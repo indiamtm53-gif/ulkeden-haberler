@@ -1,75 +1,313 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elsa Jean • Gallery</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <style>
-    body { background: #0a0a0a; color: #eee; font-family: system-ui, sans-serif; }
-    .photo-card { transition: all 0.4s; }
-    .photo-card:hover { transform: scale(1.06); z-index: 10; }
-    .overlay { background: linear-gradient(transparent, rgba(0,0,0,0.85)); }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ülkeden Haberler</title>
+<meta name="description" content="Türkiye ve dünyadan son dakika haberleri, ekonomi, spor, teknoloji ve hava durumu gelişmeleri Ülkeden Haberler'de.">
+<meta name="keywords" content="haber, son dakika, gündem, ekonomi, spor, teknoloji, hava durumu, türkiye haberleri">
+<meta property="og:title" content="Ülkeden Haberler">
+<meta property="og:description" content="Türkiye'nin güncel haber portalı">
+<meta property="og:type" content="website">
+<meta property="og:image" content="logo.png">
+<link rel="icon" href="images/favicon.png">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f4f6f9;color:#0F172A}
+header{background:#0F172A;color:white;padding:15px 5%;display:flex;justify-content:space-between;align-items:center;gap:15px}
+.logo{font-size:28px;font-weight:800;letter-spacing:1px;display:flex;align-items:center;gap:10px}
+#menuBtn,#darkBtn{background:#2563EB;color:white;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:bold}
+#mobileMenu{display:none;background:white;padding:15px;border-radius:10px;margin:10px}
+#mobileMenu a{display:block;padding:10px;text-decoration:none;color:#0F172A;font-weight:bold}
+nav a{color:white;text-decoration:none;margin-left:15px;font-weight:bold}
+.top-tools{display:flex;align-items:center;gap:10px}
+#clock{color:white;font-weight:bold;font-size:14px}
+#visitorCounter{color:#CBD5E1;font-size:12px;margin-top:4px;text-align:right}
+.ads{background:linear-gradient(135deg,#F97316,#EA580C);height:90px;margin:30px auto;width:90%;display:flex;justify-content:center;align-items:center;font-size:24px;font-weight:bold;color:white;border-radius:15px}
+.ticker{background:#dc2626;color:white;overflow:hidden;padding:12px;white-space:nowrap;font-weight:bold}
+.ticker-content{display:inline-block;padding-left:100%;animation:ticker 20s linear infinite}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+.container{width:90%;margin:auto;padding:30px 0}
+.slider{position:relative;height:450px;overflow:hidden;border-radius:15px;margin-bottom:30px}
+.slide{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;transition:opacity 1s ease}
+.slide.active{opacity:1}
+.slide img{width:100%;height:450px;object-fit:cover}
+.slide-content{position:absolute;bottom:40px;left:40px;background:rgba(0,0,0,.7);padding:20px;border-radius:10px;color:white;max-width:600px}
+.slide-content h2{margin-bottom:10px}
+.section-title{margin-bottom:20px;color:#0F172A}
+.news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.news-grid a{text-decoration:none;color:inherit;display:block}
+.news-card{background:white;border-radius:12px;overflow:hidden;box-shadow:0 4px 10px rgba(0,0,0,.1);transition:.3s;cursor:pointer;position:relative}
+.news-card:hover{transform:translateY(-8px);box-shadow:0 10px 25px rgba(0,0,0,.15)}
+.news-card img{width:100%;height:200px;object-fit:cover}
+.news-card h3{padding:15px}
+.news-card p{padding:0 15px 15px}
+.category-tag{display:inline-block;background:#DC2626;color:white;padding:5px 10px;border-radius:6px;font-size:12px;font-weight:bold;margin:15px}
+.news-info{display:flex;justify-content:space-between;padding:10px 15px;font-size:13px;color:#64748B;gap:8px}
+.read-more{display:block;padding:0 15px 15px;text-decoration:none;font-weight:bold;color:#2563EB}
+.search-box{width:100%;padding:15px;margin-bottom:25px;border-radius:10px;border:1px solid #ccc;font-size:16px;outline:none}
+.main-layout{display:flex;gap:20px;align-items:flex-start}
+.content{flex:3}
+.sidebar{flex:1;background:white;padding:20px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.1)}
+.sidebar h2{margin-bottom:15px}
+.popular-item{padding:10px 0;border-bottom:1px solid #ddd}
+.popular-item a{text-decoration:none;color:#0F172A;font-weight:bold}
+.weather{width:90%;margin:40px auto 0}
+.weather-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px}
+.city{background:linear-gradient(135deg,#2563EB,#1D4ED8);color:white;padding:20px;border-radius:15px;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,.2);transition:.3s}
+.city:hover{transform:translateY(-5px)}
+.reaction-box{padding:15px;display:flex;gap:10px}
+.reaction-box button{background:#2563EB;color:white;border:none;padding:8px 15px;border-radius:8px;cursor:pointer}
+.site-update,.trust-box{width:90%;margin:20px auto;text-align:center;padding:15px;background:#F8FAFC;font-weight:bold;border-radius:10px}
+.alert-box{background:#FEF3C7;padding:15px;border-left:5px solid #F59E0B;margin:20px auto;width:90%;border-radius:10px;font-weight:bold}
+.footer{background:#0F172A;color:white;padding:50px 20px;margin-top:50px}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
+.footer h3{margin-bottom:15px}
+.footer ul{list-style:none;padding:0}
+.footer ul li{margin-bottom:10px}
+.footer a{color:#CBD5E1;text-decoration:none}
+.footer a:hover{color:white}
+.footer-bottom{text-align:center;margin-top:20px;font-size:14px}
+#loader{position:fixed;top:0;left:0;width:100%;height:100%;background:white;display:flex;justify-content:center;align-items:center;font-size:24px;z-index:9999}
+#topBtn{position:fixed;bottom:20px;right:20px;width:50px;height:50px;border:none;border-radius:50%;background:#2563EB;color:white;font-size:22px;cursor:pointer;z-index:999}
+a{transition:.3s}a:hover{opacity:.8}
+img{max-width:100%;height:auto}
+.dark{background:#111827;color:white}
+.dark .news-card,.dark .sidebar,.dark .site-update,.dark .trust-box{background:#1F2937;color:white}
+.dark .section-title,.dark .popular-item a{color:white}
+@media(max-width:768px){header{flex-direction:column;gap:15px}nav{display:flex;flex-wrap:wrap;justify-content:center}.main-layout{flex-direction:column}.slider{height:330px}.slide img{height:330px}.slide-content{left:20px;right:20px;bottom:20px}.news-info{flex-direction:column}}
+</style>
 </head>
-<body class="min-h-screen pb-20">
-  <header class="bg-black py-6 border-b border-red-900">
-    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-      <h1 class="text-4xl font-bold text-red-500">ELSA JEAN</h1>
-      <div class="text-sm uppercase tracking-widest">Official Fan Gallery</div>
-    </div>
-  </header>
 
-  <div class="max-w-7xl mx-auto px-6 py-10">
-    <div class="text-center mb-12">
-      <h2 class="text-5xl font-light">Elsa Jean Photo Archive</h2>
-      <p class="text-gray-400 mt-3">En kaliteli ve yüksek çözünürlüklü fotoğraflar</p>
-    </div>
+<body>
+<div id="loader">📰 Ülkeden Haberler Yükleniyor...</div>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6" id="gallery"></div>
-  </div>
+<header>
+<div id="mobileMenu">
+<a href="gundem.html">Gündem</a>
+<a href="ekonomi.html">Ekonomi</a>
+<a href="spor.html">Spor</a>
+<a href="teknoloji.html">Teknoloji</a>
+<a href="hava-durumu.html">Hava Durumu</a>
+<a href="iletisim.html">İletişim</a>
+<a href="hakkimizda.html">Hakkımızda</a>
+</div>
 
-  <script>
-    // Buraya Elsa Jean fotoğrafları ekleyebilirsin (gerçek linkler)
-    const photos = [https://share.google/Jq7xFkO3QjOpkwZRc]
-      "https://picsum.photos/id/1015/800/1200",
-      "https://picsum.photos/id/1027/800/1200",
-      "https://picsum.photos/id/106/800/1200",
-      "https://picsum.photos/id/133/800/1200",
-      "https://picsum.photos/id/180/800/1200",
-      "https://picsum.photos/id/201/800/1200",
-      "https://picsum.photos/id/237/800/1200",
-      "https://picsum.photos/id/251/800/1200",
-      "https://picsum.photos/id/274/800/1200",
-      "https://picsum.photos/id/317/800/1200",
-      // İstediğin kadar gerçek Elsa Jean fotoğraf linki ekleyebilirsin
-    ];
+<div class="logo"><button id="menuBtn">☰ Menü</button>📰 Ülkeden Haberler</div>
 
-    let html = '';
-    photos.forEach((url, index) => {
-      html += `
-        <div class="photo-card relative overflow-hidden rounded-3xl bg-zinc-900 cursor-pointer group" onclick="showFull('${url}')">
-          <img src="${url}" class="w-full aspect-[3/4] object-cover">
-          <div class="overlay absolute bottom-0 left-0 right-0 h-2/3 flex items-end p-4">
-            <div class="text-sm opacity-75 group-hover:opacity-100">#${index + 1}</div>
-          </div>
-        </div>
-      `;
-    });
-    document.getElementById("gallery").innerHTML = html;
+<nav>
+<a href="gundem.html">Gündem</a>
+<a href="ekonomi.html">Ekonomi</a>
+<a href="spor.html">Spor</a>
+<a href="teknoloji.html">Teknoloji</a>
+<a href="hava-durumu.html">Hava Durumu</a>
+</nav>
 
-    function showFull(url) {
-      const modal = document.createElement("div");
-      modal.className = "fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-4";
-      modal.innerHTML = `
-        <div class="relative max-w-4xl w-full">
-          <button onclick="this.parentElement.parentElement.remove()" class="absolute -top-4 -right-4 bg-red-600 text-white w-10 h-10 rounded-full flex items-center justify-center text-2xl">×</button>
-          <img src="${url}" class="w-full rounded-3xl shadow-2xl">
-        </div>
-      `;
-      document.body.appendChild(modal);
-    }
-  </script>
+<div class="top-tools">
+<button id="darkBtn" onclick="toggleDarkMode()">🌙 Mod</button>
+<div><div id="clock">00:00:00</div><div id="visitorCounter">👥 12458</div></div>
+</div>
+</header>
+
+<div class="ads">970x90 REKLAM ALANI</div>
+
+<div class="ticker"><div class="ticker-content">🔥 SON DAKİKA • Türkiye gündemi sürekli güncelleniyor • Ekonomi piyasalarında son gelişmeler • Spor dünyasından flaş haberler • Teknoloji ve yapay zeka gelişmeleri • Ülkeden Haberler 7/24 yayında</div></div>
+
+<div class="alert-box">⚠ Acil durum ve afet haberlerini resmi kaynaklardan takip ediniz.</div>
+
+<div class="container">
+<div class="slider">
+<div class="slide active"><img src="https://picsum.photos/1200/500?20" loading="lazy"><div class="slide-content"><h2>Son Dakika Gündem</h2><p>Türkiye'nin gündemindeki önemli gelişmeler.</p></div></div>
+<div class="slide"><img src="https://picsum.photos/1200/500?21" loading="lazy"><div class="slide-content"><h2>Ekonomi Haberleri</h2><p>Piyasalarda son durum ve analizler.</p></div></div>
+<div class="slide"><img src="https://picsum.photos/1200/500?22" loading="lazy"><div class="slide-content"><h2>Spor Dünyası</h2><p>Günün öne çıkan spor haberleri.</p></div></div>
+</div>
+</div>
+
+<div class="site-update">📅 Son Güncelleme: 15 Haziran 2026 - 20:30</div>
+
+<div class="container">
+<div class="news-card">
+<img src="https://picsum.photos/1200/500?99" loading="lazy">
+<span class="category-tag">GÜNDEM</span>
+<h3 style="font-size:32px;padding:20px;">🔥 Türkiye Gündeminde Son Dakika</h3>
+<p style="font-size:18px;">Ekonomi, spor, teknoloji ve gündemden en önemli gelişmeleri anlık olarak takip edin.</p>
+<div class="news-info"><span>📅 15 Haziran 2026</span><span>👁️ 12.548 Okunma</span></div>
+<a class="read-more" href="haber.html">Devamını Oku →</a>
+</div>
+</div>
+
+<div class="container">
+<h2 class="section-title">Öne Çıkan Haberler</h2>
+<div class="news-grid">
+<div class="news-card"><img src="https://picsum.photos/500/300?4" loading="lazy"><span class="category-tag">TEKNOLOJİ</span><h3>Yapay Zeka Sektörü Büyümeye Devam Ediyor</h3><p>Yapay zeka ve teknoloji dünyasındaki son gelişmeler öne çıkıyor.</p><div class="news-info"><span>📅 15 Haziran 2026</span><span>👁️ 3.245</span></div><a class="read-more" href="haber.html">Devamını Oku →</a></div>
+<div class="news-card"><img src="https://picsum.photos/500/300?5" loading="lazy"><span class="category-tag">DÜNYA</span><h3>Küresel Ekonomide Yeni Gelişmeler</h3><p>Dünyadan öne çıkan gelişmeler ve son dakika haberleri.</p><div class="news-info"><span>📅 15 Haziran 2026</span><span>👁️ 2.860</span></div><a class="read-more" href="haber.html">Devamını Oku →</a></div>
+<div class="news-card"><img src="https://picsum.photos/500/300?6" loading="lazy"><span class="category-tag">HAVA</span><h3>Meteorolojiden Kuvvetli Yağış Uyarısı</h3><p>Türkiye genelinde beklenen hava olayları ve uyarılar.</p><div class="news-info"><span>📅 15 Haziran 2026</span><span>👁️ 4.110</span></div><a class="read-more" href="haber.html">Devamını Oku →</a></div>
+</div>
+
+<input type="text" id="searchInput" class="search-box" placeholder="🔍 Haber Ara..." onkeyup="searchNews()">
+
+<h2 class="section-title">Son Haberler</h2>
+<div class="news-grid">
+<a href="haber.html"><div class="news-card"><img src="https://picsum.photos/500/300?1" loading="lazy"><span class="category-tag">GÜNDEM</span><h3>TBMM'de Yeni Düzenleme Görüşülüyor</h3><p>Meclis gündemindeki yeni düzenleme teklifleri değerlendiriliyor.</p><div class="news-info"><span>📅 15 Haziran 2026</span><span>👁️ 2.453</span></div><div class="reaction-box"><button onclick="likeNews(); event.preventDefault();">👍 <span id="likeCount">0</span></button><button onclick="dislikeNews(); event.preventDefault();">👎 <span id="dislikeCount">0</span></button></div></div></a>
+<div class="news-card"><img src="https://picsum.photos/500/300?2" loading="lazy"><span class="category-tag">EKONOMİ</span><h3>Merkez Bankası Faiz Kararını Açıkladı</h3><p>Piyasaların merakla beklediği faiz kararı açıklandı.</p><div class="news-info"><span>📅 15 Haziran 2026</span><span>👁️ 5.120</span></div><a class="read-more" href="ekonomi.html">Devamını Oku →</a></div>
+<div class="news-card"><img src="https://picsum.photos/500/300?3" loading="lazy"><span class="category-tag">SPOR</span><h3>Süper Lig'de Haftanın Sonuçları</h3><p>Haftanın maçları tamamlanırken puan tablosunda değişiklikler yaşandı.</p><div class="news-info"><span>📅 15 Haziran 2026</span><span>👁️ 3.875</span></div><a class="read-more" href="spor.html">Devamını Oku →</a></div>
+</div>
+
+<div class="main-layout">
+<div class="content">
+<h2 class="section-title">🔥 Popüler Haberler</h2>
+<div class="news-grid">
+<div class="news-card"><img src="https://picsum.photos/500/300?10" loading="lazy"><span class="category-tag">POPÜLER</span><h3>En Çok Okunan Haber</h3><p>Günün en çok okunan gelişmeleri.</p><div class="news-info"><span>📅 15 Haziran 2026</span><span>👁️ 9.430</span></div></div>
+<div class="news-card"><img src="https://picsum.photos/500/300?11" loading="lazy"><span class="category-tag">SON DAKİKA</span><h3>Son Dakika Gelişmesi</h3><p>Türkiye gündeminden önemli gelişmeler.</p><div class="news-info"><span>📅 15 Haziran 2026</span><span>👁️ 8.234</span></div></div>
+<div class="news-card"><img src="https://picsum.photos/500/300?12" loading="lazy"><span class="category-tag">ÖZEL</span><h3>Özel Haber</h3><p>Editörlerimizin seçtiği içerikler.</p><div class="news-info"><span>📅 15 Haziran 2026</span><span>👁️ 6.740</span></div></div>
+</div>
+
+<h2 class="section-title">🎥 Video Haberler</h2>
+<div class="news-grid">
+<div class="news-card"><iframe width="100%" height="220" src="https://www.youtube.com/embed/jNQXAC9IVRw" title="Video Haber" frameborder="0" allowfullscreen></iframe><span class="category-tag">VİDEO</span><h3>Günün Video Haberi</h3><p>Öne çıkan gelişmeleri videolu olarak izleyin.</p></div>
+<div class="news-card"><iframe width="100%" height="220" src="https://www.youtube.com/embed/jNQXAC9IVRw" title="Video Haber" frameborder="0" allowfullscreen></iframe><span class="category-tag">EKONOMİ</span><h3>Ekonomi Video Analizi</h3><p>Piyasalardaki son gelişmeler.</p></div>
+</div>
+</div>
+
+<div class="sidebar">
+<h2>🔥 En Çok Okunanlar</h2>
+<div class="popular-item"><a href="haber.html">Türkiye Gündeminde Son Dakika</a></div>
+<div class="popular-item"><a href="haber.html">Ekonomide Son Gelişmeler</a></div>
+<div class="popular-item"><a href="haber.html">Spor Dünyasında Büyük Transfer</a></div>
+<div class="popular-item"><a href="haber.html">Yapay Zeka Teknolojileri</a></div>
+<div class="popular-item"><a href="haber.html">Hava Durumu Uyarıları</a></div>
+<hr style="margin:20px 0;">
+<h2>📈 Trend Haberler</h2>
+<div class="popular-item"><a href="haber.html">Ekonomide Son Dakika</a></div>
+<div class="popular-item"><a href="haber.html">Yapay Zeka Gündemi</a></div>
+<div class="popular-item"><a href="haber.html">Süper Lig Sonuçları</a></div>
+<hr style="margin:20px 0;">
+<h2>⭐ Editörün Seçtikleri</h2>
+<div class="popular-item"><a href="haber.html">Haftanın En Önemli Gelişmesi</a></div>
+<div class="popular-item"><a href="haber.html">Ekonomide Kritik Karar</a></div>
+</div>
+</div>
+</div>
+
+<div class="weather"><h2 class="section-title">Hava Durumu</h2><div class="weather-grid"><div class="city"><h3>İstanbul</h3><p>24°C</p></div><div class="city"><h3>Ankara</h3><p>26°C</p></div><div class="city"><h3>İzmir</h3><p>29°C</p></div><div class="city"><h3>Gaziantep</h3><p>31°C</p></div></div></div>
+<div class="weather"><h2 class="section-title">📍 Son Depremler</h2><div class="weather-grid"><div class="city"><h3>Malatya</h3><p>4.2</p></div><div class="city"><h3>Hatay</h3><p>3.8</p></div><div class="city"><h3>İzmir</h3><p>2.9</p></div></div></div>
+<div class="weather"><h2 class="section-title">💵 Döviz Kurları</h2><div class="weather-grid"><div class="city"><h3>USD</h3><p>39.25 ₺</p></div><div class="city"><h3>EUR</h3><p>45.12 ₺</p></div><div class="city"><h3>GBP</h3><p>53.40 ₺</p></div></div></div>
+<div class="weather"><h2 class="section-title">🥇 Altın Fiyatları</h2><div class="weather-grid"><div class="city"><h3>Gram</h3><p>4320 ₺</p></div><div class="city"><h3>Çeyrek</h3><p>7120 ₺</p></div><div class="city"><h3>Ons</h3><p>3420 $</p></div></div></div>
+
+<div class="weather"><h2>📱 Bizi Takip Edin</h2><p>Facebook • Instagram • X • YouTube • Telegram</p></div>
+<div class="trust-box">✅ Güncel Haberler &nbsp; ✅ Tarafsız Yayın &nbsp; ✅ 7/24 Güncelleme</div>
+
+<div style="text-align:center;padding:20px;">
+<button onclick="enableNotifications()" style="padding:12px 25px;background:#2563EB;color:white;border:none;border-radius:10px;cursor:pointer;font-size:16px;">🔔 Bildirimleri Aç</button>
+</div>
+
+<footer class="footer">
+<div class="footer-grid">
+<div><h3>📰 Ülkeden Haberler</h3><p>Türkiye'nin güncel haber portalı.</p><p>Tarafsız, hızlı ve güvenilir habercilik.</p></div>
+<div><h3>📂 Kategoriler</h3><ul><li><a href="gundem.html">Gündem</a></li><li><a href="ekonomi.html">Ekonomi</a></li><li><a href="spor.html">Spor</a></li><li><a href="teknoloji.html">Teknoloji</a></li></ul></div>
+<div><h3>⚡ Hızlı Linkler</h3><ul><li><a href="hakkimizda.html">Hakkımızda</a></li><li><a href="iletisim.html">İletişim</a></li><li><a href="gizlilik.html">Gizlilik</a></li><li><a href="cerez-politikasi.html">Çerez Politikası</a></li><li><a href="kullanim-sartlari.html">Kullanım Şartları</a></li></ul></div>
+<div><h3>📧 İletişim</h3><p>info@ulkedenhaberler.com</p><p>Türkiye</p></div>
+</div>
+<hr>
+<div class="footer-bottom">© 2026 Ülkeden Haberler<br><br><p>Tüm hakları saklıdır.</p></div>
+</footer>
+
+<button id="topBtn">⬆</button>
+
+<script>
+function updateClock(){
+const now=new Date();
+document.getElementById("clock").innerHTML=now.toLocaleTimeString("tr-TR");
+}
+setInterval(updateClock,1000);
+updateClock();
+
+function toggleDarkMode(){
+document.body.classList.toggle("dark");
+if(document.body.classList.contains("dark")){
+localStorage.setItem("theme","dark");
+}else{
+localStorage.setItem("theme","light");
+}
+}
+
+if(localStorage.getItem("theme")==="dark"){
+document.body.classList.add("dark");
+}
+
+function searchNews(){
+let input=document.getElementById("searchInput").value.toLowerCase();
+let cards=document.querySelectorAll(".news-card");
+cards.forEach(card=>{
+let titleElement=card.querySelector("h3");
+if(!titleElement) return;
+let title=titleElement.innerText.toLowerCase();
+card.style.display=title.includes(input) ? "block" : "none";
+});
+}
+
+const slides=document.querySelectorAll(".slide");
+let currentSlide=0;
+if(slides.length>0){
+setInterval(()=>{
+slides[currentSlide].classList.remove("active");
+currentSlide++;
+if(currentSlide>=slides.length){currentSlide=0;}
+slides[currentSlide].classList.add("active");
+},4000);
+}
+
+let likes=0;
+let dislikes=0;
+
+function likeNews(){
+likes++;
+document.getElementById("likeCount").innerHTML=likes;
+}
+
+function dislikeNews(){
+dislikes++;
+document.getElementById("dislikeCount").innerHTML=dislikes;
+}
+
+function enableNotifications(){
+if(!("Notification" in window)){
+alert("Tarayıcınız bildirimleri desteklemiyor.");
+return;
+}
+if(Notification.permission !== "granted"){
+Notification.requestPermission().then(permission=>{
+if(permission==="granted"){
+new Notification("Ülkeden Haberler",{body:"Bildirimler başarıyla açıldı."});
+}
+});
+}else{
+new Notification("Ülkeden Haberler",{body:"Bildirimler zaten açık."});
+}
+}
+
+let menuBtn=document.getElementById("menuBtn");
+let mobileMenu=document.getElementById("mobileMenu");
+if(menuBtn && mobileMenu){
+menuBtn.onclick=function(){
+mobileMenu.style.display = mobileMenu.style.display==="block" ? "none" : "block";
+}
+}
+
+window.onload=function(){
+let loader=document.getElementById("loader");
+if(loader){loader.style.display="none";}
+}
+
+let topBtn=document.getElementById("topBtn");
+if(topBtn){
+topBtn.onclick=function(){
+window.scrollTo({top:0,behavior:"smooth"});
+}
+}
+
+</script>
+
 </body>
 </html>
