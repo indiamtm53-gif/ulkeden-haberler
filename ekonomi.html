@@ -3,13 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta
-name="description"
-content="Dolar, euro, altın ve ekonomi piyasalarındaki son gelişmeler.">
+
 <title>Ekonomi Haberleri - Ülkeden Haberler</title>
 
-<style>
+<meta name="description" content="Dolar, euro, altın, faiz kararları, enerji yatırımları ve ekonomi piyasalarındaki son gelişmeler Ülkeden Haberler'de.">
 
+<link rel="canonical" href="https://indiamtm53-gif.github.io/ulkeden-haberler/ekonomi.html">
+<link rel="icon" href="favicon.png">
+
+<style>
 *{
 margin:0;
 padding:0;
@@ -19,6 +21,7 @@ font-family:Arial,sans-serif;
 
 body{
 background:#f4f6f9;
+color:#0F172A;
 }
 
 header{
@@ -28,15 +31,37 @@ padding:20px;
 text-align:center;
 }
 
+nav{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-top:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
 .container{
 width:90%;
+max-width:1200px;
 margin:auto;
 padding:30px 0;
 }
 
-h1{
+.page-title{
+font-size:34px;
+margin-bottom:10px;
+}
+
+.page-desc{
+font-size:17px;
+line-height:1.7;
+color:#475569;
 margin-bottom:25px;
-color:#0F172A;
 }
 
 .news-grid{
@@ -47,14 +72,14 @@ gap:20px;
 
 .news-card{
 background:white;
-border-radius:12px;
+border-radius:14px;
 overflow:hidden;
 box-shadow:0 4px 10px rgba(0,0,0,.1);
 transition:.3s;
 }
 
 .news-card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 .news-card img{
@@ -63,12 +88,45 @@ height:200px;
 object-fit:cover;
 }
 
+.category-tag{
+display:inline-block;
+background:#10B981;
+color:white;
+padding:6px 11px;
+border-radius:7px;
+font-size:12px;
+font-weight:bold;
+margin:15px 15px 0;
+}
+
 .news-card h3{
 padding:15px;
 }
 
 .news-card p{
 padding:0 15px 15px;
+}
+
+.news-info{
+display:flex;
+justify-content:space-between;
+padding:0 15px 15px;
+font-size:13px;
+color:#64748B;
+}
+
+.read-more{
+display:block;
+padding:0 15px 18px;
+color:#10B981;
+font-weight:bold;
+text-decoration:none;
+}
+
+.news-link{
+text-decoration:none;
+color:inherit;
+display:block;
 }
 
 .back-btn{
@@ -80,86 +138,137 @@ color:white;
 text-decoration:none;
 border-radius:10px;
 }
-
 </style>
 </head>
 
 <body>
 
 <header>
-<h2>🇹🇷 Ülkeden Haberler</h2>
+
+<h2>💰 Ülkeden Haberler</h2>
+
+<nav>
+<a href="index.html">Ana Sayfa</a>
+<a href="gundem.html">Gündem</a>
+<a href="ekonomi.html">Ekonomi</a>
+<a href="spor.html">Spor</a>
+<a href="teknoloji.html">Teknoloji</a>
+<a href="hava-durumu.html">Hava Durumu</a>
+</nav>
+
 </header>
 
 <div class="container">
 
-<h1>Ekonomi Haberleri</h1>
+<h1 class="page-title">Ekonomi Haberleri</h1>
+
+<p class="page-desc">
+Dolar, euro, altın, faiz kararları ve piyasalardaki son gelişmeler.
+</p>
 
 <div class="news-grid">
-
-<a href="haber.html" style="text-decoration:none;color:inherit;">
+  <a href="haber.html" class="news-link">
 <div class="news-card">
-<img src="https://picsum.photos/500/300?21">
+<img src="https://picsum.photos/500/300?51" loading="lazy">
+<span class="category-tag">EKONOMİ</span>
 <h3>Merkez Bankası Faiz Kararını Açıkladı</h3>
-
-<p>
-Piyasaların merakla beklediği faiz kararı kamuoyu ile paylaşıldı.
-</p>
+<p>Piyasaların merakla beklediği faiz kararı kamuoyu ile paylaşıldı.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 5.420</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
 </a>
 
-<a href="haber.html" style="text-decoration:none;color:inherit;">
+<a href="haber.html" class="news-link">
 <div class="news-card">
-<img src="https://picsum.photos/500/300?22">
+<img src="https://picsum.photos/500/300?52" loading="lazy">
+<span class="category-tag">EKONOMİ</span>
 <h3>Dolar ve Euro Kurunda Son Durum</h3>
-
-<p>
-Döviz piyasalarında gün içindeki hareketlilik yatırımcılar tarafından yakından takip ediliyor.
-</p>
+<p>Döviz piyasalarındaki hareketlilik yatırımcılar tarafından yakından takip ediliyor.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 4.870</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
 </a>
 
-<a href="haber.html" style="text-decoration:none;color:inherit;">
+<a href="haber.html" class="news-link">
 <div class="news-card">
-<img src="https://picsum.photos/500/300?23">
+<img src="https://picsum.photos/500/300?53" loading="lazy">
+<span class="category-tag">EKONOMİ</span>
 <h3>Altın Fiyatlarında Yeni Rekor</h3>
+<p>Küresel piyasalardaki gelişmeler altın fiyatlarını etkilemeye devam ediyor.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 6.210</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
 
-<p>
-Küresel piyasalardaki gelişmeler altın fiyatlarını etkilemeye devam ediyor.
-</p>
+<a href="haber.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?54" loading="lazy">
+<span class="category-tag">EKONOMİ</span>
+<h3>İhracat Verileri Açıklandı</h3>
+<p>Türkiye'nin ihracat rakamlarında dikkat çeken yükseliş yaşandı.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 4.210</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
+
+<a href="haber.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?55" loading="lazy">
+<span class="category-tag">EKONOMİ</span>
+<h3>Enerji Sektöründe Yeni Yatırımlar</h3>
+<p>Enerji alanında yapılan yatırımlar ekonomiye katkı sağlamayı hedefliyor.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 3.765</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
+
+<a href="haber.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?56" loading="lazy">
+<span class="category-tag">EKONOMİ</span>
+<h3>Borsa İstanbul Güne Yükselişle Başladı</h3>
+<p>Yatırımcıların yakından takip ettiği endekslerde pozitif görünüm sürüyor.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 3.980</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
+
+<a href="haber.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?57" loading="lazy">
+<span class="category-tag">EKONOMİ</span>
+<h3>KOBİ Destek Paketleri Gündemde</h3>
+<p>Küçük ve orta ölçekli işletmeler için yeni destek programları değerlendiriliyor.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 3.450</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
 </a>
 
 </div>
-<div class="news-card">
-<img src="https://picsum.photos/500/300?41" loading="lazy">
-<span class="category-tag">EKONOMİ</span>
-
-<h3>İhracat Verileri Açıklandı</h3>
-
-<p>
-Türkiye'nin ihracat rakamlarında yılın son döneminde dikkat çeken hareketlilik yaşandı.
-</p>
-
-<div class="news-info">
-<span>📅 16 Haziran 2026</span>
-<span>👁️ 4.210 Okunma</span>
-</div>
-
-<a class="read-more" href="haber.html">Devamını Oku →</a>
-</div>
-<div class="news-card">
-<img src="https://picsum.photos/500/300?42" loading="lazy">
-<span class="category-tag">EKONOMİ</span>
-
-<h3>Enerji Sektöründe Yeni Yatırımlar</h3>
-
-<p>
-Enerji alanında yapılan yeni yatırımlar ekonomiye katkı sağlamayı hedefliyor.
-</p>
-
-<div class="news-info">
-<span>📅 16 Haziran 2026</span>
-<span>👁️ 3.765 Okunma</span>
-</div>
-
-<a class="read-more" href="haber.html">Devamını Oku →</a>
+<div style="margin-top:35px;padding:18px;background:white;border-radius:14px;box-shadow:0 4px 10px rgba(0,0,0,.08);line-height:1.7;">
+<strong>Ülkeden Haberler Ekonomi Servisi:</strong>
+Döviz kurları, altın fiyatları, merkez bankası kararları, enerji yatırımları ve finans dünyasındaki gelişmeler düzenli olarak güncellenmektedir.
 </div>
 
 <a href="index.html" class="back-btn">
