@@ -3,13 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta
-name="description"
-content="Türkiye genelinde güncel hava durumu tahminleri, sıcaklık değerleri ve meteorolojik gelişmeler.">
+
 <title>Türkiye Hava Durumu - Ülkeden Haberler</title>
 
-<style>
+<meta name="description" content="Türkiye genelinde güncel hava durumu tahminleri, sıcaklık değerleri, yağış uyarıları ve meteorolojik gelişmeler.">
 
+<link rel="canonical" href="https://indiamtm53-gif.github.io/ulkeden-haberler/hava-durumu.html">
+<link rel="icon" href="favicon.png">
+
+<style>
 *{
 margin:0;
 padding:0;
@@ -19,6 +21,7 @@ font-family:Arial,sans-serif;
 
 body{
 background:#f4f6f9;
+color:#0F172A;
 }
 
 header{
@@ -28,15 +31,37 @@ padding:20px;
 text-align:center;
 }
 
+nav{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-top:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
 .container{
 width:90%;
+max-width:1200px;
 margin:auto;
 padding:30px 0;
 }
 
-h1{
+.page-title{
+font-size:34px;
+margin-bottom:10px;
+}
+
+.page-desc{
+font-size:17px;
+line-height:1.7;
+color:#475569;
 margin-bottom:25px;
-color:#0F172A;
 }
 
 .news-grid{
@@ -47,14 +72,14 @@ gap:20px;
 
 .news-card{
 background:white;
-border-radius:12px;
+border-radius:14px;
 overflow:hidden;
 box-shadow:0 4px 10px rgba(0,0,0,.1);
 transition:.3s;
 }
 
 .news-card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 .news-card img{
@@ -63,12 +88,45 @@ height:200px;
 object-fit:cover;
 }
 
+.category-tag{
+display:inline-block;
+background:#0EA5E9;
+color:white;
+padding:6px 11px;
+border-radius:7px;
+font-size:12px;
+font-weight:bold;
+margin:15px 15px 0;
+}
+
 .news-card h3{
 padding:15px;
 }
 
 .news-card p{
 padding:0 15px 15px;
+}
+
+.news-info{
+display:flex;
+justify-content:space-between;
+padding:0 15px 15px;
+font-size:13px;
+color:#64748B;
+}
+
+.read-more{
+display:block;
+padding:0 15px 18px;
+color:#0EA5E9;
+font-weight:bold;
+text-decoration:none;
+}
+
+.news-link{
+display:block;
+text-decoration:none;
+color:inherit;
 }
 
 .back-btn{
@@ -80,46 +138,137 @@ color:white;
 text-decoration:none;
 border-radius:10px;
 }
-
 </style>
 </head>
 
 <body>
 
 <header>
-<h2>🇹🇷 Ülkeden Haberler</h2>
+
+<h2>🌤️ Ülkeden Haberler</h2>
+
+<nav>
+<a href="index.html">Ana Sayfa</a>
+<a href="gundem.html">Gündem</a>
+<a href="ekonomi.html">Ekonomi</a>
+<a href="spor.html">Spor</a>
+<a href="teknoloji.html">Teknoloji</a>
+<a href="hava-durumu.html">Hava Durumu</a>
+</nav>
+
 </header>
 
 <div class="container">
 
-<h1>Hava Durumu Haberleri</h1>
+<h1 class="page-title">Türkiye Hava Durumu</h1>
+
+<p class="page-desc">
+Türkiye genelindeki hava tahminleri, sıcaklık değerleri, yağış uyarıları ve meteorolojik gelişmeler.
+</p>
 
 <div class="news-grid">
-
-<a href="haber.html" style="text-decoration:none;color:inherit;">
+  <a href="haber.html" class="news-link">
 <div class="news-card">
-<img src="https://picsum.photos/500/300?21">
-<h3>Gündem Haberi 1</h3>
-<p>Türkiye gündeminden son gelişmeler.</p>
+<img src="https://picsum.photos/500/300?81" loading="lazy">
+<span class="category-tag">HAVA DURUMU</span>
+<h3>Meteoroloji'den Kuvvetli Yağış Uyarısı</h3>
+<p>Bazı bölgelerde etkili olması beklenen yağışlar için vatandaşlara uyarı yapıldı.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>🌧️ Yağış Bekleniyor</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
 </div>
 </a>
 
-<a href="haber.html" style="text-decoration:none;color:inherit;">
+<a href="haber.html" class="news-link">
 <div class="news-card">
-<img src="https://picsum.photos/500/300?22">
-<h3>Gündem Haberi 2</h3>
-<p>Öne çıkan sıcak gelişmeler.</p>
+<img src="https://picsum.photos/500/300?82" loading="lazy">
+<span class="category-tag">HAVA DURUMU</span>
+<h3>Sıcaklıklar Mevsim Normallerinin Üzerinde</h3>
+<p>Yurt genelinde sıcak hava etkisini sürdürürken bazı bölgelerde sıcaklıklar yükseliyor.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>☀️ 34°C</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
 </div>
 </a>
 
-<a href="haber.html" style="text-decoration:none;color:inherit;">
+<a href="haber.html" class="news-link">
 <div class="news-card">
-<img src="https://picsum.photos/500/300?23">
-<h3>Gündem Haberi 3</h3>
-<p>Günün en çok konuşulan olayları.</p>
+<img src="https://picsum.photos/500/300?83" loading="lazy">
+<span class="category-tag">HAVA DURUMU</span>
+<h3>Marmara Bölgesi İçin Yeni Tahmin</h3>
+<p>Meteoroloji uzmanları Marmara Bölgesi için güncel hava tahminlerini paylaştı.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>🌤️ Parçalı Bulutlu</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
 </div>
 </a>
 
+<a href="haber.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?84" loading="lazy">
+<span class="category-tag">HAVA DURUMU</span>
+<h3>Karadeniz'de Sağanak Bekleniyor</h3>
+<p>Bölge genelinde kuvvetli sağanak ve yer yer gök gürültülü yağış bekleniyor.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>🌧️ Sağanak</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
+
+<a href="haber.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?85" loading="lazy">
+<span class="category-tag">HAVA DURUMU</span>
+<h3>Ege Bölgesi Güneşli Başladı</h3>
+<p>Ege kıyılarında güneşli hava etkisini sürdürürken sıcaklıklar yükselişte.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>☀️ Açık Hava</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
+
+<a href="haber.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?86" loading="lazy">
+<span class="category-tag">HAVA DURUMU</span>
+<h3>Doğu Anadolu'da Gece Sıcaklıkları Düştü</h3>
+<p>Gece saatlerinde sıcaklıkların hissedilir derecede azalacağı bildirildi.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>🌙 Serin Gece</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
+
+<a href="haber.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?87" loading="lazy">
+<span class="category-tag">HAVA DURUMU</span>
+<h3>Hafta Sonu Hava Nasıl Olacak?</h3>
+<p>Uzmanlar hafta sonuna ilişkin ülke genelindeki hava durumu beklentilerini açıkladı.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>📊 Haftalık Tahmin</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
+
+</div>
+<div style="margin-top:35px;padding:18px;background:white;border-radius:14px;box-shadow:0 4px 10px rgba(0,0,0,.08);line-height:1.7;">
+<strong>Ülkeden Haberler Hava Durumu Servisi:</strong>
+Türkiye genelindeki hava tahminleri, meteorolojik uyarılar, sıcaklık değişimleri ve bölgesel hava olayları düzenli olarak güncellenmektedir.
 </div>
 
 <a href="index.html" class="back-btn">
