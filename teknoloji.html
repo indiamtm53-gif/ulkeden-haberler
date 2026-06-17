@@ -3,13 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta
-name="description"
-content="Yapay zeka ve teknoloji dünyasındaki son gelişmeler.">
+
 <title>Teknoloji Haberleri - Ülkeden Haberler</title>
 
-<style>
+<meta name="description" content="Yapay zeka, siber güvenlik, akıllı telefonlar, uzay teknolojileri ve teknoloji dünyasındaki son gelişmeler.">
 
+<link rel="canonical" href="https://indiamtm53-gif.github.io/ulkeden-haberler/teknoloji.html">
+<link rel="icon" href="favicon.png">
+
+<style>
 *{
 margin:0;
 padding:0;
@@ -19,6 +21,7 @@ font-family:Arial,sans-serif;
 
 body{
 background:#f4f6f9;
+color:#0F172A;
 }
 
 header{
@@ -28,15 +31,37 @@ padding:20px;
 text-align:center;
 }
 
+nav{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-top:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
 .container{
 width:90%;
+max-width:1200px;
 margin:auto;
 padding:30px 0;
 }
 
-h1{
+.page-title{
+font-size:34px;
+margin-bottom:10px;
+}
+
+.page-desc{
+font-size:17px;
+line-height:1.7;
+color:#475569;
 margin-bottom:25px;
-color:#0F172A;
 }
 
 .news-grid{
@@ -47,14 +72,14 @@ gap:20px;
 
 .news-card{
 background:white;
-border-radius:12px;
+border-radius:14px;
 overflow:hidden;
 box-shadow:0 4px 10px rgba(0,0,0,.1);
 transition:.3s;
 }
 
 .news-card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 .news-card img{
@@ -63,12 +88,45 @@ height:200px;
 object-fit:cover;
 }
 
+.category-tag{
+display:inline-block;
+background:#2563EB;
+color:white;
+padding:6px 11px;
+border-radius:7px;
+font-size:12px;
+font-weight:bold;
+margin:15px 15px 0;
+}
+
 .news-card h3{
 padding:15px;
 }
 
 .news-card p{
 padding:0 15px 15px;
+}
+
+.news-info{
+display:flex;
+justify-content:space-between;
+padding:0 15px 15px;
+font-size:13px;
+color:#64748B;
+}
+
+.read-more{
+display:block;
+padding:0 15px 18px;
+color:#2563EB;
+font-weight:bold;
+text-decoration:none;
+}
+
+.news-link{
+display:block;
+text-decoration:none;
+color:inherit;
 }
 
 .back-btn{
@@ -80,86 +138,137 @@ color:white;
 text-decoration:none;
 border-radius:10px;
 }
-
 </style>
 </head>
 
 <body>
 
 <header>
-<h2>🇹🇷 Ülkeden Haberler</h2>
+
+<h2>💻 Ülkeden Haberler</h2>
+
+<nav>
+<a href="index.html">Ana Sayfa</a>
+<a href="gundem.html">Gündem</a>
+<a href="ekonomi.html">Ekonomi</a>
+<a href="spor.html">Spor</a>
+<a href="teknoloji.html">Teknoloji</a>
+<a href="hava-durumu.html">Hava Durumu</a>
+</nav>
+
 </header>
 
 <div class="container">
 
-<h1>Teknoloji Haberleri</h1>
+<h1 class="page-title">Teknoloji Haberleri</h1>
+
+<p class="page-desc">
+Yapay zeka, yazılım, siber güvenlik, mobil teknolojiler ve uzay araştırmalarındaki son gelişmeler.
+</p>
 
 <div class="news-grid">
-
-<a href="haber.html" style="text-decoration:none;color:inherit;">
+  <a href="haber.html" class="news-link">
 <div class="news-card">
-<img src="https://picsum.photos/500/300?21">
+<img src="https://picsum.photos/500/300?71" loading="lazy">
+<span class="category-tag">TEKNOLOJİ</span>
 <h3>Yapay Zeka Teknolojileri Gelişiyor</h3>
-
-<p>
-Yeni nesil yapay zeka sistemleri birçok sektörde kullanılmaya başlandı.
-</p>
+<p>Yeni nesil yapay zeka sistemleri birçok sektörde kullanılmaya başlandı.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 5.640</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
 </a>
 
-<a href="haber.html" style="text-decoration:none;color:inherit;">
+<a href="haber.html" class="news-link">
 <div class="news-card">
-<img src="https://picsum.photos/500/300?22">
+<img src="https://picsum.photos/500/300?72" loading="lazy">
+<span class="category-tag">TEKNOLOJİ</span>
 <h3>Akıllı Telefon Pazarında Rekabet Artıyor</h3>
-
-<p>
-Üreticiler yeni modellerini tanıtarak kullanıcıların ilgisini çekmeye çalışıyor.
-</p>
+<p>Üreticiler yeni modellerini tanıtarak kullanıcıların ilgisini çekmeye çalışıyor.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 4.720</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
 </a>
 
-<a href="haber.html" style="text-decoration:none;color:inherit;">
+<a href="haber.html" class="news-link">
 <div class="news-card">
-<img src="https://picsum.photos/500/300?23">
+<img src="https://picsum.photos/500/300?73" loading="lazy">
+<span class="category-tag">TEKNOLOJİ</span>
 <h3>Siber Güvenlik Uyarısı</h3>
+<p>Uzmanlar internet kullanıcılarını yeni tehditlere karşı dikkatli olmaları konusunda uyardı.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 4.210</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
 
-<p>
-Uzmanlar internet kullanıcılarını yeni tehditlere karşı dikkatli olmaları konusunda uyardı.
-</p>
+<a href="haber.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?74" loading="lazy">
+<span class="category-tag">TEKNOLOJİ</span>
+<h3>Yerli Teknoloji Girişimleri Büyüyor</h3>
+<p>Türkiye'de geliştirilen yerli teknoloji projeleri yatırımcıların ilgisini çekmeye devam ediyor.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 3.650</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
+
+<a href="haber.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?75" loading="lazy">
+<span class="category-tag">TEKNOLOJİ</span>
+<h3>Uzay Teknolojilerinde Yeni Gelişmeler</h3>
+<p>Uydu ve uzay teknolojilerinde yapılan çalışmalar bilim dünyasında dikkat çekiyor.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 4.050</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
+
+<a href="haber.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?76" loading="lazy">
+<span class="category-tag">TEKNOLOJİ</span>
+<h3>Bulut Teknolojilerine Yatırım Artıyor</h3>
+<p>Şirketler veri güvenliği ve esneklik için bulut çözümlerine yöneliyor.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 3.890</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
+
+<a href="haber.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?77" loading="lazy">
+<span class="category-tag">TEKNOLOJİ</span>
+<h3>Yazılım Sektöründe İstihdam Artışı</h3>
+<p>Teknoloji şirketleri yeni projeler için uzman yazılımcı alımlarını sürdürüyor.</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 3.540</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
 </a>
 
 </div>
-<div class="news-card">
-<img src="https://picsum.photos/500/300?61" loading="lazy">
-<span class="category-tag">TEKNOLOJİ</span>
-
-<h3>Yerli Teknoloji Girişimleri Büyüyor</h3>
-
-<p>
-Türkiye'de geliştirilen yerli teknoloji projeleri yatırımcıların ilgisini çekmeye devam ediyor.
-</p>
-
-<div class="news-info">
-<span>📅 16 Haziran 2026</span>
-<span>👁️ 3.650 Okunma</span>
-</div>
-
-<a class="read-more" href="haber.html">Devamını Oku →</a>
-</div>
-<div class="news-card">
-<img src="https://picsum.photos/500/300?62" loading="lazy">
-<span class="category-tag">TEKNOLOJİ</span>
-
-<h3>Uzay Teknolojilerinde Yeni Gelişmeler</h3>
-
-<p>
-Uydu ve uzay teknolojilerinde yapılan çalışmalar bilim dünyasında dikkat çekiyor.
-</p>
-
-<div class="news-info">
-<span>📅 16 Haziran 2026</span>
-<span>👁️ 4.050 Okunma</span>
-</div>
-
-<a class="read-more" href="haber.html">Devamını Oku →</a>
+<div style="margin-top:35px;padding:18px;background:white;border-radius:14px;box-shadow:0 4px 10px rgba(0,0,0,.08);line-height:1.7;">
+<strong>Ülkeden Haberler Teknoloji Servisi:</strong>
+Yapay zeka, yazılım, siber güvenlik, mobil teknolojiler, uzay araştırmaları ve teknoloji dünyasındaki gelişmeler düzenli olarak güncellenmektedir.
 </div>
 
 <a href="index.html" class="back-btn">
