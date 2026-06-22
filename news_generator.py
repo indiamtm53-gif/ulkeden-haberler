@@ -1,8 +1,10 @@
-import datetime
+import feedparser
 
-print("Ülkeden Haberler Otomasyon Sistemi Çalıştı")
+rss_url = "https://feeds.bbci.co.uk/news/world/rss.xml"
 
-with open("otomasyon-log.txt", "a", encoding="utf-8") as f:
-    f.write(
-        f"Sistem çalıştı: {datetime.datetime.now()}\n"
-    )
+feed = feedparser.parse(rss_url)
+
+print("Toplam haber:", len(feed.entries))
+
+for haber in feed.entries[:5]:
+    print(haber.title)
