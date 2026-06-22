@@ -88,3 +88,39 @@ Habere Git
         encoding="utf-8"
     ) as f:
         f.write(html)
+liste_html = """
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Otomatik Haberler</title>
+</head>
+<body>
+
+<h1>Otomatik Haberler</h1>
+
+<ul>
+"""
+
+for i, haber in enumerate(haberler, start=1):
+    liste_html += f'''
+<li>
+<a href="haber-{i}.html">
+{haber["baslik"]}
+</a>
+</li>
+'''
+
+liste_html += """
+</ul>
+
+</body>
+</html>
+"""
+
+with open(
+    "otomatik-gundem.html",
+    "w",
+    encoding="utf-8"
+) as f:
+    f.write(liste_html)
