@@ -17,7 +17,41 @@ with open("otomatik-haberler.json", "w", encoding="utf-8") as f:
     json.dump(haberler, f, ensure_ascii=False, indent=4)
 
 print("5 haber kaydedildi.")
-if len(haberler) > 0:
+for i, haber in enumerate(haberler, start=1):
+
+    html = f"""
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>{haber['baslik']}</title>
+<meta name="description" content="{haber['baslik']}">
+</head>
+<body>
+
+<h1>{haber['baslik']}</h1>
+
+<p>
+Bu haber otomatik sistem tarafından oluşturulmuştur.
+</p>
+
+<p>
+Kaynak:
+<a href="{haber['link']}">
+Habere Git
+</a>
+</p>
+
+</body>
+</html>
+"""
+
+    with open(
+        f"haber-{i}.html",
+        "w",
+        encoding="utf-8"
+    ) as f:
+        f.write(html)
 
     ilk_haber = haberler[0]
 
