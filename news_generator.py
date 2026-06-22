@@ -124,3 +124,10 @@ with open(
     encoding="utf-8"
 ) as f:
     f.write(liste_html)
+with open("otomatik-sitemap.txt", "w", encoding="utf-8") as f:
+
+    for i in range(1, 6):
+
+        f.write(
+            f"https://indiamtm53-gif.github.io/ulkeden-haberler/haber-{i}.html\n"
+        )
