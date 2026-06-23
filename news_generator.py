@@ -111,10 +111,12 @@ h1{{
 margin-bottom:20px;
 }}
 
-.meta{{
+.meta{
 color:#64748B;
 margin-bottom:20px;
-}}
+font-size:15px;
+line-height:1.8;
+}
 
 .back-btn{{
 display:inline-block;
@@ -141,8 +143,13 @@ border-radius:10px;
 <h1>{haber['baslik']}</h1>
 
 <div class="meta">
-📂 {haber['kategori'].upper()} |
-🤖 Otomatik Haber Sistemi
+📂 {haber['kategori'].upper()}
+<br><br>
+📅 Otomatik Güncelleme
+<br><br>
+👁️ Popüler Haber
+<br><br>
+🤖 Ülkeden Haberler Otomasyon Sistemi
 </div>
 
 <p>
