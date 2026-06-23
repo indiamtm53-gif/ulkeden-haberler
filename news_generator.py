@@ -258,3 +258,62 @@ with open(
     encoding="utf-8"
 ) as f:
     f.write(sitemap)
+kategoriler = {
+    "gundem": [],
+    "ekonomi": [],
+    "teknoloji": []
+}
+
+for i, haber in enumerate(haberler, start=1):
+
+    kategoriler[haber["kategori"]].append(
+        {
+            "baslik": haber["baslik"],
+            "dosya": f"haber-{i}.html"
+        }
+    )
+
+for kategori, liste in kategoriler.items():
+
+    html = f"""
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>{kategori.title()} Haberleri</title>
+</head>
+<body>
+
+<h1>{kategori.title()} Haberleri</h1>
+
+<ul>
+"""
+
+    for haber in liste:
+
+        html += f"""
+<li>
+<a href="{haber['dosya']}">
+{haber['baslik']}
+</a>
+</li>
+"""
+
+    html += """
+</ul>
+
+<a href="otomatik-gundem.html">
+Ana Listeye Dön
+</a>
+
+</body>
+</html>
+"""
+
+    with open(
+        f"{kategori}-otomatik.html",
+        "w",
+        encoding="utf-8"
+    ) as f:
+
+        f.write(html)
