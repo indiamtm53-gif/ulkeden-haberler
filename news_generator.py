@@ -1,10 +1,16 @@
+import os
 import feedparser
 import json
 
 rss_url = "https://feeds.bbci.co.uk/news/world/rss.xml"
 
 feed = feedparser.parse(rss_url)
+for i in range(1, 21):
 
+    dosya = f"haber-{i}.html"
+
+    if os.path.exists(dosya):
+        os.remove(dosya)
 haberler = []
 def kategori_belirle(baslik):
 
