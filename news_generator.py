@@ -6,12 +6,44 @@ rss_url = "https://feeds.bbci.co.uk/news/world/rss.xml"
 feed = feedparser.parse(rss_url)
 
 haberler = []
+def kategori_belirle(baslik):
 
+    baslik = baslik.lower()
+
+    ekonomi = [
+        "economy",
+        "market",
+        "bank",
+        "money",
+        "inflation",
+        "stock"
+    ]
+
+    teknoloji = [
+        "ai",
+        "technology",
+        "tech",
+        "software",
+        "google",
+        "apple",
+        "microsoft"
+    ]
+
+    for kelime in ekonomi:
+        if kelime in baslik:
+            return "ekonomi"
+
+    for kelime in teknoloji:
+        if kelime in baslik:
+            return "teknoloji"
+
+    return "gundem"
 for haber in feed.entries[:5]:
     haberler.append({
-        "baslik": haber.title,
-        "link": haber.link
-    })
+    "baslik": haber.title,
+    "link": haber.link,
+    "kategori": kategori_belirle(haber.title)
+})
 
 with open("otomatik-haberler.json", "w", encoding="utf-8") as f:
     json.dump(haberler, f, ensure_ascii=False, indent=4)
