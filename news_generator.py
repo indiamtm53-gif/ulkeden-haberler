@@ -16,7 +16,6 @@ RSS_KAYNAKLARI = [
     RSS_KAYNAKLARI = [
     "https://www.trthaber.com/manset_articles.rss"
 ]
-]
 
 def kategori_belirle(baslik):
     baslik = baslik.lower()
