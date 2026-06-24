@@ -1,3 +1,4 @@
+import re
 import os
 import feedparser
 import json
@@ -19,13 +20,18 @@ for rss in rss_kaynaklari:
         tum_haberler.append(haber)
 for i in range(1, 21):
 
-    dosya = f"haber-{i}.html"
-
+    dosya = haber["dosya"]
     if os.path.exists(dosya):
         os.remove(dosya)
 haberler = []
 def kategori_belirle(baslik):
-
+def slug_olustur(baslik):
+    baslik = baslik.lower()
+    baslik = baslik.replace("ı", "i").replace("ğ", "g").replace("ü", "u")
+    baslik = baslik.replace("ş", "s").replace("ö", "o").replace("ç", "c")
+    baslik = re.sub(r"[^a-z0-9\s-]", "", baslik)
+    baslik = re.sub(r"\s+", "-", baslik).strip("-")
+    return "auto-" + baslik[:60]
     baslik = baslik.lower()
 
     ekonomi = [
@@ -69,7 +75,8 @@ with open("otomatik-haberler.json", "w", encoding="utf-8") as f:
 
 print("5 haber kaydedildi.")
 for i, haber in enumerate(haberler, start=1):
-
+dosya_adi = slug_olustur(haber["baslik"]) + ".html"
+    haber["dosya"] = dosya_adi
     html = f"""
 <!DOCTYPE html>
 <html lang="tr">
@@ -181,7 +188,7 @@ Orijinal Haberi Görüntüle
 """
 
     with open(
-        f"haber-{i}.html",
+        {haber['dosya']}
         "w",
         encoding="utf-8"
     ) as f:
@@ -239,7 +246,7 @@ liste_html = """
 for i, haber in enumerate(haberler, start=1):
     liste_html += f'''
 <li>
-<a href="haber-{i}.html">
+<a href={haber['dosya']}
 {haber["baslik"]}
 </a>
 </li>
@@ -359,7 +366,7 @@ for i, haber in enumerate(haberler, start=1):
 
     ana_sayfa += f"""
 <li>
-<a href="haber-{i}.html">
+<a href={haber['dosya']}
 {haber['baslik']}
 </a>
 </li>
