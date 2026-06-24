@@ -13,7 +13,6 @@ RSS_KAYNAKLARI = [
     "https://feeds.bbci.co.uk/news/technology/rss.xml",
     "https://feeds.bbci.co.uk/news/business/rss.xml"
     "https://www.trthaber.com/manset_articles.rss",
-    RSS_KAYNAKLARI = [
     "https://www.trthaber.com/manset_articles.rss"
 ]
 
