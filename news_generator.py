@@ -9,7 +9,9 @@ from datetime import datetime
 SITE_URL = "https://indiamtm53-gif.github.io/ulkeden-haberler"
 
 RSS_KAYNAKLARI = [
-    "https://www.trthaber.com/manset_articles.rss"
+    "https://www.trthaber.com/manset_articles.rss",
+    "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "https://feeds.bbci.co.uk/news/technology/rss.xml"
 ]
 
 def kategori_belirle(baslik):
