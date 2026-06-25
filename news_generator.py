@@ -99,6 +99,8 @@ def haberleri_cek():
                     "kategori": kategori_belirle(baslik),
                     "dosya": slug_olustur(baslik) + ".html",
                     "kaynak": kaynak_adi(rss)
+                    "tarih": datetime.now().strftime("%d.%m.%Y"),
+"gorsel": "https://picsum.photos/1000/500?random"
                 })
 
     return tum_haberler[:10]
