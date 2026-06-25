@@ -50,16 +50,6 @@
         "gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2230000/milli-savunma-bakanligi-2230027.jpg"
     },
     {
-        "baslik": "'I thought I was going to die' - Venezuelans describe earthquake panic",
-        "link": "https://www.bbc.co.uk/news/articles/czj8vjvmz38o?at_medium=RSS&at_campaign=rss",
-        "ozet": "Buildings were flattened in the capital Caracas, where voices have been heard calling from the rubble.",
-        "kategori": "gundem",
-        "dosya": "auto-i-thought-i-was-going-to-die---venezuelans-describe-earthqua.html",
-        "kaynak": "BBC World",
-        "tarih": "25.06.2026",
-        "gorsel": "https://picsum.photos/1000/500?random"
-    },
-    {
         "baslik": "Earthquake is devastating blow to Venezuela at time of uncertainty",
         "link": "https://www.bbc.co.uk/news/articles/c3vynpw7rk4o?at_medium=RSS&at_campaign=rss",
         "ozet": "The twin quakes come less than six months after Venezuela's then-leader Nicolás Maduro was seized by US forces.",
@@ -70,11 +60,21 @@
         "gorsel": "https://picsum.photos/1000/500?random"
     },
     {
-        "baslik": "Europe's heatwave shifts east as France raises health alert to highest level",
+        "baslik": "People flee as building collapses on Caracas outskirts",
+        "link": "https://www.bbc.co.uk/news/videos/c78y1e3606vo?at_medium=RSS&at_campaign=rss",
+        "ozet": "The capital and its surrounding areas have seen some of the worst damage from the 7.2 and 7.5 quakes, which hit a minute apart.",
+        "kategori": "gundem",
+        "dosya": "auto-people-flee-as-building-collapses-on-caracas-outskirts.html",
+        "kaynak": "BBC World",
+        "tarih": "25.06.2026",
+        "gorsel": "https://picsum.photos/1000/500?random"
+    },
+    {
+        "baslik": "France warns even young people's health at risk as Europe's heatwave shifts east",
         "link": "https://www.bbc.co.uk/news/articles/cwy0pdq89zno?at_medium=RSS&at_campaign=rss",
         "ozet": "Temperatures in Germany could hit 40C in some areas while French officials say deaths linked to the heat are being seen among young people.",
-        "kategori": "teknoloji",
-        "dosya": "auto-europes-heatwave-shifts-east-as-france-raises-health-alert-t.html",
+        "kategori": "gundem",
+        "dosya": "auto-france-warns-even-young-peoples-health-at-risk-as-europes-he.html",
         "kaynak": "BBC World",
         "tarih": "25.06.2026",
         "gorsel": "https://picsum.photos/1000/500?random"
