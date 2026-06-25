@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<link rel="icon" type="image/png" href="favicon.png">  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gündem Haberleri - Ülkeden Haberler</title>
+
+<meta name="description" content="Türkiye gündemindeki son dakika haberleri, güncel gelişmeler, kamu açıklamaları, ulaşım, afet hazırlıkları ve gündeme dair önemli başlıklar Ülkeden Haberler'de.">
+
+<link rel="canonical" href="https://indiamtm53-gif.github.io/ulkeden-haberler/gundem.html">
+<link rel="icon" href="favicon.png">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f6f9;
+color:#0F172A;
+}
+
+header{
+background:#0F172A;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+header h2{
+margin-bottom:10px;
+}
+
+nav{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-top:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#F97316;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:30px 0;
+}
+
+.page-title{
+margin-bottom:10px;
+color:#0F172A;
+font-size:34px;
+}
+
+.page-desc{
+font-size:17px;
+line-height:1.7;
+color:#475569;
+margin-bottom:25px;
+}
+
+.update-box{
+background:#EEF2FF;
+padding:14px;
+border-left:5px solid #2563EB;
+border-radius:10px;
+margin-bottom:25px;
+font-weight:bold;
+}
+
+.news-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.news-card{
+background:white;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 4px 10px rgba(0,0,0,.1);
+transition:.3s;
+height:100%;
+}
+
+.news-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.news-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.news-card h3{
+padding:15px;
+font-size:20px;
+color:#0F172A;
+}
+
+.news-card p{
+padding:0 15px 15px;
+line-height:1.6;
+color:#334155;
+}
+
+.news-link{
+text-decoration:none;
+color:inherit;
+display:block;
+height:100%;
+}
+
+.category-tag{
+display:inline-block;
+background:#DC2626;
+color:white;
+padding:6px 11px;
+border-radius:7px;
+font-size:12px;
+font-weight:bold;
+margin:15px 15px 0;
+}
+
+.news-info{
+display:flex;
+justify-content:space-between;
+gap:10px;
+padding:0 15px 15px;
+font-size:13px;
+color:#64748B;
+}
+
+.read-more{
+display:block;
+padding:0 15px 18px;
+color:#2563EB;
+font-weight:bold;
+text-decoration:none;
+}
+
+.back-btn{
+display:inline-block;
+margin-top:30px;
+padding:12px 20px;
+background:#2563EB;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+}
+
+.back-btn:hover{
+background:#1D4ED8;
+}
+
+.footer-note{
+margin-top:35px;
+padding:18px;
+background:white;
+border-radius:14px;
+box-shadow:0 4px 10px rgba(0,0,0,.08);
+line-height:1.7;
+}
+
+@media(max-width:768px){
+.page-title{
+font-size:28px;
+}
+
+.news-info{
+flex-direction:column;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>🇹🇷 Ülkeden Haberler</h2>
+
+<nav>
+<a href="index.html">Ana Sayfa</a>
+<a href="gundem.html">Gündem</a>
+<a href="ekonomi.html">Ekonomi</a>
+<a href="spor.html">Spor</a>
+<a href="teknoloji.html">Teknoloji</a>
+<a href="hava-durumu.html">Hava Durumu</a>
+</nav>
+</header>
+
+<div class="container">
+
+<h1 class="page-title">Gündem Haberleri</h1>
+
+<p class="page-desc">
+Türkiye gündemindeki son dakika gelişmeleri, kamu açıklamaları, şehir yaşamı, ulaşım projeleri ve güncel olaylar Ülkeden Haberler'de.
+</p>
+
+<div class="update-box">
+📅 Son Güncelleme: 16 Haziran 2026 - 21:30
+</div>
+
+<div class="news-grid">
+
+<a href="haber.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?21" loading="lazy" alt="İçişleri Bakanlığı açıklaması">
+<span class="category-tag">GÜNDEM</span>
+<h3>İçişleri Bakanlığı Yeni Açıklama Yaptı</h3>
+<p>
+Yurt genelindeki güvenlik ve kamu düzenine ilişkin son bilgiler kamuoyu ile paylaşıldı.
+</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 3.420 Okunma</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
+
+<a href="tbmm-duzenleme.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?22" loading="lazy" alt="TBMM düzenleme görüşmeleri">
+<span class="category-tag">GÜNDEM</span>
+<h3>TBMM'de Yeni Düzenleme Görüşülüyor</h3>
+<p>
+Meclis gündemindeki yeni düzenleme teklifleri komisyonlarda değerlendirilmeye devam ediyor.
+</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 4.125 Okunma</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
+
+<a href="haber.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?23" loading="lazy" alt="Şehirlerde trafik yoğunluğu">
+<span class="category-tag">GÜNDEM</span>
+<h3>Şehirlerde Trafik Yoğunluğu Arttı</h3>
+<p>
+Hafta sonu hareketliliği nedeniyle büyük şehirlerde trafik yoğunluğu yaşanıyor.
+</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 2.980 Okunma</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
+
+<a href="afet-hazirlik.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?31" loading="lazy" alt="Afet hazırlık çalışmaları">
+<span class="category-tag">GÜNDEM</span>
+<h3>Afet Hazırlık Çalışmaları Devam Ediyor</h3>
+<p>
+Türkiye genelinde afetlere karşı hazırlık çalışmaları ve bilinçlendirme faaliyetleri sürüyor.
+</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 2.845 Okunma</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
+
+<a href="ulasim-projeleri.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?32" loading="lazy" alt="Ulaşım projelerinde yeni dönem">
+<span class="category-tag">GÜNDEM</span>
+<h3>Ulaşım Projelerinde Yeni Dönem</h3>
+<p>
+Büyükşehirlerde ulaşımı rahatlatacak yeni projeler için çalışmalar hız kazandı.
+</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 3.120 Okunma</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
+
+<a href="egitim-reformu.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?33" loading="lazy" alt="Eğitim sisteminde yeni dönem">
+<span class="category-tag">GÜNDEM</span>
+<h3>Eğitim Sisteminde Yeni Dönem Hazırlığı</h3>
+<p>
+Yeni eğitim dönemi için yapılan hazırlıklar ve planlanan düzenlemeler gündemde yer alıyor.
+</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 3.640 Okunma</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
+
+<a href="yerel-yonetimler.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?34" loading="lazy" alt="Yerel yönetimlerde dijital dönüşüm">
+<span class="category-tag">GÜNDEM</span>
+<h3>Yerel Yönetimlerde Dijital Dönüşüm</h3>
+<a href="dijital-donusum.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?35" loading="lazy" alt="Kamu hizmetlerinde dijital dönüşüm">
+<span class="category-tag">GÜNDEM</span>
+<h3>Kamu Hizmetlerinde Dijital Dönüşüm</h3>
+<p>
+Kamu kurumlarında dijital dönüşüm çalışmaları hız kazanırken birçok hizmet çevrim içi ortama taşınıyor.
+</p>
+<div class="news-info">
+<span>📅 19 Haziran 2026</span>
+<span>👁️ 2.950 Okunma</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
+<p>
+Belediyelerde dijital hizmetlerin yaygınlaşmasıyla vatandaş işlemlerinin hızlanması hedefleniyor.
+</p>
+<div class="news-info">
+<span>📅 16 Haziran 2026</span>
+<span>👁️ 2.760 Okunma</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
+
+</div>
+
+<div class="footer-note">
+<strong>Ülkeden Haberler Gündem Servisi:</strong>
+Gündeme dair gelişmeler düzenli olarak güncellenir. Son dakika haberleri, resmi açıklamalar ve kamuoyunu ilgilendiren başlıklar bu sayfada yer alır.
+</div>
+<a href="kamu-hizmetleri.html" class="news-link">
+<div class="news-card">
+<img src="https://picsum.photos/500/300?90" loading="lazy">
+<span class="category-tag">GÜNDEM</span>
+<h3>Kamu Hizmetlerinde Dijitalleşme Çalışmaları Sürüyor</h3>
+<p>Kamu kurumlarında dijital dönüşüm projeleri hız kazanmaya devam ediyor.</p>
+<div class="news-info">
+<span>📅 19 Haziran 2026</span>
+<span>👁️ 2.145</span>
+</div>
+<span class="read-more">Devamını Oku →</span>
+</div>
+</a>
+<a href="index.html" class="back-btn">
+← Ana Sayfaya Dön
+</a>
+
+</div>
+
+</body>
+</html>
