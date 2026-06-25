@@ -81,6 +81,7 @@ def temizle():
             os.remove(dosya)
 
 def haberleri_cek():
+def haberleri_cek():
     tum_haberler = []
 
     for rss in RSS_KAYNAKLARI:
@@ -89,10 +90,23 @@ def haberleri_cek():
         for haber in feed.entries[:5]:
             baslik = getattr(haber, "title", "").strip()
             link = getattr(haber, "link", "").strip()
-            ozet = getattr(haber, "summary", "").strip()
+
+            summary = getattr(haber, "summary", "").strip()
 
             # HTML etiketlerini temizle
-            ozet = re.sub(r"<[^>]+>", "", ozet)
+            ozet = re.sub(r"<[^>]+>", "", summary)
+
+            # Gerçek görseli almaya çalış
+            gorsel = "https://picsum.photos/1000/500?random"
+
+            eslesme = re.search(
+                r'<img[^>]+src="([^"]+)"',
+                summary,
+                re.IGNORECASE
+            )
+
+            if eslesme:
+                gorsel = eslesme.group(1)
 
             if baslik and link:
                 tum_haberler.append({
@@ -103,7 +117,7 @@ def haberleri_cek():
                     "dosya": slug_olustur(baslik) + ".html",
                     "kaynak": kaynak_adi(rss),
                     "tarih": datetime.now().strftime("%d.%m.%Y"),
-                    "gorsel": "https://picsum.photos/1000/500?random"
+                    "gorsel": gorsel
                 })
 
     return tum_haberler[:10]
@@ -199,7 +213,7 @@ font-weight:bold;
 <div class="container">
 
 <h1>{baslik}</h1>
-<img src="https://picsum.photos/1000/500?random" alt="{baslik}" style="width:100%;border-radius:15px;margin-bottom:20px;">
+<img src="{haber['gorsel']}" alt="{baslik}"
 <div class="meta">
 📂 {kategori}
 <br>
