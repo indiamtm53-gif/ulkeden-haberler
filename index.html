@@ -495,10 +495,22 @@ window.scrollTo({top:0,behavior:"smooth"});
 </script>
 <script>
 fetch("otomatik-haberler.json")
-.then(res => res.json())
+.then(res => {
+    if(!res.ok){
+        throw new Error("JSON yüklenemedi");
+    }
+    return res.json();
+})
 .then(data => {
 
     const alan = document.getElementById("otomatikHaberler");
+
+    if(!alan){
+        console.log("otomatikHaberler div bulunamadı");
+        return;
+    }
+
+    alan.innerHTML = "";
 
     data.slice(0,5).forEach(haber => {
 
@@ -512,6 +524,9 @@ fetch("otomatik-haberler.json")
 
     });
 
+})
+.catch(err=>{
+    console.log(err);
 });
 </script>
 </body>
