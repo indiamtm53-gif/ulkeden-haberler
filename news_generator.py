@@ -80,7 +80,7 @@ def temizle():
         if os.path.exists(dosya):
             os.remove(dosya)
 
-def haberleri_cek():
+
 def haberleri_cek():
     tum_haberler = []
 
