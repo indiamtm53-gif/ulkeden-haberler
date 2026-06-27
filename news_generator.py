@@ -246,7 +246,7 @@ Kaynak:
 
     with open(haber["dosya"], "w", encoding="utf-8") as f:
         f.write(sayfa)
-
+print(f"Oluşturuldu: {haber['dosya']}")
 def otomatik_liste_olustur(haberler):
     liste = """<!DOCTYPE html>
 <html lang="tr">
