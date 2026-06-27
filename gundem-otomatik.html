@@ -3,28 +3,171 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gundem Otomatik Haberleri - Ülkeden Haberler</title>
-<link rel="icon" href="favicon.png">
+<title>Gündem Otomatik Haberleri - Ülkeden Haberler</title>
+<meta name="description" content="Türkiye gündemine dair otomatik sistem tarafından güncellenen son haberler ve gelişmeler.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://indiamtm53-gif.github.io/ulkeden-haberler/gundem-otomatik.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta property="og:title" content="Gündem Otomatik Haberleri - Ülkeden Haberler">
+<meta property="og:description" content="Türkiye gündemine dair otomatik sistem tarafından güncellenen son haberler ve gelişmeler.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="logo.png">
+<meta property="og:url" content="https://indiamtm53-gif.github.io/ulkeden-haberler/gundem-otomatik.html">
+<meta property="og:site_name" content="Ülkeden Haberler">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gündem Otomatik Haberleri - Ülkeden Haberler">
+<meta name="twitter:description" content="Türkiye gündemine dair otomatik sistem tarafından güncellenen son haberler ve gelişmeler.">
+<meta name="twitter:image" content="logo.png">
+<style>
+:root{
+--bg:#f4f6f9;--card:#fff;--text:#0f172a;--muted:#64748b;--primary:#2563eb;--danger:#dc2626;--green:#10b981;--border:#e2e8f0;--shadow:0 10px 30px rgba(15,23,42,.09);--cat:#dc2626;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+.site-header{background:#0f172a;color:white;position:sticky;top:0;z-index:1000;box-shadow:0 4px 18px rgba(0,0,0,.18)}
+.header-inner{width:92%;max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:22px} .brand img{height:52px;border-radius:10px}
+.nav{display:flex;gap:16px;font-weight:bold;font-size:14px} .nav a{color:#e2e8f0;padding:8px 10px;border-radius:8px} .nav a:hover{background:rgba(255,255,255,.08);color:white}
+.actions{display:flex;gap:10px} .btn{border:none;background:#2563eb;color:white;padding:9px 12px;border-radius:10px;font-weight:bold;cursor:pointer}
+.mobile-menu{display:none;background:#111827;border-top:1px solid rgba(255,255,255,.08);padding:10px 4%} .mobile-menu a{display:block;color:#fff;padding:12px;border-bottom:1px solid rgba(255,255,255,.08);font-weight:bold}
+.mobile-menu.show{display:block}
+.hero{background:linear-gradient(135deg,rgba(15,23,42,.94),rgba(37,99,235,.72)),url("https://picsum.photos/1600/700?gundem") center/cover;color:white;padding:58px 0 48px}
+.hero-inner{width:92%;max-width:1200px;margin:auto;display:grid;grid-template-columns:1.5fr .8fr;gap:24px;align-items:center}
+.hero h1{font-size:42px;line-height:1.15;margin-bottom:16px} .hero p{color:#dbeafe;font-size:18px;max-width:720px}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px} .badge{font-size:13px;font-weight:bold;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.18)}
+.hero-panel{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:22px;border-radius:20px;backdrop-filter:blur(8px)} .hero-panel h3{margin-bottom:12px} .hero-panel a{display:block;color:#fff;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.15);font-weight:bold}
+.ticker{background:var(--cat);color:white;font-weight:bold;overflow:hidden;white-space:nowrap;padding:12px 0} .ticker span{display:inline-block;padding-left:100%;animation:ticker 24s linear infinite} @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+.container{width:92%;max-width:1200px;margin:auto;padding:34px 0}
+.top-row{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:22px} .section-title{font-size:28px;line-height:1.2} .section-subtitle{color:var(--muted);margin-top:5px}
+.search-area{display:flex;gap:10px;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:14px;padding:10px 12px;box-shadow:0 4px 14px rgba(0,0,0,.04);min-width:300px}
+.search-area input{border:none;outline:none;background:transparent;font-size:15px;width:100%;color:var(--text)}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px;align-items:start} .news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.news-card{background:var(--card);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(226,232,240,.8);transition:.25s ease} .news-card:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(15,23,42,.14)}
+.news-img{height:210px;width:100%;object-fit:cover;background:#e2e8f0} .news-body{padding:18px}
+.badge-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px} .tag{font-size:11px;font-weight:900;letter-spacing:.3px;padding:6px 9px;border-radius:8px;color:white} .tag.breaking{background:#dc2626} .tag.category{background:var(--cat)}
+.news-title{font-size:20px;line-height:1.28;margin-bottom:10px} .news-meta{display:flex;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:13px;margin-bottom:12px} .news-desc{color:#334155;font-size:15px;margin-bottom:16px}
+.action-row{display:flex;flex-wrap:wrap;gap:9px} .action{display:inline-flex;align-items:center;justify-content:center;border:none;border-radius:10px;padding:10px 12px;font-weight:bold;font-size:14px;cursor:pointer} .read{background:#2563eb;color:white} .source{background:#10b981;color:white} .share{background:#f59e0b;color:white}
+.sidebar{display:flex;flex-direction:column;gap:18px;position:sticky;top:92px} .side-card{background:var(--card);border:1px solid rgba(226,232,240,.8);border-radius:20px;padding:20px;box-shadow:var(--shadow)} .side-card h3{margin-bottom:14px;font-size:19px} .side-link{display:block;padding:12px 0;border-bottom:1px solid var(--border);font-weight:bold;font-size:14px;color:var(--text)} .side-link:last-child{border-bottom:none} .side-link:hover{color:#2563eb}
+.empty-state{background:var(--card);border-radius:20px;padding:28px;box-shadow:var(--shadow);text-align:center;color:var(--muted)}
+.footer{margin-top:42px;background:#0f172a;color:white;padding:40px 0} .footer-inner{width:92%;max-width:1200px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px} .footer p,.footer a{color:#cbd5e1} .footer h3{margin-bottom:12px} .footer a{display:block;margin:8px 0}
+body.dark{--bg:#0b1120;--card:#111827;--text:#f8fafc;--muted:#cbd5e1;--border:#334155;--shadow:0 10px 30px rgba(0,0,0,.28)} body.dark{background:var(--bg);color:var(--text)} body.dark .news-desc{color:#d1d5db} body.dark .search-area input,body.dark .section-title,body.dark .news-title,body.dark .side-link{color:#f8fafc} body.dark .mobile-menu{background:#111827} body.dark .mobile-menu a{color:#fff}
+@media(max-width:950px){.hero-inner,.layout{grid-template-columns:1fr}.sidebar{position:static}.news-grid{grid-template-columns:1fr}.top-row{flex-direction:column;align-items:stretch}.search-area{min-width:auto}}
+@media(max-width:760px){.header-inner{flex-wrap:wrap}.nav{display:none}.brand img{height:44px}.hero{padding:42px 0}.hero h1{font-size:31px}.hero p{font-size:16px}.container{padding:26px 0}.news-img{height:190px}.footer-inner{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
+<header class="site-header">
+<div class="header-inner">
+<a class="brand" href="index.html"><img src="logo.png" alt="Ülkeden Haberler Logo"><span>Ülkeden Haberler</span></a>
+<nav class="nav"><a href="index.html">Ana Sayfa</a><a href="otomatik-gundem.html">Otomatik Haberler</a><a href="gundem.html">Gündem</a><a href="ekonomi.html">Ekonomi</a><a href="teknoloji.html">Teknoloji</a></nav>
+<div class="actions"><button class="btn" id="menuBtn">☰ Menü</button><button class="btn" id="darkBtn">🌙 Mod</button></div>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+<a href="index.html">Ana Sayfa</a><a href="otomatik-gundem.html">Otomatik Haberler</a><a href="gundem-otomatik.html">Gündem Otomatik</a><a href="ekonomi-otomatik.html">Ekonomi Otomatik</a><a href="teknoloji-otomatik.html">Teknoloji Otomatik</a>
+</div>
+</header>
 
-<h1>Gundem Otomatik Haberleri</h1>
+<section class="hero">
+<div class="hero-inner">
+<div>
+<h1>🔥 Gündem Otomatik Haberleri</h1>
+<p>Türkiye gündemine dair otomatik sistem tarafından güncellenen son haberler ve gelişmeler.</p>
+<div class="badges"><span class="badge">🤖 Otomatik Sistem</span><span class="badge">📰 Güncel İçerik</span><span class="badge">🌙 Dark Mode</span><span class="badge">📱 Mobil Uyumlu</span></div>
+</div>
+<div class="hero-panel">
+<h3>Hızlı Erişim</h3>
+<a href="otomatik-gundem.html">Tüm Otomatik Haberler</a>
+<a href="gundem-otomatik.html">Gündem</a>
+<a href="ekonomi-otomatik.html">Ekonomi</a>
+<a href="teknoloji-otomatik.html">Teknoloji</a>
+</div>
+</div>
+</section>
 
-<ul>
-<li><a href="auto-cumhurbaskani-erdogan-ak-parti-bir-turkiye-kitabidir.html">Cumhurbaşkanı Erdoğan: AK Parti bir Türkiye kitabıdır</a></li>
-<li><a href="auto-iran-abdnin-ulkenin-guney-sahillerine-duzenledigi-saldiri-mu.html">İran: ABDnin ülkenin güney sahillerine düzenlediği saldırı mutabakatın ihlali</a></li>
-<li><a href="auto-yenilenebilir-enerji-uretimi-mayista-zirveye-ulasti.html">Yenilenebilir enerji üretimi mayısta zirveye ulaştı</a></li>
-<li><a href="auto-pariste-asiri-sicaklar-nedeniyle-son-24-saatte-yaklasik-3-bi.html">Paris&#x27;te aşırı sıcaklar nedeniyle son 24 saatte yaklaşık 3 bin kişi hastanelik oldu</a></li>
-<li><a href="auto-gazi-kosusu-yarin-100-kez-kosulacak.html">Gazi Koşusu yarın 100. kez koşulacak</a></li>
-<li><a href="auto-us-strikes-iran-after-attack-on-cargo-ship.html">US strikes Iran after attack on cargo ship</a></li>
-<li><a href="auto-venezuela-earthquakes-kill-920-people-as-international-rescu.html">Venezuela earthquakes kill 920 people as international rescue teams arrive</a></li>
-<li><a href="auto-mother-dies-saving-daughter-in-venezuela-earthquakes.html">Mother dies saving daughter in Venezuela earthquakes</a></li>
-<li><a href="auto-meloni-and-trump-a-very-public-fall-out-that-is-proving-very.html">Meloni and Trump: A very public fall-out that is proving very hard to fix</a></li>
-<li><a href="auto-europes-deadly-heatwave-breaks-german-record-and-halts-publi.html">Europe&#x27;s deadly heatwave breaks German record and halts public events</a></li>
+<div class="ticker"><span>🔥 Gündem Otomatik Haberleri • Otomatik haber sistemi aktif • Kaynaklı ve güncel içerikler • Ülkeden Haberler</span></div>
 
-</ul>
+<main class="container">
+<div class="top-row">
+<div><h2 class="section-title">Gündem Otomatik Haberleri</h2><p class="section-subtitle">Otomatik sistemden gelen gundem haberleri</p></div>
+<div class="search-area"><span>🔍</span><input type="text" id="searchInput" placeholder="Bu kategoride ara..."></div>
+</div>
 
-<a href="otomatik-gundem.html">Ana Listeye Dön</a>
+<div class="layout">
+<section>
+<div id="newsGrid" class="news-grid"></div>
+<div id="emptyState" class="empty-state" style="display:none;"><h3>Bu kategoride haber bulunamadı</h3><p>Arama metnini değiştirip tekrar deneyin.</p></div>
+</section>
 
+<aside class="sidebar">
+<div class="side-card"><h3>🔥 Bu Kategoride Öne Çıkanlar</h3><div id="popularList"></div></div>
+<div class="side-card"><h3>📂 Diğer Kategoriler</h3><a class="side-link" href="gundem-otomatik.html">Gündem Haberleri</a><a class="side-link" href="ekonomi-otomatik.html">Ekonomi Haberleri</a><a class="side-link" href="teknoloji-otomatik.html">Teknoloji Haberleri</a></div>
+<div class="side-card"><h3>↩️ Geri Dön</h3><a class="side-link" href="index.html">Ana Sayfa</a><a class="side-link" href="otomatik-gundem.html">Tüm Otomatik Haberler</a></div>
+</aside>
+</div>
+</main>
+
+<footer class="footer">
+<div class="footer-inner">
+<div><h3>📰 Ülkeden Haberler</h3><p>Türkiye ve dünyadan güncel haberleri otomatik sistem desteğiyle takip eden modern haber platformu.</p></div>
+<div><h3>Kategoriler</h3><a href="gundem.html">Gündem</a><a href="ekonomi.html">Ekonomi</a><a href="spor.html">Spor</a><a href="teknoloji.html">Teknoloji</a></div>
+<div><h3>Hızlı Linkler</h3><a href="index.html">Ana Sayfa</a><a href="hakkimizda.html">Hakkımızda</a><a href="iletisim.html">İletişim</a></div>
+</div>
+</footer>
+
+<script>
+const CATEGORY="gundem";
+const menuBtn=document.getElementById("menuBtn");
+const mobileMenu=document.getElementById("mobileMenu");
+const darkBtn=document.getElementById("darkBtn");
+const searchInput=document.getElementById("searchInput");
+const newsGrid=document.getElementById("newsGrid");
+const emptyState=document.getElementById("emptyState");
+let allNews=[];
+
+if(localStorage.getItem("theme")==="dark"){document.body.classList.add("dark");}
+menuBtn.addEventListener("click",()=>{mobileMenu.classList.toggle("show");});
+darkBtn.addEventListener("click",()=>{document.body.classList.toggle("dark");localStorage.setItem("theme",document.body.classList.contains("dark") ? "dark" : "light");});
+
+function cleanText(text,limit){const plain=String(text||"").replace(/<[^>]*>/g,"").trim();return plain.length>limit ? plain.substring(0,limit)+"..." : plain;}
+function makeCard(haber){
+const kategori=(haber.kategori || CATEGORY).toUpperCase();
+const ozet=cleanText(haber.ozet,135);
+const source=haber.kaynak || "Ülkeden Haberler";
+const tarih=haber.tarih || "Güncel";
+const gorsel=haber.gorsel || "https://picsum.photos/900/500?news";
+const dosya=haber.dosya || "#";
+const link=haber.link || "#";
+return `<article class="news-card">
+<img class="news-img" src="${gorsel}" alt="${haber.baslik}" loading="lazy">
+<div class="news-body">
+<div class="badge-row"><span class="tag breaking">SON DAKİKA</span><span class="tag category">${kategori}</span></div>
+<h3 class="news-title">${haber.baslik}</h3>
+<div class="news-meta"><span>📰 ${source}</span><span>📅 ${tarih}</span></div>
+<p class="news-desc">${ozet}</p>
+<div class="action-row"><a class="action read" href="${dosya}">Haberi Oku →</a><a class="action source" href="${link}" target="_blank" rel="noopener noreferrer">Kaynağa Git 🌍</a><button class="action share" onclick="shareNews('${encodeURIComponent(haber.baslik)}','${dosya}')">📤 Paylaş</button></div>
+</div>
+</article>`;
+}
+function renderNews(){
+const q=searchInput.value.toLowerCase().trim();
+const filtered=allNews.filter(h=>{const text=((h.baslik||"")+" "+(h.ozet||"")+" "+(h.kaynak||"")).toLowerCase();return !q || text.includes(q);});
+newsGrid.innerHTML=filtered.map(makeCard).join("");
+emptyState.style.display=filtered.length ? "none" : "block";
+}
+function renderSidebar(){
+document.getElementById("popularList").innerHTML=allNews.slice(0,5).map(h=>`<a class="side-link" href="${h.dosya}">${h.baslik}</a>`).join("");
+}
+function shareNews(titleEncoded,url){
+const title=decodeURIComponent(titleEncoded);const fullUrl=new URL(url,window.location.href).href;
+if(navigator.share){navigator.share({title:title,url:fullUrl});}else if(navigator.clipboard){navigator.clipboard.writeText(fullUrl);alert("Haber linki kopyalandı.");}else{alert(fullUrl);}
+}
+searchInput.addEventListener("input",renderNews);
+fetch("otomatik-haberler.json")
+.then(res=>res.json())
+.then(data=>{allNews=(Array.isArray(data) ? data : []).filter(h=>String(h.kategori||"").toLowerCase()===CATEGORY);renderSidebar();renderNews();})
+.catch(()=>{newsGrid.innerHTML=`<div class="empty-state"><h3>Haberler yüklenemedi</h3><p>otomatik-haberler.json kontrol edilmeli.</p></div>`;});
+</script>
 </body>
 </html>
