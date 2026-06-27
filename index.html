@@ -324,13 +324,9 @@ Teknoloji
 <div class="stat-card"><h3>✅</h3><h2>%100</h2><p>Ücretsiz Erişim</p></div>
 </div>
 
-<div class="trend-grid">
-<div><a href="faiz-karari.html"><strong>📈 Merkez Bankası Faiz Kararı</strong></a><p>Ekonomi gündeminin en çok okunan haberi.</p></div>
-<div><a href="super-lig.html"><strong>⚽ Süper Lig Sonuçları</strong></a><p>Spor dünyasında haftanın öne çıkan gelişmeleri.</p></div>
-<div><a href="yapay-zeka.html"><strong>🤖 Yapay Zeka Teknolojileri</strong></a><p>Teknoloji kategorisinin en popüler içeriği.</p></div>
-<div><a href="tbmm-duzenleme.html"><strong>🏛️ TBMM Düzenleme Görüşmeleri</strong></a><p>Gündemin öne çıkan başlıklarından biri.</p></div>
-</div>
-</div>
+<h3 style="color:#EA580C;">🔥 Trend Haberler</h3>
+
+<div id="trendHaberler" class="trend-grid"></div>
 
 <div class="news-grid">
 <a href="tbmm-duzenleme.html"><div class="news-card"><img src="https://picsum.photos/500/300?1" loading="lazy" alt="TBMM düzenleme"><span class="category-tag">GÜNDEM</span><h3>TBMM'de Yeni Düzenleme Görüşülüyor</h3><p>Meclis gündemindeki yeni düzenleme teklifleri değerlendiriliyor.</p><div class="news-info"><span>📅 19 Haziran 2026</span><span>👁️ 2.453</span></div><div class="reaction-box"><button onclick="likeNews(); event.preventDefault();">👍 <span id="likeCount">0</span></button><button onclick="dislikeNews(); event.preventDefault();">👎 <span id="dislikeCount">0</span></button></div></div></a>
@@ -622,6 +618,22 @@ if (populerAlan) {
             <a href="${haber.dosya}">
                 ${haber.baslik}
             </a>
+        </div>
+        `;
+    });
+}
+const trendAlan = document.getElementById("trendHaberler");
+
+if (trendAlan) {
+    trendAlan.innerHTML = "";
+
+    data.slice(0,4).forEach(haber => {
+        trendAlan.innerHTML += `
+        <div>
+            <a href="${haber.dosya}">
+                <strong>🔥 ${haber.baslik}</strong>
+            </a>
+            <p>${haber.ozet.substring(0,80)}...</p>
         </div>
         `;
     });
