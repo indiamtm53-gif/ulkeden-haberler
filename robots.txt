@@ -2,4 +2,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://indiamtm53-gif.github.io/ulkeden-haberler/sitemap.xml
+Sitemap: https://indiamtm53-gif.github.io/ulkeden-haberler/otomatik-sitemap.xml
