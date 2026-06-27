@@ -356,11 +356,7 @@ Teknoloji
 
 <div class="sidebar">
 <h2>🔥 En Çok Okunanlar</h2>
-<div class="popular-item"><a href="tbmm-duzenleme.html">Türkiye Gündeminde Son Dakika</a></div>
-<div class="popular-item"><a href="faiz-karari.html">Ekonomide Son Gelişmeler</a></div>
-<div class="popular-item"><a href="transfer-donemi.html">Spor Dünyasında Büyük Transfer</a></div>
-<div class="popular-item"><a href="yapay-zeka.html">Yapay Zeka Teknolojileri</a></div>
-<div class="popular-item"><a href="meteoroloji-uyari.html">Hava Durumu Uyarıları</a></div>
+
 <hr style="margin:20px 0;">
 <h2>📈 Trend Haberler</h2>
 <div class="popular-item"><a href="ihracat-verileri.html">Ekonomide Son Dakika</a></div>
@@ -615,7 +611,21 @@ font-weight:bold;">
 `;
 
 });
+const populerAlan = document.getElementById("enCokOkunanlar");
 
+if (populerAlan) {
+    populerAlan.innerHTML = "";
+
+    data.slice(0,5).forEach(haber => {
+        populerAlan.innerHTML += `
+        <div class="popular-item">
+            <a href="${haber.dosya}">
+                ${haber.baslik}
+            </a>
+        </div>
+        `;
+    });
+}
 }).catch(console.error);
 </script>
 
