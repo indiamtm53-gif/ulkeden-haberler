@@ -10,6 +10,26 @@
         "gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2472000/cumhurbaskani-erdogan-kamp-aa-2472139.jpg"
     },
     {
+        "baslik": "İletişim Başkanı Duran: İnsanlık suçlarını örtbas etme çabasının beyhude bir dışavurumudur",
+        "link": "https://www.trthaber.com/haber/gundem/iletisim-baskani-duran-insanlik-suclarini-ortbas-etme-cabasinin-beyhude-bir-disavurumudur-949613.html",
+        "ozet": "İletişim Başkanı Duran, İsrail'in 1915 olaylarıyla ilgili kararına tepki gösterdi. Duran, \"İsrail’in 1915 olaylarını sözde \"soykırım\" olarak tanıması, ellerine bulaşan Filistinli masumların kanını, Orta Doğu'da yürüttükleri devlet terörünü ve fütursuzca işledikleri insanlık suçlarını örtbas etme çabasının beyhude bir dışavurumudur\" dedi.",
+        "kategori": "gundem",
+        "dosya": "auto-iletisim-baskani-duran-insanlik-suclarini-ortbas-etme-cabasi.html",
+        "kaynak": "TRT Haber",
+        "tarih": "28.06.2026",
+        "gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2462000/burhanettin-duran-aa-2463483.jpg"
+    },
+    {
+        "baslik": "İran basını: İran planlanan teknik görüşmeye katılmadı",
+        "link": "https://www.trthaber.com/haber/dunya/iran-basini-iran-planlanan-teknik-gorusmeye-katilmadi-949610.html",
+        "ozet": "İran basını, İran'ın son saldırılar ve yerine getirilmeyen şartlar nedeniyle ABD ile planlanan teknik görüşmelere katılmadığını açıkladı.",
+        "kategori": "gundem",
+        "dosya": "auto-iran-basini-iran-planlanan-teknik-gorusmeye-katilmadi.html",
+        "kaynak": "TRT Haber",
+        "tarih": "28.06.2026",
+        "gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2454000/abd-iran-2454862.jpg"
+    },
+    {
         "baslik": "Trump: İran'da başlattığımız işi askeri olarak tamamlamak zorunda kalabiliriz",
         "link": "https://www.trthaber.com/haber/dunya/trump-iranda-baslattigimiz-isi-askeri-olarak-tamamlamak-zorunda-kalabiliriz-949554.html",
         "ozet": "ABD Başkanı Donald Trump, ateşkesi ihlal ettiği gerekçesiyle İran'a yönelik saldırılara ilişkin, \"Artık makul olamayacağımız bir nokta gelebilir ve başarıyla başlattığımız işi askeri olarak tamamlamak zorunda kalabiliriz. Bu olursa artık İran var olmaz.\" açıklamasında bulundu.",
@@ -28,26 +48,6 @@
         "kaynak": "TRT Haber",
         "tarih": "28.06.2026",
         "gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2448000/sicak-hava-2448918.jpg"
-    },
-    {
-        "baslik": "İran Devrim Muhafızları'ndan ateşkes mesajı: İhlaller sert karşılık bulacak",
-        "link": "https://www.trthaber.com/haber/dunya/iran-devrim-muhafizlarindan-ateskes-mesaji-ihlaller-sert-karsilik-bulacak-949560.html",
-        "ozet": "İran Devrim Muhafızları Ordusu Sözcüsü Hüseyin Muhibbi, \"düşmanın\" ateşkesi her ihlal ettiğinde daha sert bir karşılık bulacağını söyledi.",
-        "kategori": "gundem",
-        "dosya": "auto-iran-devrim-muhafizlarindan-ateskes-mesaji-ihlaller-sert-kar.html",
-        "kaynak": "TRT Haber",
-        "tarih": "28.06.2026",
-        "gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2444000/irgc-missile-reu-2444731.jpg"
-    },
-    {
-        "baslik": "Bakırköy'de dere yatağında binlerce ölü balık bulundu",
-        "link": "https://www.trthaber.com/haber/turkiye/bakirkoyde-dere-yataginda-binlerce-olu-balik-bulundu-949557.html",
-        "ozet": "İstanbul'un Bakırköy ilçesinde sahile bağlantısı bulunan dere yatağında çok sayıda ölü balık tespit edildi. AFAD, Sahil Güvenlik ve belediye ekipleri bölgede inceleme yaparken, sudan alınan numuneler analiz için laboratuvara gönderildi.",
-        "kategori": "gundem",
-        "dosya": "auto-bakirkoyde-dere-yataginda-binlerce-olu-balik-bulundu.html",
-        "kaynak": "TRT Haber",
-        "tarih": "28.06.2026",
-        "gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2472000/olu-balik-aa-2472037.jpg"
     },
     {
         "baslik": "Two boys rescued from Venezuela earthquake rubble after days of being trapped",
@@ -70,11 +70,11 @@
         "gorsel": "https://picsum.photos/1000/500?random"
     },
     {
-        "baslik": "US and Iran exchange strikes and accuse each other of violating ceasefire",
-        "link": "https://www.bbc.co.uk/news/articles/cdxdwkgqgq0o?at_medium=RSS&at_campaign=rss",
-        "ozet": "Iran says it has launched retaliatory attacks at US infrastructure in Kuwait and Bahrain after the US said it hit multiple targets across Iran.",
+        "baslik": "Europe's heatwave linked to 1,300 deaths, WHO says, as Germany hits record 41.7C",
+        "link": "https://www.bbc.co.uk/news/articles/cn4d2vv935lo?at_medium=RSS&at_campaign=rss",
+        "ozet": "WHO chief Tedros Adhanom Ghebreyesus warned that Europe is not prepared for high temperatures.",
         "kategori": "gundem",
-        "dosya": "auto-us-and-iran-exchange-strikes-and-accuse-each-other-of-violat.html",
+        "dosya": "auto-europes-heatwave-linked-to-1300-deaths-who-says-as-germany-h.html",
         "kaynak": "BBC World",
         "tarih": "28.06.2026",
         "gorsel": "https://picsum.photos/1000/500?random"
@@ -82,7 +82,7 @@
     {
         "baslik": "Eleven killed after plane carrying skydivers crashes in eastern France",
         "link": "https://www.bbc.co.uk/news/articles/c5yz9yj9x74o?at_medium=RSS&at_campaign=rss",
-        "ozet": "The pilot and 10 passengers died in the incident, local officials said.",
+        "ozet": "The pilot and 10 passengers - including five first-time parachutists - died in the incident, local officials said.",
         "kategori": "gundem",
         "dosya": "auto-eleven-killed-after-plane-carrying-skydivers-crashes-in-east.html",
         "kaynak": "BBC World",
@@ -90,11 +90,11 @@
         "gorsel": "https://picsum.photos/1000/500?random"
     },
     {
-        "baslik": "Heatwave breaks records in Germany, Denmark and Czech Republic",
-        "link": "https://www.bbc.co.uk/news/articles/cx2vdydz31no?at_medium=RSS&at_campaign=rss",
-        "ozet": "An estimated 150 million people have been experiencing temperatures of over 35C across Europe.",
+        "baslik": "US and Iran exchange strikes and accuse each other of violating ceasefire",
+        "link": "https://www.bbc.co.uk/news/articles/cdxdwkgqgq0o?at_medium=RSS&at_campaign=rss",
+        "ozet": "Iran says it has launched retaliatory attacks at US infrastructure in Kuwait and Bahrain after the US said it hit multiple targets across Iran.",
         "kategori": "gundem",
-        "dosya": "auto-heatwave-breaks-records-in-germany-denmark-and-czech-republi.html",
+        "dosya": "auto-us-and-iran-exchange-strikes-and-accuse-each-other-of-violat.html",
         "kaynak": "BBC World",
         "tarih": "28.06.2026",
         "gorsel": "https://picsum.photos/1000/500?random"
