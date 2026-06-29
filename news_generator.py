@@ -364,6 +364,44 @@ def haber_sayfasi_olustur(haber):
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{baslik} - Ülkeden Haberler</title>
+<meta name="description" content="{baslik} - Ülkeden Haberler tarafından otomatik oluşturulan güncel haber.">
+
+<meta name="keywords" content="{kategori.lower()}, haber, son dakika, {kaynak}, Türkiye, dünya">
+
+<meta name="author" content="Ülkeden Haberler">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="{baslik}">
+<meta property="og:description" content="{ozet[:150]}">
+<meta property="og:image" content="{gorsel}">
+<meta property="og:url" content="{SITE_URL}/{haber['dosya']}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{baslik}">
+<meta name="twitter:description" content="{ozet[:150]}">
+<meta name="twitter:image" content="{gorsel}">
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"NewsArticle",
+"headline":"{baslik}",
+"image":["{gorsel}"],
+"datePublished":"{tarih}",
+"author":{
+"@type":"Organization",
+"name":"Ülkeden Haberler"
+},
+"publisher":{
+"@type":"Organization",
+"name":"Ülkeden Haberler",
+"logo":{
+"@type":"ImageObject",
+"url":"{SITE_URL}/logo.png"
+}
+},
+"mainEntityOfPage":"{SITE_URL}/{haber['dosya']}"
+}
+</script>
 <meta name="description" content="{baslik}">
 <link rel="canonical" href="{canonical}">
 <link rel="icon" type="image/png" href="favicon.png">
