@@ -381,26 +381,26 @@ def haber_sayfasi_olustur(haber):
 <meta name="twitter:description" content="{ozet[:150]}">
 <meta name="twitter:image" content="{gorsel}">
 <script type="application/ld+json">
-{
+{{
 "@context":"https://schema.org",
 "@type":"NewsArticle",
 "headline":"{baslik}",
 "image":["{gorsel}"],
 "datePublished":"{tarih}",
-"author":{
+"author":{{
 "@type":"Organization",
 "name":"Ülkeden Haberler"
-},
-"publisher":{
+}},
+"publisher":{{
 "@type":"Organization",
 "name":"Ülkeden Haberler",
-"logo":{
+"logo":{{
 "@type":"ImageObject",
 "url":"{SITE_URL}/logo.png"
-}
-},
+}}
+}},
 "mainEntityOfPage":"{SITE_URL}/{haber['dosya']}"
-}
+}}
 </script>
 <meta name="description" content="{baslik}">
 <link rel="canonical" href="{canonical}">
