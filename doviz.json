@@ -1,0 +1,20 @@
+[
+    {
+        "kod": "USD",
+        "ad": "Amerikan Doları",
+        "deger": 46.84,
+        "birim": "₺"
+    },
+    {
+        "kod": "EUR",
+        "ad": "Euro",
+        "deger": 53.56,
+        "birim": "₺"
+    },
+    {
+        "kod": "GBP",
+        "ad": "İngiliz Sterlini",
+        "deger": 62.7,
+        "birim": "₺"
+    }
+]

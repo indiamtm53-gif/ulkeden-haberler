@@ -1,0 +1,9 @@
+[
+    {
+        "kod": "ALTIN",
+        "ad": "Altın verisi",
+        "deger": null,
+        "birim": "₺",
+        "not": "Güvenilir canlı altın kaynağı bağlanınca otomatik güncellenecek."
+    }
+]
