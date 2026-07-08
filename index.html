@@ -119,7 +119,7 @@ button{font:inherit}
 .main-layout{display:grid;grid-template-columns:2.6fr 1fr;gap:20px;align-items:start}.sidebar{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:18px;box-shadow:var(--shadow);position:sticky;top:95px}.sidebar h2{font-size:20px;margin:8px 0 12px}.popular-item{padding:11px 0;border-bottom:1px solid var(--border)}.popular-item a{font-weight:800;line-height:1.45}
 .trend-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:12px 0 20px}.trend-item{background:#F8FAFC;border:1px solid var(--border);border-radius:14px;padding:14px}.trend-item strong{line-height:1.4}.trend-item p{color:var(--muted);font-size:14px;margin-top:8px;line-height:1.5}
 
-.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin:32px auto}.city{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;border-radius:16px;padding:18px;text-align:center;box-shadow:var(--shadow)}.city h3{font-size:17px;margin-bottom:6px}.city p{font-size:22px;font-weight:900}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin:32px auto}.city{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;border-radius:16px;padding:18px;text-align:center;box-shadow:var(--shadow)}.city h3{font-size:17px;margin-bottom:6px}.city p{font-size:22px;font-weight:900}.city small{font-size:14px;line-height:1.7}.market-note{font-size:12px;opacity:.9;margin-top:6px;display:block}
 .trust-box{background:#fff;border:1px solid var(--border);border-radius:16px;padding:16px;text-align:center;font-weight:900;box-shadow:var(--shadow);margin:24px auto}
 .notify{text-align:center;margin:24px 0}.notify button{background:var(--blue);color:#fff;border:none;border-radius:12px;padding:12px 20px;font-weight:900;cursor:pointer}
 
@@ -274,10 +274,16 @@ gtag('config','G-WQW2XLPGKC');
 </div>
 </main>
 <aside class="sidebar">
-<div class="trust-box">✅ Güncel Haberler &nbsp; ✅ Tarafsız Yayın &nbsp; ✅ 7/24 Güncelleme</div>
-<div class="notify"><button onclick="enableNotifications()">🔔 Bildirimleri Aç</button></div>
+<h2>🔥 En Çok Okunanlar</h2>
+<div id="enCokOkunanlar"></div>
+<hr style="margin:20px 0;border:none;border-top:1px solid var(--border);">
+<h2>⭐ Editörün Seçtikleri</h2>
+<div class="popular-item"><a href="afet-hazirlik.html">Haftanın En Önemli Gelişmesi</a></div>
+<div class="popular-item"><a href="borsa-yukselis.html">Ekonomide Kritik Karar</a></div>
+<div class="popular-item"><a href="yapay-zeka.html">Yapay Zeka Teknolojileri</a></div>
+</aside>
 </div>
-
+</div>
 
 <div class="container">
 <h2 class="section-title">🌤️ Canlı Hava Durumu</h2>
@@ -286,8 +292,11 @@ gtag('config','G-WQW2XLPGKC');
 <h2 class="section-title">📍 Son Depremler</h2>
 <div id="liveEarthquakes" class="info-grid"></div>
 
-<h2 class="section-title">💵 Canlı Döviz Kurları</h2>
+<h2 class="section-title">💵 Canlı Döviz ve Altın</h2>
 <div id="liveCurrency" class="info-grid"></div>
+
+<div class="trust-box">✅ Güncel Haberler &nbsp; ✅ Tarafsız Yayın &nbsp; ✅ 7/24 Güncelleme</div>
+<div class="notify"><button onclick="enableNotifications()">🔔 Bildirimleri Aç</button></div>
 </div>
 
 <footer class="footer">
@@ -364,6 +373,12 @@ const liveCities=[
 {name:"Gaziantep",lat:37.0662,lon:37.3833}
 ];
 
+async function fetchJson(url){
+const res=await fetch(url,{cache:"no-store"});
+if(!res.ok) throw new Error("HTTP "+res.status);
+return await res.json();
+}
+
 async function loadWeather(){
 const box=document.getElementById("liveWeather");
 if(!box) return;
@@ -373,10 +388,8 @@ let html="";
 for(const city of liveCities){
 try{
 const url=`https://api.open-meteo.com/v1/forecast?latitude=${city.lat}&longitude=${city.lon}&current=temperature_2m,relative_humidity_2m,wind_speed_10m,apparent_temperature&timezone=auto`;
-const res=await fetch(url);
-const data=await res.json();
-const cur=data.current;
-
+const data=await fetchJson(url);
+const cur=data.current || {};
 html+=`
 <div class="city">
 <h3>${city.name}</h3>
@@ -385,11 +398,23 @@ html+=`
 <small>💧 Nem: ${cur.relative_humidity_2m}%</small><br>
 <small>💨 Rüzgar: ${cur.wind_speed_10m} km/s</small>
 </div>`;
-}catch(err){
+}catch(e){
 html+=`<div class="city"><h3>${city.name}</h3><p>Veri alınamadı</p></div>`;
 }
 }
 box.innerHTML=html;
+}
+
+function normalizeQuake(item){
+const p=item.properties || item;
+const geo=item.geometry || {};
+const coords=geo.coordinates || [];
+return {
+title:p.title || p.place || p.location || p.lokasyon || p.yer || "Türkiye çevresi",
+mag:p.mag || p.magnitude || p.buyukluk || p.ml || p.ML || "-",
+depth:p.depth || p.derinlik || (coords[2] ? coords[2] : ""),
+time:p.time ? new Date(p.time).toLocaleString("tr-TR") : (p.date || p.tarih || p.zaman || "")
+};
 }
 
 async function loadEarthquakes(){
@@ -397,31 +422,37 @@ const box=document.getElementById("liveEarthquakes");
 if(!box) return;
 box.innerHTML='<div class="city"><h3>Son Depremler</h3><p>Yükleniyor...</p></div>';
 
-try{
-const start=new Date(Date.now()-7*24*60*60*1000).toISOString().split("T")[0];
-const url=`https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=${start}&minlatitude=35.5&maxlatitude=42.5&minlongitude=25&maxlongitude=45&minmagnitude=2.5&orderby=time&limit=6`;
-const res=await fetch(url);
-const data=await res.json();
+const start=new Date(Date.now()-14*24*60*60*1000).toISOString().split("T")[0];
+const sources=[
+`https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=${start}&minlatitude=35&maxlatitude=43&minlongitude=25&maxlongitude=46&minmagnitude=1.5&orderby=time&limit=6`,
+"https://api.orhanaydogdu.com.tr/deprem",
+"https://sondepremler.live/api/quakes"
+];
 
-if(!data.features || data.features.length===0){
-box.innerHTML='<div class="city"><h3>Son Depremler</h3><p>Güncel veri yok</p></div>';
+for(const url of sources){
+try{
+const data=await fetchJson(url);
+let list=[];
+if(Array.isArray(data.features)) list=data.features;
+else if(Array.isArray(data.result)) list=data.result;
+else if(Array.isArray(data.data)) list=data.data;
+else if(Array.isArray(data)) list=data;
+
+list=list.slice(0,6).map(normalizeQuake);
+if(list.length){
+box.innerHTML=list.map(eq=>`
+<div class="city">
+<h3>${eq.title}</h3>
+<p>${eq.mag}</p>
+<small>🕒 ${eq.time || "Güncel"}</small><br>
+${eq.depth ? `<small>📐 Derinlik: ${eq.depth} km</small>` : ""}
+</div>`).join("");
 return;
 }
-
-box.innerHTML=data.features.map(eq=>{
-const mag=eq.properties.mag ?? "-";
-const place=eq.properties.place || "Türkiye çevresi";
-const time=new Date(eq.properties.time).toLocaleString("tr-TR");
-return `
-<div class="city">
-<h3>${place}</h3>
-<p>${mag}</p>
-<small>🕒 ${time}</small>
-</div>`;
-}).join("");
-}catch(err){
-box.innerHTML='<div class="city"><h3>Deprem Verisi</h3><p>Veri alınamadı</p></div>';
+}catch(e){}
 }
+
+box.innerHTML='<div class="city"><h3>Son Depremler</h3><p>Güncel veri yok</p></div>';
 }
 
 async function loadCurrency(){
@@ -430,9 +461,7 @@ if(!box) return;
 box.innerHTML='<div class="city"><h3>Döviz</h3><p>Yükleniyor...</p></div>';
 
 try{
-const res=await fetch("https://api.frankfurter.app/latest?from=TRY&to=USD,EUR,GBP");
-const data=await res.json();
-
+const data=await fetchJson("https://api.frankfurter.app/latest?from=TRY&to=USD,EUR,GBP");
 const usd=(1/data.rates.USD).toFixed(2);
 const eur=(1/data.rates.EUR).toFixed(2);
 const gbp=(1/data.rates.GBP).toFixed(2);
@@ -441,10 +470,27 @@ box.innerHTML=`
 <div class="city"><h3>USD</h3><p>${usd} ₺</p><small>Amerikan Doları</small></div>
 <div class="city"><h3>EUR</h3><p>${eur} ₺</p><small>Euro</small></div>
 <div class="city"><h3>GBP</h3><p>${gbp} ₺</p><small>İngiliz Sterlini</small></div>
+<div class="city"><h3>Gram Altın</h3><p>Canlı API Bekliyor</p><small>Altın için ücretli/özel API gerekebilir</small></div>
 `;
-}catch(err){
+return;
+}catch(e){}
+
+try{
+const data=await fetchJson("https://finans.truncgil.com/today.json");
+const usd=data["USD"]?.Selling || data["USD"]?.Alış || "-";
+const eur=data["EUR"]?.Selling || data["EUR"]?.Alış || "-";
+const gbp=data["GBP"]?.Selling || data["GBP"]?.Alış || "-";
+const gram=data["Gram Altın"]?.Selling || data["Gram Altın"]?.Alış || "-";
+box.innerHTML=`
+<div class="city"><h3>USD</h3><p>${usd} ₺</p><small>Amerikan Doları</small></div>
+<div class="city"><h3>EUR</h3><p>${eur} ₺</p><small>Euro</small></div>
+<div class="city"><h3>GBP</h3><p>${gbp} ₺</p><small>İngiliz Sterlini</small></div>
+<div class="city"><h3>Gram Altın</h3><p>${gram} ₺</p><small>Altın</small></div>
+`;
+return;
+}catch(e){}
+
 box.innerHTML='<div class="city"><h3>Döviz</h3><p>Veri alınamadı</p></div>';
-}
 }
 
 function loadLiveData(){
