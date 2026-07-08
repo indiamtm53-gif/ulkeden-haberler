@@ -1,13 +1,13 @@
 [
     {
-        "baslik": "Cumhurbaşkanı Erdoğan: Savunma hedeflerine 5 yıl erken ulaşacağız",
-        "link": "https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-savunma-hedeflerine-5-yil-erken-ulasacagiz-950637.html",
-        "ozet": "Cumhurbaşkanı Recep Tayyip Erdoğan, \"2030 yılından önce savunma harcamalarımızın oranını yüzde 3,5 düzeyine yükseltmek için tedbirlerimizi aldık. Güvenlik ve dayanıklılıkla bağlantılı harcamalarda ise şimdiden yüzde 1,5’luk bütçe payına ulaştık. Böylece yüzde 5 hedefine, Lahey’de belirlenen 2035 yılından 5 sene önce erişmeyi hedefliyoruz\" dedi.",
+        "baslik": "Cumhurbaşkanı Erdoğan: NATO, birbirine güç katan müttefiklerin ittifakı olmalıdır",
+        "link": "https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-nato-birbirine-guc-katan-muttefiklerin-ittifaki-olmalidir-950688.html",
+        "ozet": "Cumhurbaşkanı Recep Tayyip Erdoğan, \"NATO birbirine bağımlı ülkelerin değil, birbirine güç katan müttefiklerin ittifakı olmalıdır.\" dedi.",
         "kategori": "gundem",
-        "dosya": "auto-cumhurbaskani-erdogan-savunma-hedeflerine-5-yil-erken-ulasac.html",
+        "dosya": "auto-cumhurbaskani-erdogan-nato-birbirine-guc-katan-muttefiklerin.html",
         "kaynak": "TRT Haber",
         "tarih": "08.07.2026",
-        "gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2474000/erdogan-2474780.jpg"
+        "gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2474000/erdogan-nato-zirvesi-aa-2474905.jpg"
     },
     {
         "baslik": "NATO Ankara Zirvesi Bildirgesi açıklandı",
@@ -40,21 +40,21 @@
         "gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2474000/trmp-zlnsk-re-2474879.jpg"
     },
     {
-        "baslik": "Emine Erdoğan, lider eşlerini Çankaya Köşkü'nde ağırladı",
-        "link": "https://www.trthaber.com/haber/gundem/emine-erdogan-lider-eslerini-cankaya-koskunde-agirladi-950673.html",
-        "ozet": "Cumhurbaşkanı Recep Tayyip Erdoğan'ın eşi Emine Erdoğan, \"Çocuk güvenliği, dijital platformlara sonradan eklenen bir ayar değil, tasarımın ilk ilkesi olmalıdır. Algoritmaların kara kutusu açılmalı, teknoloji şirketleri, ürünlerinin toplumsal etkilerini bağımsız denetime sunmalıdır\" dedi.",
+        "baslik": "ABD ordusu: İran'a karşı yeni saldırılar başlattık",
+        "link": "https://www.trthaber.com/haber/dunya/abd-ordusu-irana-karsi-yeni-saldirilar-baslattik-950699.html",
+        "ozet": "ABD ordusu, \"ticari gemileri hedef aldığı\" gerekçesiyle İran'a karşı yeni saldırılar başlattığını duyurdu.",
         "kategori": "gundem",
-        "dosya": "auto-emine-erdogan-lider-eslerini-cankaya-koskunde-agirladi.html",
+        "dosya": "auto-abd-ordusu-irana-karsi-yeni-saldirilar-baslattik.html",
         "kaynak": "TRT Haber",
         "tarih": "08.07.2026",
-        "gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2474000/emine-erdogan-2474890.jpg"
+        "gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2454000/abd-iran-2454861.jpg"
     },
     {
-        "baslik": "Trump says ceasefire is 'over' after US and Iran trade strikes",
-        "link": "https://www.bbc.co.uk/news/articles/clyw8w1g409o?at_medium=RSS&at_campaign=rss",
-        "ozet": "Speaking ahead of a Nato summit, the president says US negotiators can keep talking with the Iranians \"if they want\".",
-        "kategori": "gundem",
-        "dosya": "auto-trump-says-ceasefire-is-over-after-us-and-iran-trade-strikes.html",
+        "baslik": "US launches new wave of strikes against Iran after promising to 'hit them hard'",
+        "link": "https://www.bbc.co.uk/news/articles/cz75zjj5wp8o?at_medium=RSS&at_campaign=rss",
+        "ozet": "Explosions have been reported by Iranian state media in parts of the country's south.",
+        "kategori": "teknoloji",
+        "dosya": "auto-us-launches-new-wave-of-strikes-against-iran-after-promising.html",
         "kaynak": "BBC World",
         "tarih": "08.07.2026",
         "gorsel": "https://picsum.photos/1000/500?random"
@@ -65,6 +65,16 @@
         "ozet": "The US has launched the strikes on Iran in response to attacks on three oil tankers in the Strait of Hormuz.",
         "kategori": "gundem",
         "dosya": "auto-us-strikes-target-iranian-military-boats.html",
+        "kaynak": "BBC World",
+        "tarih": "08.07.2026",
+        "gorsel": "https://picsum.photos/1000/500?random"
+    },
+    {
+        "baslik": "Ukraine to get licence to produce Patriot missiles, Trump says",
+        "link": "https://www.bbc.co.uk/news/articles/ce8klree690o?at_medium=RSS&at_campaign=rss",
+        "ozet": "Although the Patriots are highly effective against Russia's ballistic missiles, they also have lengthy production times.",
+        "kategori": "teknoloji",
+        "dosya": "auto-ukraine-to-get-licence-to-produce-patriot-missiles-trump-say.html",
         "kaynak": "BBC World",
         "tarih": "08.07.2026",
         "gorsel": "https://picsum.photos/1000/500?random"
@@ -85,16 +95,6 @@
         "ozet": "Police said a major operation was under way in the area of Welfen-Gymnasium secondary school in Schongau, Bavaria.",
         "kategori": "gundem",
         "dosya": "auto-teenager-arrested-after-two-girls-13-seriously-injured-in-ge.html",
-        "kaynak": "BBC World",
-        "tarih": "08.07.2026",
-        "gorsel": "https://picsum.photos/1000/500?random"
-    },
-    {
-        "baslik": "Arizona toddler found alive in hospital morgue after declared dead from drowning",
-        "link": "https://www.bbc.co.uk/news/articles/cvg5x0vvrmro?at_medium=RSS&at_campaign=rss",
-        "ozet": "After he was discovered to still be alive, the 18-month-old was flown to another hospital and survived.",
-        "kategori": "gundem",
-        "dosya": "auto-arizona-toddler-found-alive-in-hospital-morgue-after-declare.html",
         "kaynak": "BBC World",
         "tarih": "08.07.2026",
         "gorsel": "https://picsum.photos/1000/500?random"
