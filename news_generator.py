@@ -712,6 +712,7 @@ def main():
     kategori_sayfalari_olustur(haberler)
     sitemap_olustur(haberler)
     ana_sayfa_kutusu_olustur(haberler)
+    canli_veriler_json_olustur()
     log_yaz()
 
     print("Otomatik haber sistemi başarıyla tamamlandı.")
