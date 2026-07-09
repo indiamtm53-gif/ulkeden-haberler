@@ -130,25 +130,6 @@ button{font:inherit}
 
 @media(max-width:900px){nav{display:none}.hero,.quick-panels,.main-layout{grid-template-columns:1fr}.status-bar{grid-template-columns:repeat(2,1fr)}.sidebar{position:static}.slider{height:340px}.slide-content h2{font-size:26px}.featured img{height:250px}.featured-content h1{font-size:28px}}
 @media(max-width:600px){.header-inner{flex-wrap:wrap}.logo img{height:48px}.tools{margin-left:auto}.ad-box{font-size:18px;min-height:74px}.status-bar{grid-template-columns:1fr}.auto-card{grid-template-columns:1fr}.auto-img{height:190px}.slider{height:310px}.slide-content{left:18px;right:18px;bottom:18px}.slide-content h2{font-size:23px}.featured-content h1{font-size:24px}.news-grid{grid-template-columns:1fr}.footer{padding:34px 0}}
-.dark #mobileMenu{
-background:#111827 !important;
-color:white !important;
-border:1px solid #374151;
-}
-
-.dark #mobileMenu a{
-color:white !important;
-border-bottom:1px solid #374151;
-}
-
-.dark #mobileMenu a:hover{
-background:#1F2937;
-}
-
-.dark #menuBtn{
-background:#2563EB !important;
-color:white !important;
-}
 </style>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQW2XLPGKC"></script>
@@ -384,138 +365,108 @@ if(trend){trend.innerHTML="";haberler.slice(0,4).forEach(haber=>{trend.innerHTML
 .catch(err=>{console.error(err);});
 </script>
 
-<script>
-const liveCities=[
-{name:"İstanbul",lat:41.0082,lon:28.9784},
-{name:"Ankara",lat:39.9334,lon:32.8597},
-{name:"İzmir",lat:38.4192,lon:27.1287},
-{name:"Gaziantep",lat:37.0662,lon:37.3833}
-];
 
-async function fetchJson(url){
-const res=await fetch(url,{cache:"no-store"});
-if(!res.ok) throw new Error("HTTP "+res.status);
+<script>
+async function readLocalJson(file){
+const res=await fetch(file + "?v=" + Date.now(), {cache:"no-store"});
+if(!res.ok) throw new Error(file + " okunamadı");
 return await res.json();
 }
 
-async function loadWeather(){
+function valueOrDash(v){
+return (v===null || v===undefined || v==="") ? "-" : v;
+}
+
+async function loadWeatherFromJson(){
 const box=document.getElementById("liveWeather");
 if(!box) return;
 box.innerHTML='<div class="city"><h3>Hava Durumu</h3><p>Yükleniyor...</p></div>';
 
-let html="";
-for(const city of liveCities){
 try{
-const url=`https://api.open-meteo.com/v1/forecast?latitude=${city.lat}&longitude=${city.lon}&current=temperature_2m,relative_humidity_2m,wind_speed_10m,apparent_temperature&timezone=auto`;
-const data=await fetchJson(url);
-const cur=data.current || {};
-html+=`
+const data=await readLocalJson("hava-durumu.json");
+if(!Array.isArray(data) || data.length===0) throw new Error("Boş veri");
+
+box.innerHTML=data.map(item=>`
 <div class="city">
-<h3>${city.name}</h3>
-<p>${Math.round(cur.temperature_2m)}°C</p>
-<small>🌡️ Hissedilen: ${Math.round(cur.apparent_temperature)}°C</small><br>
-<small>💧 Nem: ${cur.relative_humidity_2m}%</small><br>
-<small>💨 Rüzgar: ${cur.wind_speed_10m} km/s</small>
-</div>`;
+<h3>${esc(item.sehir)}</h3>
+<p>${valueOrDash(Math.round(item.sicaklik))}°C</p>
+<small>🌡️ Hissedilen: ${valueOrDash(Math.round(item.hissedilen))}°C</small><br>
+<small>💧 Nem: ${valueOrDash(item.nem)}%</small><br>
+<small>💨 Rüzgar: ${valueOrDash(item.ruzgar)} km/s</small>
+</div>
+`).join("");
 }catch(e){
-html+=`<div class="city"><h3>${city.name}</h3><p>Veri alınamadı</p></div>`;
+box.innerHTML='<div class="city"><h3>Hava Durumu</h3><p>Veri alınamadı</p></div>';
 }
-}
-box.innerHTML=html;
 }
 
-function normalizeQuake(item){
-const p=item.properties || item;
-const geo=item.geometry || {};
-const coords=geo.coordinates || [];
-return {
-title:p.title || p.place || p.location || p.lokasyon || p.yer || "Türkiye çevresi",
-mag:p.mag || p.magnitude || p.buyukluk || p.ml || p.ML || "-",
-depth:p.depth || p.derinlik || (coords[2] ? coords[2] : ""),
-time:p.time ? new Date(p.time).toLocaleString("tr-TR") : (p.date || p.tarih || p.zaman || "")
-};
-}
-
-async function loadEarthquakes(){
+async function loadEarthquakesFromJson(){
 const box=document.getElementById("liveEarthquakes");
 if(!box) return;
 box.innerHTML='<div class="city"><h3>Son Depremler</h3><p>Yükleniyor...</p></div>';
 
-const start=new Date(Date.now()-14*24*60*60*1000).toISOString().split("T")[0];
-const sources=[
-`https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=${start}&minlatitude=35&maxlatitude=43&minlongitude=25&maxlongitude=46&minmagnitude=1.5&orderby=time&limit=6`,
-"https://api.orhanaydogdu.com.tr/deprem",
-"https://sondepremler.live/api/quakes"
-];
-
-for(const url of sources){
 try{
-const data=await fetchJson(url);
-let list=[];
-if(Array.isArray(data.features)) list=data.features;
-else if(Array.isArray(data.result)) list=data.result;
-else if(Array.isArray(data.data)) list=data.data;
-else if(Array.isArray(data)) list=data;
-
-list=list.slice(0,6).map(normalizeQuake);
-if(list.length){
-box.innerHTML=list.map(eq=>`
-<div class="city">
-<h3>${eq.title}</h3>
-<p>${eq.mag}</p>
-<small>🕒 ${eq.time || "Güncel"}</small><br>
-${eq.depth ? `<small>📐 Derinlik: ${eq.depth} km</small>` : ""}
-</div>`).join("");
+const data=await readLocalJson("son-depremler.json");
+if(!Array.isArray(data) || data.length===0){
+box.innerHTML='<div class="city"><h3>Son Depremler</h3><p>Güncel veri yok</p></div>';
 return;
 }
-}catch(e){}
+
+box.innerHTML=data.slice(0,6).map(eq=>`
+<div class="city">
+<h3>${esc(eq.yer || "Türkiye çevresi")}</h3>
+<p>${esc(eq.buyukluk)}</p>
+<small>🕒 ${esc(eq.zaman || "Güncel")}</small><br>
+${eq.derinlik ? `<small>📐 Derinlik: ${esc(eq.derinlik)} km</small>` : ""}
+</div>
+`).join("");
+}catch(e){
+box.innerHTML='<div class="city"><h3>Son Depremler</h3><p>Veri alınamadı</p></div>';
+}
 }
 
-box.innerHTML='<div class="city"><h3>Son Depremler</h3><p>Güncel veri yok</p></div>';
-}
-
-async function loadCurrency(){
+async function loadCurrencyFromJson(){
 const box=document.getElementById("liveCurrency");
 if(!box) return;
 box.innerHTML='<div class="city"><h3>Döviz</h3><p>Yükleniyor...</p></div>';
 
 try{
-const data=await fetchJson("https://api.frankfurter.app/latest?from=TRY&to=USD,EUR,GBP");
-const usd=(1/data.rates.USD).toFixed(2);
-const eur=(1/data.rates.EUR).toFixed(2);
-const gbp=(1/data.rates.GBP).toFixed(2);
+const doviz=await readLocalJson("doviz.json");
+let altin=[];
+try{ altin=await readLocalJson("altin.json"); }catch(e){ altin=[]; }
 
-box.innerHTML=`
-<div class="city"><h3>USD</h3><p>${usd} ₺</p><small>Amerikan Doları</small></div>
-<div class="city"><h3>EUR</h3><p>${eur} ₺</p><small>Euro</small></div>
-<div class="city"><h3>GBP</h3><p>${gbp} ₺</p><small>İngiliz Sterlini</small></div>
-<div class="city"><h3>Gram Altın</h3><p>Canlı API Bekliyor</p><small>Altın için ücretli/özel API gerekebilir</small></div>
-`;
-return;
-}catch(e){}
+let html="";
 
-try{
-const data=await fetchJson("https://finans.truncgil.com/today.json");
-const usd=data["USD"]?.Selling || data["USD"]?.Alış || "-";
-const eur=data["EUR"]?.Selling || data["EUR"]?.Alış || "-";
-const gbp=data["GBP"]?.Selling || data["GBP"]?.Alış || "-";
-const gram=data["Gram Altın"]?.Selling || data["Gram Altın"]?.Alış || "-";
-box.innerHTML=`
-<div class="city"><h3>USD</h3><p>${usd} ₺</p><small>Amerikan Doları</small></div>
-<div class="city"><h3>EUR</h3><p>${eur} ₺</p><small>Euro</small></div>
-<div class="city"><h3>GBP</h3><p>${gbp} ₺</p><small>İngiliz Sterlini</small></div>
-<div class="city"><h3>Gram Altın</h3><p>${gram} ₺</p><small>Altın</small></div>
-`;
-return;
-}catch(e){}
+if(Array.isArray(doviz)){
+html+=doviz.map(item=>`
+<div class="city">
+<h3>${esc(item.kod || item.ad)}</h3>
+<p>${item.deger ? esc(item.deger) + " " + esc(item.birim || "₺") : "Veri yok"}</p>
+<small>${esc(item.ad || "")}</small>
+</div>
+`).join("");
+}
 
+if(Array.isArray(altin)){
+html+=altin.map(item=>`
+<div class="city">
+<h3>${esc(item.kod || "Altın")}</h3>
+<p>${item.deger ? esc(item.deger) + " " + esc(item.birim || "₺") : "Bekliyor"}</p>
+<small>${esc(item.not || item.ad || "Altın")}</small>
+</div>
+`).join("");
+}
+
+box.innerHTML=html || '<div class="city"><h3>Döviz</h3><p>Veri alınamadı</p></div>';
+}catch(e){
 box.innerHTML='<div class="city"><h3>Döviz</h3><p>Veri alınamadı</p></div>';
+}
 }
 
 function loadLiveData(){
-loadWeather();
-loadEarthquakes();
-loadCurrency();
+loadWeatherFromJson();
+loadEarthquakesFromJson();
+loadCurrencyFromJson();
 }
 
 loadLiveData();
