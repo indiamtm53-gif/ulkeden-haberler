@@ -7,14 +7,22 @@
 <meta name="description" content="Türkiye ve dünyadan son dakika haberleri, ekonomi, spor, teknoloji ve hava durumu gelişmeleri Ülkeden Haberler'de.">
 <meta name="keywords" content="haber, son dakika, gündem, ekonomi, spor, teknoloji, hava durumu, türkiye haberleri">
 <meta name="robots" content="index,follow">
-<link rel="canonical" href="https://indiamtm53-gif.github.io/">
+<link rel="canonical" href="https://indiamtm53-gif.github.io/ulkeden-haberler/">
 <link rel="icon" type="image/png" href="favicon.png">
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0F172A">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Ülkeden Haberler">
+<link rel="apple-touch-icon" href="logo.png">
+
 
 <meta property="og:title" content="Ülkeden Haberler">
 <meta property="og:description" content="Türkiye'nin güncel haber portalı">
 <meta property="og:type" content="website">
 <meta property="og:image" content="logo.png">
-<meta property="og:url" content="https://indiamtm53-gif.github.io/">
+<meta property="og:url" content="https://indiamtm53-gif.github.io/ulkeden-haberler/">
 <meta property="og:site_name" content="Ülkeden Haberler">
 <meta property="og:locale" content="tr_TR">
 
@@ -130,25 +138,6 @@ button{font:inherit}
 
 @media(max-width:900px){nav{display:none}.hero,.quick-panels,.main-layout{grid-template-columns:1fr}.status-bar{grid-template-columns:repeat(2,1fr)}.sidebar{position:static}.slider{height:340px}.slide-content h2{font-size:26px}.featured img{height:250px}.featured-content h1{font-size:28px}}
 @media(max-width:600px){.header-inner{flex-wrap:wrap}.logo img{height:48px}.tools{margin-left:auto}.ad-box{font-size:18px;min-height:74px}.status-bar{grid-template-columns:1fr}.auto-card{grid-template-columns:1fr}.auto-img{height:190px}.slider{height:310px}.slide-content{left:18px;right:18px;bottom:18px}.slide-content h2{font-size:23px}.featured-content h1{font-size:24px}.news-grid{grid-template-columns:1fr}.footer{padding:34px 0}}
-
-.finance-card{
-background:linear-gradient(135deg,#0F172A,#2563EB);
-color:#fff;
-border-radius:18px;
-padding:18px;
-text-align:center;
-box-shadow:var(--shadow);
-border:1px solid rgba(255,255,255,.12);
-}
-.finance-card h3{font-size:18px;margin-bottom:6px}
-.finance-card p{font-size:24px;font-weight:900;margin-bottom:4px}
-.finance-card small{display:block;line-height:1.6;color:#E0F2FE}
-.finance-card .updated{font-size:12px;opacity:.85;margin-top:6px}
-.finance-card.gold{background:linear-gradient(135deg,#92400E,#F59E0B)}
-.finance-card.crypto{background:linear-gradient(135deg,#312E81,#7C3AED)}
-.finance-card.wait{background:linear-gradient(135deg,#475569,#64748B)}
-.dark .finance-card{border-color:#334155}
-
 </style>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQW2XLPGKC"></script>
@@ -447,7 +436,7 @@ box.innerHTML='<div class="city"><h3>Son Depremler</h3><p>Veri alınamadı</p></
 async function loadCurrencyFromJson(){
 const box=document.getElementById("liveCurrency");
 if(!box) return;
-box.innerHTML='<div class="finance-card wait"><h3>Döviz</h3><p>Yükleniyor...</p></div>';
+box.innerHTML='<div class="city"><h3>Döviz</h3><p>Yükleniyor...</p></div>';
 
 try{
 const doviz=await readLocalJson("doviz.json");
@@ -457,40 +446,28 @@ try{ altin=await readLocalJson("altin.json"); }catch(e){ altin=[]; }
 let html="";
 
 if(Array.isArray(doviz)){
-html+=doviz.map(item=>{
-const kod=item.kod || item.ad || "Döviz";
-const ad=item.ad || "";
-const deger=item.deger ? esc(item.deger) + " " + esc(item.birim || "₺") : "Veri yok";
-const cls=kod==="BTC" ? "finance-card crypto" : "finance-card";
-return `
-<div class="${cls}">
-<h3>${esc(kod)}</h3>
-<p>${deger}</p>
-<small>${esc(ad)}</small>
-<small class="updated">🔄 Otomatik güncellenir</small>
-</div>`;
-}).join("");
+html+=doviz.map(item=>`
+<div class="city">
+<h3>${esc(item.kod || item.ad)}</h3>
+<p>${item.deger ? esc(item.deger) + " " + esc(item.birim || "₺") : "Veri yok"}</p>
+<small>${esc(item.ad || "")}</small>
+</div>
+`).join("");
 }
 
 if(Array.isArray(altin)){
-html+=altin.map(item=>{
-const kod=item.kod || "Altın";
-const ad=item.ad || item.not || "Altın";
-const deger=item.deger ? esc(item.deger) + " " + esc(item.birim || "₺") : "Bekliyor";
-const cls=item.deger ? "finance-card gold" : "finance-card wait";
-return `
-<div class="${cls}">
-<h3>${esc(kod)}</h3>
-<p>${deger}</p>
-<small>${esc(ad)}</small>
-<small class="updated">🔄 Otomatik güncellenir</small>
-</div>`;
-}).join("");
+html+=altin.map(item=>`
+<div class="city">
+<h3>${esc(item.kod || "Altın")}</h3>
+<p>${item.deger ? esc(item.deger) + " " + esc(item.birim || "₺") : "Bekliyor"}</p>
+<small>${esc(item.not || item.ad || "Altın")}</small>
+</div>
+`).join("");
 }
 
-box.innerHTML=html || '<div class="finance-card wait"><h3>Döviz</h3><p>Veri alınamadı</p></div>';
+box.innerHTML=html || '<div class="city"><h3>Döviz</h3><p>Veri alınamadı</p></div>';
 }catch(e){
-box.innerHTML='<div class="finance-card wait"><h3>Döviz</h3><p>Veri alınamadı</p></div>';
+box.innerHTML='<div class="city"><h3>Döviz</h3><p>Veri alınamadı</p></div>';
 }
 }
 
@@ -502,6 +479,17 @@ loadCurrencyFromJson();
 
 loadLiveData();
 setInterval(loadLiveData,900000);
+</script>
+
+
+<script>
+if("serviceWorker" in navigator){
+window.addEventListener("load",()=>{
+navigator.serviceWorker.register("service-worker.js")
+.then(()=>console.log("Service Worker aktif"))
+.catch(err=>console.log("Service Worker hata:",err));
+});
+}
 </script>
 
 </body>
