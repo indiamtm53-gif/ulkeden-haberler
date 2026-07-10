@@ -6,6 +6,7 @@ import re
 import html
 import urllib.request
 import urllib.error
+import urllib.parse
 
 SITE_URL = "https://indiamtm53-gif.github.io"
 
@@ -76,6 +77,90 @@ def temizle():
             os.remove(dosya)
 
 
+
+def gorsel_uzantisi_bul(url, content_type=""):
+    content_type = (content_type or "").lower()
+
+    if "png" in content_type:
+        return ".png"
+    if "webp" in content_type:
+        return ".webp"
+    if "gif" in content_type:
+        return ".gif"
+
+    yol = urllib.parse.urlparse(url).path.lower()
+    for uzanti in (".jpg", ".jpeg", ".png", ".webp", ".gif"):
+        if yol.endswith(uzanti):
+            return ".jpg" if uzanti == ".jpeg" else uzanti
+
+    return ".jpg"
+
+
+def haber_gorselini_indir(gorsel_url, baslik):
+    """
+    RSS görselini images/auto klasörüne kaydeder.
+    İndirme başarısız olursa mevcut logo.png kullanılır.
+    """
+    varsayilan = "logo.png"
+
+    if not gorsel_url or not str(gorsel_url).startswith(("http://", "https://")):
+        return varsayilan
+
+    klasor = os.path.join("images", "auto")
+    os.makedirs(klasor, exist_ok=True)
+
+    dosya_koku = slug_olustur(baslik).replace("auto-", "")[:55] or "haber"
+    gecici_yol = os.path.join(klasor, dosya_koku)
+
+    try:
+        req = urllib.request.Request(
+            gorsel_url,
+            headers={
+                "User-Agent": "Mozilla/5.0 (Ülkeden Haberler Bot)",
+                "Accept": "image/avif,image/webp,image/apng,image/*,*/*;q=0.8"
+            }
+        )
+
+        with urllib.request.urlopen(req, timeout=20) as response:
+            content_type = response.headers.get("Content-Type", "")
+            if not content_type.lower().startswith("image/"):
+                print(f"Görsel değil, atlandı: {gorsel_url}")
+                return varsayilan
+
+            veri = response.read(8 * 1024 * 1024 + 1)
+
+            if not veri or len(veri) > 8 * 1024 * 1024:
+                print(f"Görsel çok büyük veya boş, atlandı: {gorsel_url}")
+                return varsayilan
+
+            uzanti = gorsel_uzantisi_bul(gorsel_url, content_type)
+            dosya_yolu = gecici_yol + uzanti
+
+            with open(dosya_yolu, "wb") as f:
+                f.write(veri)
+
+            return dosya_yolu.replace(os.sep, "/")
+
+    except Exception as hata:
+        print(f"Görsel indirilemedi: {gorsel_url} | {hata}")
+        return varsayilan
+
+
+def eski_otomatik_gorselleri_temizle():
+    klasor = os.path.join("images", "auto")
+
+    if not os.path.isdir(klasor):
+        return
+
+    for dosya in os.listdir(klasor):
+        yol = os.path.join(klasor, dosya)
+        if os.path.isfile(yol):
+            try:
+                os.remove(yol)
+            except OSError as hata:
+                print(f"Eski görsel silinemedi: {yol} | {hata}")
+
+
 def haberleri_cek():
     tum_haberler = []
 
@@ -95,6 +180,8 @@ def haberleri_cek():
                 gorsel = eslesme.group(1)
 
             if baslik and link:
+                yerel_gorsel = haber_gorselini_indir(gorsel, baslik)
+
                 tum_haberler.append({
                     "baslik": baslik,
                     "link": link,
@@ -103,7 +190,8 @@ def haberleri_cek():
                     "dosya": slug_olustur(baslik) + ".html",
                     "kaynak": kaynak_adi(rss),
                     "tarih": datetime.now().strftime("%d.%m.%Y"),
-                    "gorsel": gorsel
+                    "gorsel": yerel_gorsel,
+                    "orijinal_gorsel": gorsel
                 })
 
     return tum_haberler[:10]
@@ -941,6 +1029,7 @@ def main():
     print("Ülkeden Haberler otomasyon sistemi başladı.")
 
     temizle()
+    eski_otomatik_gorselleri_temizle()
 
     haberler = haberleri_cek()
 
