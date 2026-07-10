@@ -1,14 +1,25 @@
 [
     {
-        "baslik": "Cumhurbaşkanı Erdoğan: 36'ncı NATO Zirvesi'ni başarıyla tamamladık",
-        "link": "https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-36nci-nato-zirvesini-basariyla-tamamladik-950796.html",
-        "ozet": "Cumhurbaşkanı Erdoğan, Türkiye'nin ev sahipliğinde gerçekleştirilen 36. NATO Devlet ve Hükûmet Başkanları Zirvesi'nin başarıyla tamamlandığını belirterek, zirvenin Ankara'nın uluslararası tanıtımına önemli katkı sağladığını söyleyerek Ankaralılara teşekkür etti.",
+        "baslik": "Cumhurbaşkanı Erdoğan: Yeni sistemin kutupbaşlarından biri olma yolunda ilerliyoruz",
+        "link": "https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-yeni-sistemin-kutupbaslarindan-biri-olma-yolunda-ilerliyoruz-950861.html",
+        "ozet": "Cumhurbaşkanı Recep Tayyip Erdoğan, \"Devlet olarak, uluslararası güvenlik paradigmasının radikal bir dönüşüme uğradığı bu dönemde yeni sistemin kutupbaşlarından biri olma yolunda ilerliyoruz.\" dedi.",
         "kategori": "gundem",
-        "dosya": "auto-cumhurbaskani-erdogan-36nci-nato-zirvesini-basariyla-tamamla.html",
+        "dosya": "auto-cumhurbaskani-erdogan-yeni-sistemin-kutupbaslarindan-biri-ol.html",
         "kaynak": "TRT Haber",
         "tarih": "10.07.2026",
-        "gorsel": "images/auto/cumhurbaskani-erdogan-36nci-nato-zirvesini-basariyla-ta.jpg",
-        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2474000/erdogan-nato-aa-2475024.jpg"
+        "gorsel": "images/auto/cumhurbaskani-erdogan-yeni-sistemin-kutupbaslarindan-bi.jpg",
+        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2474000/erdogan-aa-2475148.jpg"
+    },
+    {
+        "baslik": "Bakan Fidan: Müttefikler arasında yaptırım olmasını istemiyoruz",
+        "link": "https://www.trthaber.com/haber/gundem/bakan-fidan-muttefikler-arasinda-yaptirim-olmasini-istemiyoruz-950881.html",
+        "ozet": "Dışişleri Bakanı Hakan Fidan, TRT Haber özel yayınında, ABD ile yürütülen CAATSA ve F-35 görüşmelerine değinerek, \"Biz baştan beri hiçbir şekilde müttefikler arasında yaptırım olmasını istemiyoruz. İki liderdeki bu iradeyle inşallah yakında bir neticeye ulaşacağız.\" dedi.",
+        "kategori": "gundem",
+        "dosya": "auto-bakan-fidan-muttefikler-arasinda-yaptirim-olmasini-istemiyor.html",
+        "kaynak": "TRT Haber",
+        "tarih": "10.07.2026",
+        "gorsel": "images/auto/bakan-fidan-muttefikler-arasinda-yaptirim-olmasini-iste.jpg",
+        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2474000/disisleri-bakani-hakan-fidan-2475150.jpg"
     },
     {
         "baslik": "LGS sonuçları açıklandı",
@@ -22,6 +33,17 @@
         "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2022000/lgs-2023895.jpg"
     },
     {
+        "baslik": "15 Temmuz şehitleri İstanbulda bir dizi programla anılacak",
+        "link": "https://www.trthaber.com/haber/gundem/15-temmuz-sehitleri-istanbulda-bir-dizi-programla-anilacak-950872.html",
+        "ozet": "Fetullahçı Terör Örgütü'nün (FETÖ) 15 Temmuz 2016'daki hain darbe girişiminde şehit olanlar, 10 ila 17 Temmuz arasında İstanbul'da bir dizi programla anılacak.",
+        "kategori": "gundem",
+        "dosya": "auto-15-temmuz-sehitleri-istanbulda-bir-dizi-programla-anilacak.html",
+        "kaynak": "TRT Haber",
+        "tarih": "10.07.2026",
+        "gorsel": "images/auto/15-temmuz-sehitleri-istanbulda-bir-dizi-programla-anila.jpg",
+        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2474000/15-temmuz-iletisim-baskanligi-2475112.jpg"
+    },
+    {
         "baslik": "29'u kırmızı bültenle aranan 54 suçlu Türkiye'ye getirildi",
         "link": "https://www.trthaber.com/haber/gundem/29u-kirmizi-bultenle-aranan-54-suclu-turkiyeye-getirildi-950840.html",
         "ozet": "İçişleri Bakanlığı, kırmızı bültenle aranan 29, ulusal seviyede aranan 25 suçlunun ülkeye geri getirildiğini açıkladı.",
@@ -33,64 +55,20 @@
         "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2434000/kirmizi-bulten-yapay-zeka-2434273.jpg"
     },
     {
-        "baslik": "Gürsel Tekin için göreve devam kararı",
-        "link": "https://www.trthaber.com/haber/gundem/gursel-tekin-icin-goreve-devam-karari-950844.html",
-        "ozet": "CHP 38. Olağan İstanbul İl Kongresi’nde seçilen il başkanı ve il yönetim kurulunun tedbiren görevlerinden uzaklaştırılmasına ve kongrede alınan kararların iptaline ilişkin açılan davada mahkeme, daha önce verilen tedbir ara kararının devamına hükmetti. Ara kararla Gürsel Tekin görevine devam edecek.",
-        "kategori": "gundem",
-        "dosya": "auto-gursel-tekin-icin-goreve-devam-karari.html",
-        "kaynak": "TRT Haber",
-        "tarih": "10.07.2026",
-        "gorsel": "images/auto/gursel-tekin-icin-goreve-devam-karari.jpg",
-        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1908000/gursel-tekin-aa-1909349.jpg"
-    },
-    {
-        "baslik": "Çin'de sellerin vurduğu çiftlikteki yaklaşık 900 yılan kaçtı",
-        "link": "https://www.trthaber.com/haber/dunya/cinde-sellerin-vurdugu-ciftlikteki-yaklasik-900-yilan-kacti-950828.html",
-        "ozet": "Çin'in güneyinde etkili olan tayfun ve sel felaketi nedeniyle bir barajın çökmesi sonucu sular altında kalan çiftlikten yaklaşık 900 yılan kaçtı. Aralarında ölümcül kobraların da bulunduğu yüzlerce yılanın yayıldığı Dengwei köyünde \"acil durum\" ilan edildi.",
-        "kategori": "gundem",
-        "dosya": "auto-cinde-sellerin-vurdugu-ciftlikteki-yaklasik-900-yilan-kacti.html",
-        "kaynak": "TRT Haber",
-        "tarih": "10.07.2026",
-        "gorsel": "images/auto/cinde-sellerin-vurdugu-ciftlikteki-yaklasik-900-yilan-k.jpg",
-        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1816000/yilan-reu-1817715.jpg"
-    },
-    {
-        "baslik": "Huge crowds in Mashhad as Iran's late supreme leader is buried",
-        "link": "https://www.bbc.co.uk/news/articles/c5yzm8m4peeo?at_medium=RSS&at_campaign=rss",
-        "ozet": "Ali Khamenei was buried at the Imam Reza shrine, Iran's holiest Shia Muslim site, ending six days of public mourning ceremonies.",
-        "kategori": "gundem",
-        "dosya": "auto-huge-crowds-in-mashhad-as-irans-late-supreme-leader-is-burie.html",
-        "kaynak": "BBC World",
-        "tarih": "10.07.2026",
-        "gorsel": "images/auto/huge-crowds-in-mashhad-as-irans-late-supreme-leader-is-.jpg",
-        "orijinal_gorsel": "https://picsum.photos/1000/500?random"
-    },
-    {
-        "baslik": "Ukrainian agent accused of murdering Monaco bomb suspect changes story",
-        "link": "https://www.bbc.co.uk/news/articles/cpv3e8y39j7o?at_medium=RSS&at_campaign=rss",
-        "ozet": "Two men with links to Ukraine's security services are accused of killing Anastasiia Berezovska and dumping her body in woods.",
+        "baslik": "Wildfire in southern Spain leaves at least 12 dead and 23 missing",
+        "link": "https://www.bbc.co.uk/news/articles/c8e2382jk7jo?at_medium=RSS&at_campaign=rss",
+        "ozet": "A local official said four of the victims may be British after a fire broke out near Los Gallardos, Almería.",
         "kategori": "teknoloji",
-        "dosya": "auto-ukrainian-agent-accused-of-murdering-monaco-bomb-suspect-cha.html",
+        "dosya": "auto-wildfire-in-southern-spain-leaves-at-least-12-dead-and-23-mi.html",
         "kaynak": "BBC World",
         "tarih": "10.07.2026",
-        "gorsel": "images/auto/ukrainian-agent-accused-of-murdering-monaco-bomb-suspec.jpg",
-        "orijinal_gorsel": "https://picsum.photos/1000/500?random"
-    },
-    {
-        "baslik": "Palestinians mourn Gaza World Cup screenings organiser killed in Israeli strike",
-        "link": "https://www.bbc.co.uk/news/articles/cwylznzjk04o?at_medium=RSS&at_campaign=rss",
-        "ozet": "Aid worker Mohammed al-Wahidi had become a prominent humanitarian figure during the Israel-Hamas war.",
-        "kategori": "gundem",
-        "dosya": "auto-palestinians-mourn-gaza-world-cup-screenings-organiser-kille.html",
-        "kaynak": "BBC World",
-        "tarih": "10.07.2026",
-        "gorsel": "images/auto/palestinians-mourn-gaza-world-cup-screenings-organiser-.jpg",
+        "gorsel": "images/auto/wildfire-in-southern-spain-leaves-at-least-12-dead-and-.jpg",
         "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     },
     {
         "baslik": "East Asia braces for destructive typhoon as landslides kill 15 in Philippines",
         "link": "https://www.bbc.co.uk/news/articles/c04y6wr03gxo?at_medium=RSS&at_campaign=rss",
-        "ozet": "Headed for Taiwan and south-eastern China, the 1,000 km-wide Bavi is forecast to be one of the strongest storms in decades.",
+        "ozet": "Heading for Taiwan and south-eastern China, the 1,000 km-wide Bavi is forecast to be one of the strongest storms in decades.",
         "kategori": "gundem",
         "dosya": "auto-east-asia-braces-for-destructive-typhoon-as-landslides-kill-.html",
         "kaynak": "BBC World",
@@ -99,14 +77,36 @@
         "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     },
     {
-        "baslik": "China lands reusable rocket for first time, state media says",
-        "link": "https://www.bbc.co.uk/news/articles/cm2rmmx86pdo?at_medium=RSS&at_campaign=rss",
-        "ozet": "It follows similar landings of reusable rockets by US-owned companies SpaceX and Blue Origin.",
-        "kategori": "gundem",
-        "dosya": "auto-china-lands-reusable-rocket-for-first-time-state-media-says.html",
+        "baslik": "Zulu king expresses regret after video captures tirade against his wife",
+        "link": "https://www.bbc.co.uk/news/articles/cy8dl9n1v3vo?at_medium=RSS&at_campaign=rss",
+        "ozet": "In the footage widely shared in South Africa, King Misuzulu threatens to physically assault his wife and accuses her of cheating.",
+        "kategori": "teknoloji",
+        "dosya": "auto-zulu-king-expresses-regret-after-video-captures-tirade-again.html",
         "kaynak": "BBC World",
         "tarih": "10.07.2026",
-        "gorsel": "images/auto/china-lands-reusable-rocket-for-first-time-state-media-.jpg",
+        "gorsel": "images/auto/zulu-king-expresses-regret-after-video-captures-tirade-.jpg",
+        "orijinal_gorsel": "https://picsum.photos/1000/500?random"
+    },
+    {
+        "baslik": "Man fatally shot by ICE in Houston was not intended target, DHS says",
+        "link": "https://www.bbc.co.uk/news/articles/cm2rm66xd17o?at_medium=RSS&at_campaign=rss",
+        "ozet": "Immigration agents were looking for a different person when they shot Lorenzo Salgado Araujo during a traffic stop, officials say.",
+        "kategori": "gundem",
+        "dosya": "auto-man-fatally-shot-by-ice-in-houston-was-not-intended-target-d.html",
+        "kaynak": "BBC World",
+        "tarih": "10.07.2026",
+        "gorsel": "images/auto/man-fatally-shot-by-ice-in-houston-was-not-intended-tar.jpg",
+        "orijinal_gorsel": "https://picsum.photos/1000/500?random"
+    },
+    {
+        "baslik": "Man nearly sucked out of window mid-air on Ryanair plane, passengers say",
+        "link": "https://www.bbc.co.uk/news/articles/cgk65knkyzdo?at_medium=RSS&at_campaign=rss",
+        "ozet": "The man's wife held onto his legs for around five minutes to stop him from being sucked out, officials say.",
+        "kategori": "teknoloji",
+        "dosya": "auto-man-nearly-sucked-out-of-window-mid-air-on-ryanair-plane-pas.html",
+        "kaynak": "BBC World",
+        "tarih": "10.07.2026",
+        "gorsel": "images/auto/man-nearly-sucked-out-of-window-mid-air-on-ryanair-plan.jpg",
         "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     }
 ]
