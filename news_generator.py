@@ -940,57 +940,124 @@ def doviz_json_olustur():
 
 
 
+
 def altin_json_olustur():
     sonuc = []
+    usd_try = None
 
-    data = url_json_oku("https://finans.truncgil.com/today.json")
-
-    def temiz_sayi(deger):
-        if not deger:
-            return None
-        deger = str(deger).replace("₺", "").replace("$", "").replace(".", "").replace(",", ".").strip()
+    # 1) USD/TRY kuru
+    kur_data = url_json_oku("https://api.frankfurter.app/latest?from=TRY&to=USD")
+    if kur_data and kur_data.get("rates", {}).get("USD"):
         try:
-            return round(float(deger), 2)
+            usd_try = 1 / float(kur_data["rates"]["USD"])
         except Exception:
-            return str(deger)
+            usd_try = None
 
-    if data:
-        eslesmeler = [
-            ("Gram Altın", "GRAM", "Gram Altın"),
-            ("Çeyrek Altın", "CEYREK", "Çeyrek Altın"),
-            ("Yarım Altın", "YARIM", "Yarım Altın"),
-            ("Cumhuriyet Altını", "CUMHURIYET", "Cumhuriyet Altını")
+    # 2) Ücretsiz altın spot fiyatı için birden fazla endpoint dene
+    altin_kaynaklari = [
+        "https://api.gold-api.com/price/XAU",
+        "https://api.gold-api.com/price/XAU/USD",
+        "https://api.gold-api.com/price/XAU?currency=USD"
+    ]
+
+    xau_usd = None
+    kullanilan_kaynak = None
+
+    for kaynak in altin_kaynaklari:
+        data = url_json_oku(kaynak)
+        if not isinstance(data, dict):
+            continue
+
+        olasi_degerler = [
+            data.get("price"),
+            data.get("ask"),
+            data.get("close"),
+            data.get("value"),
+            data.get("rate"),
+            data.get("price_gram_24k"),
+            data.get("ounce")
         ]
 
-        for kaynak_adi, kod, ad in eslesmeler:
-            item = data.get(kaynak_adi)
-            if isinstance(item, dict):
-                sonuc.append({
-                    "kod": kod,
-                    "ad": ad,
-                    "deger": temiz_sayi(item.get("Selling") or item.get("Satış") or item.get("Alış")),
-                    "birim": "₺"
-                })
+        for deger in olasi_degerler:
+            try:
+                deger = float(deger)
+                if deger > 100:
+                    xau_usd = deger
+                    kullanilan_kaynak = kaynak
+                    break
+            except Exception:
+                pass
 
-        bist = data.get("BIST 100") or data.get("BIST100")
-        if isinstance(bist, dict):
-            sonuc.append({
-                "kod": "BIST100",
-                "ad": "BIST 100",
-                "deger": temiz_sayi(bist.get("Selling") or bist.get("Son") or bist.get("Alış")),
-                "birim": ""
-            })
+        if xau_usd:
+            break
+
+    # 3) Ons altını TL'ye, ardından gram altına çevir
+    if xau_usd and usd_try:
+        gram_altin = round((xau_usd * usd_try) / 31.1034768, 2)
+
+        sonuc.append({
+            "kod": "GRAM",
+            "ad": "Gram Altın",
+            "deger": gram_altin,
+            "birim": "₺",
+            "kaynak": kullanilan_kaynak,
+            "not": "Uluslararası ons altın ve USD/TRY kuru üzerinden hesaplanmıştır.",
+            "guncelleme": datetime.now().strftime("%d.%m.%Y %H:%M")
+        })
+
+    # 4) Yedek kaynak
+    if not sonuc:
+        data = url_json_oku("https://finans.truncgil.com/today.json")
+
+        def temiz_sayi(deger):
+            if not deger:
+                return None
+            deger = str(deger).replace("₺", "").replace("$", "").strip()
+            deger = deger.replace(".", "").replace(",", ".")
+            try:
+                return round(float(deger), 2)
+            except Exception:
+                return None
+
+        if isinstance(data, dict):
+            item = data.get("Gram Altın")
+            if isinstance(item, dict):
+                deger = temiz_sayi(
+                    item.get("Selling")
+                    or item.get("Satış")
+                    or item.get("Alış")
+                )
+                if deger:
+                    sonuc.append({
+                        "kod": "GRAM",
+                        "ad": "Gram Altın",
+                        "deger": deger,
+                        "birim": "₺",
+                        "kaynak": "finans.truncgil.com",
+                        "not": "Yedek canlı kaynaktan alınmıştır.",
+                        "guncelleme": datetime.now().strftime("%d.%m.%Y %H:%M")
+                    })
+
+    # 5) Son başarılı veriyi koru; geçici API hatasında boş dosya yazma
+    if not sonuc and os.path.exists("altin.json"):
+        try:
+            with open("altin.json", "r", encoding="utf-8") as f:
+                eski_veri = json.load(f)
+            if isinstance(eski_veri, list) and eski_veri:
+                sonuc = eski_veri
+                print("Altın API'leri erişilemedi; son başarılı veri korundu.")
+        except Exception:
+            pass
 
     if not sonuc:
-        sonuc = [
-            {
-                "kod": "ALTIN",
-                "ad": "Altın verisi",
-                "deger": None,
-                "birim": "₺",
-                "not": "Canlı altın kaynağına şu an erişilemedi."
-            }
-        ]
+        sonuc = [{
+            "kod": "GRAM",
+            "ad": "Gram Altın",
+            "deger": None,
+            "birim": "₺",
+            "not": "Canlı altın verisi geçici olarak alınamadı.",
+            "guncelleme": datetime.now().strftime("%d.%m.%Y %H:%M")
+        }]
 
     with open("altin.json", "w", encoding="utf-8") as f:
         json.dump(sonuc, f, ensure_ascii=False, indent=4)
