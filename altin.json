@@ -1,9 +1,11 @@
 [
     {
-        "kod": "ALTIN",
-        "ad": "Altın verisi",
-        "deger": null,
+        "kod": "GRAM",
+        "ad": "Gram Altın",
+        "deger": 6226.79,
         "birim": "₺",
-        "not": "Canlı altın kaynağına şu an erişilemedi."
+        "kaynak": "https://api.gold-api.com/price/XAU",
+        "not": "Uluslararası ons altın ve USD/TRY kuru üzerinden hesaplanmıştır.",
+        "guncelleme": "12.07.2026 15:02"
     }
 ]
