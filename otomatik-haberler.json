@@ -1,5 +1,16 @@
 [
     {
+        "baslik": "15 Temmuz darbe girişiminin kronolojisi: Saat saat yaşananlar",
+        "link": "https://www.trthaber.com/haber/gundem/15-temmuz-darbe-girisiminin-kronolojisi-saat-saat-yasananlar-951239.html",
+        "ozet": "Fetullahçı Terör Örgütü (FETÖ) mensuplarınca 15 Temmuz 2016'da gerçekleştirilen darbe girişiminin üzerinden 10 yıl geçti. İşte 15 Temmuz gecesi saat saat yaşanan gelişmeler...",
+        "kategori": "gundem",
+        "dosya": "auto-15-temmuz-darbe-girisiminin-kronolojisi-saat-saat-yasananlar.html",
+        "kaynak": "TRT Haber",
+        "tarih": "15.07.2026",
+        "gorsel": "images/auto/15-temmuz-darbe-girisiminin-kronolojisi-saat-saat-yasan.jpg",
+        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1616000/darbe-girisimi-1617304.jpg"
+    },
+    {
         "baslik": "Cumhurbaşkanı Erdoğan: Yeni 15 Temmuzların yaşanmaması için var gücümüzle çalışacağız",
         "link": "https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-yeni-15-temmuzlarin-yasanmamasi-icin-var-gucumuzle-calisacagiz-951186.html",
         "ozet": "Cumhurbaşkanı Recep Tayyip Erdoğan, \"FETÖ’yle mücadele noktasında ise asla geri adım atmayacak, Türkiye düşmanlarına taşeronluk yapan bu ihanet şebekesiyle hukuk içinde mücadelemizi sürdüreceğiz. Yeni 15 Temmuzların yaşanmaması için var gücümüzle çalışacağız\" dedi.",
@@ -33,17 +44,6 @@
         "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2442000/2442138.jpg"
     },
     {
-        "baslik": "Kahramanmaraş'ta 4,2 büyüklüğünde deprem",
-        "link": "https://www.trthaber.com/haber/turkiye/kahramanmarasta-42-buyuklugunde-deprem-951216.html",
-        "ozet": "Kahramanmaraş'ın Pazarcık ilçesinde saat 21.27'de 4,2 büyüklüğünde deprem meydana geldi.",
-        "kategori": "gundem",
-        "dosya": "auto-kahramanmarasta-42-buyuklugunde-deprem.html",
-        "kaynak": "TRT Haber",
-        "tarih": "15.07.2026",
-        "gorsel": "images/auto/kahramanmarasta-42-buyuklugunde-deprem.jpg",
-        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2330000/deprem-2330169.jpg"
-    },
-    {
         "baslik": "Dünya Kupası'nda ilk finalist İspanya",
         "link": "https://www.trthaber.com/haber/dunya/dunya-kupasinda-ilk-finalist-ispanya-951228.html",
         "ozet": "İspanya, Fransa'yı 2-0 mağlup ederek 2026 FIFA Dünya Kupası finaline adını yazdıran ilk takım oldu. İspanya, turnuvada ikinci kez finale çıktı.",
@@ -55,14 +55,14 @@
         "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2474000/ispanya-reu-2475941.jpg"
     },
     {
-        "baslik": "Trump scraps threat of 20% fee on Hormuz cargo as US resumes blockade of Iran ports",
+        "baslik": "Trump threatens to bomb bridges and power plants unless Iran resumes talks",
         "link": "https://www.bbc.co.uk/news/articles/cy0608wy8pro?at_medium=RSS&at_campaign=rss",
-        "ozet": "Trump drops a 24-hour-old vow to charge cargo ships for using the Strait as the US continues its battle to break Iran's hold on the waterway.",
+        "ozet": "Trump's comments aired as the two countries exchanged fire for the fourth day in a row and the US resumed blockading Iranian ports.",
         "kategori": "gundem",
-        "dosya": "auto-trump-scraps-threat-of-20-fee-on-hormuz-cargo-as-us-resumes-.html",
+        "dosya": "auto-trump-threatens-to-bomb-bridges-and-power-plants-unless-iran.html",
         "kaynak": "BBC World",
         "tarih": "15.07.2026",
-        "gorsel": "images/auto/trump-scraps-threat-of-20-fee-on-hormuz-cargo-as-us-res.jpg",
+        "gorsel": "images/auto/trump-threatens-to-bomb-bridges-and-power-plants-unless.jpg",
         "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     },
     {
@@ -88,6 +88,17 @@
         "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     },
     {
+        "baslik": "China economic growth falls sharply, missing target",
+        "link": "https://www.bbc.co.uk/news/articles/cd959x4edy8o?at_medium=RSS&at_campaign=rss",
+        "ozet": "Weak demand domestically and the impact of the Iran war on oil prices overshadowed the country's strong exports.",
+        "kategori": "gundem",
+        "dosya": "auto-china-economic-growth-falls-sharply-missing-target.html",
+        "kaynak": "BBC World",
+        "tarih": "15.07.2026",
+        "gorsel": "images/auto/china-economic-growth-falls-sharply-missing-target.jpg",
+        "orijinal_gorsel": "https://picsum.photos/1000/500?random"
+    },
+    {
         "baslik": "Seven Britons among those killed in Spain wildfires",
         "link": "https://www.bbc.co.uk/news/articles/cp8l87784ngo?at_medium=RSS&at_campaign=rss",
         "ozet": "Twelve of the 13 victims were foreign nationals, Spanish authorities said on Tuesday.",
@@ -96,17 +107,6 @@
         "kaynak": "BBC World",
         "tarih": "15.07.2026",
         "gorsel": "images/auto/seven-britons-among-those-killed-in-spain-wildfires.jpg",
-        "orijinal_gorsel": "https://picsum.photos/1000/500?random"
-    },
-    {
-        "baslik": "Israeli strike on police post in north Gaza kills seven, officials say",
-        "link": "https://www.bbc.co.uk/news/articles/cqj1jqeyl5ro?at_medium=RSS&at_campaign=rss",
-        "ozet": "A senior officer in the Hamas-run police force was among those killed in the strike, which Israel's military says targeted \"terrorists\".",
-        "kategori": "gundem",
-        "dosya": "auto-israeli-strike-on-police-post-in-north-gaza-kills-seven-offi.html",
-        "kaynak": "BBC World",
-        "tarih": "15.07.2026",
-        "gorsel": "images/auto/israeli-strike-on-police-post-in-north-gaza-kills-seven.jpg",
         "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     }
 ]
