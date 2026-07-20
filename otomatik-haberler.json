@@ -1,5 +1,16 @@
 [
     {
+        "baslik": "Cumhurbaşkanı Erdoğan: Kıbrıs Türk halkını haklı mücadelesinde asla yalnız bırakmayacağız",
+        "link": "https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-kibris-turk-halkini-hakli-mucadelesinde-asla-yalniz-birakmayacagiz-951684.html",
+        "ozet": "Cumhurbaşkanı Recep Tayyip Erdoğan, Kıbrıs Barış Harekatı'nın yıl dönümünü kutlayarak, Kıbrıs Türk halkını haklı mücadelesinde yalnız bırakmayacaklarını vurguladı.",
+        "kategori": "gundem",
+        "dosya": "auto-cumhurbaskani-erdogan-kibris-turk-halkini-hakli-mucadelesind.html",
+        "kaynak": "TRT Haber",
+        "tarih": "20.07.2026",
+        "gorsel": "images/auto/cumhurbaskani-erdogan-kibris-turk-halkini-hakli-mucadel.jpg",
+        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2470000/recep-tayyip-erdogan-aa-2471602.jpg"
+    },
+    {
         "baslik": "AnkaraKahire hattı güçleniyor: Yeni bir denklem kurulabilir",
         "link": "https://www.trthaber.com/haber/gundem/ankara-kahire-hatti-gucleniyor-yeni-bir-denklem-kurulabilir-951664.html",
         "ozet": "Son dönemlerde Türkiye-Mısır ilişkilerinde gözle görülür bir dönüşüm var. İki ülke ortak tatbikatlar yapıyor, savunma iş birliği anlaşması imzalıyor, üst düzey heyetler sürekli bir araya geliyor... Tüm bunlara deniz yetki alanlarında izlenecek muhtemel yol haritası da eklendiğinde sürecin yeni bir gerçeklik yaratması gayet mümkün görünüyor.",
@@ -11,26 +22,15 @@
         "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/turkiye-misir-kahire-getty-2476741.jpg"
     },
     {
-        "baslik": "Dışişleri: Türkiye, KKTC'nin menfaatlerini korumaya devam edecektir",
-        "link": "https://www.trthaber.com/haber/gundem/disisleri-turkiye-kktcnin-menfaatlerini-korumaya-devam-edecektir-951660.html",
-        "ozet": "Dışişleri Bakanlığı, Kıbrıs Barış Harekatı'nın 52. yıl dönümünün gururla kutlandığını belirterek, Türkiye'nin gelecekte de Kuzey Kıbrıs Türk Cumhuriyeti'nin (KKTC) menfaatlerini korumaya, Kıbrıslı Türklerin özden gelen hakkı olan egemen eşitlik ve eşit uluslararası statülerinin tanınması için tüm gücüyle çalışmaya devam edeceğini bildirdi.",
+        "baslik": "İngiltere'nin yeni Başbakanı Andy Burnham oldu",
+        "link": "https://www.trthaber.com/haber/dunya/ingilterenin-yeni-basbakani-andy-burnham-oldu-951693.html",
+        "ozet": "İngiltere İşçi Partisi liderliğine seçilen Andy Burnham, ülkenin yeni başbakanı oldu.",
         "kategori": "gundem",
-        "dosya": "auto-disisleri-turkiye-kktcnin-menfaatlerini-korumaya-devam-edece.html",
+        "dosya": "auto-ingilterenin-yeni-basbakani-andy-burnham-oldu.html",
         "kaynak": "TRT Haber",
         "tarih": "20.07.2026",
-        "gorsel": "images/auto/disisleri-turkiye-kktcnin-menfaatlerini-korumaya-devam-.jpg",
-        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1760000/disisleri-bakanligi-depo-1761807.jpg"
-    },
-    {
-        "baslik": "İran Devrim Muhafızları: Hürmüz Boğazı'ndan geçmeye çalışan iki petrol tankeri patladı",
-        "link": "https://www.trthaber.com/haber/dunya/iran-devrim-muhafizlari-hurmuz-bogazindan-gecmeye-calisan-iki-petrol-tankeri-patladi-951663.html",
-        "ozet": "İran Devrim Muhafızları Ordusu, Hürmüz Boğazı'nda güvenli olmayan rotadan geçmeye çalışan iki petrol tankerinin \"patladığını\" açıkladı.",
-        "kategori": "gundem",
-        "dosya": "auto-iran-devrim-muhafizlari-hurmuz-bogazindan-gecmeye-calisan-ik.html",
-        "kaynak": "TRT Haber",
-        "tarih": "20.07.2026",
-        "gorsel": "images/auto/iran-devrim-muhafizlari-hurmuz-bogazindan-gecmeye-calis.jpg",
-        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2442000/hurmuz-a-2443244.jpg"
+        "gorsel": "images/auto/ingilterenin-yeni-basbakani-andy-burnham-oldu.jpg",
+        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/andy-burnham-reu-2476875.jpg"
     },
     {
         "baslik": "İzmit Belediyesine yönelik yolsuzluk operasyonu",
@@ -55,14 +55,36 @@
         "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2388000/ankara-sicak-hava-aa-2389152.jpg"
     },
     {
-        "baslik": "US soldier killed and one injured after Iranian attack in Iraq",
-        "link": "https://www.bbc.co.uk/news/articles/cgk417jp83po?at_medium=RSS&at_campaign=rss",
-        "ozet": "The US military reports another death a day after two of its soldiers were killed in Jordan.",
+        "baslik": "Trump says US strikes hit Iran in 'honour' of American soldiers killed",
+        "link": "https://www.bbc.co.uk/news/articles/cly52xzjd3qo?at_medium=RSS&at_campaign=rss",
+        "ozet": "Iran responded with attacks in Syria and Jordan, as two ships reportedly exploded in the Strait of Hormuz.",
         "kategori": "gundem",
-        "dosya": "auto-us-soldier-killed-and-one-injured-after-iranian-attack-in-ir.html",
+        "dosya": "auto-trump-says-us-strikes-hit-iran-in-honour-of-american-soldier.html",
         "kaynak": "BBC World",
         "tarih": "20.07.2026",
-        "gorsel": "images/auto/us-soldier-killed-and-one-injured-after-iranian-attack-.jpg",
+        "gorsel": "images/auto/trump-says-us-strikes-hit-iran-in-honour-of-american-so.jpg",
+        "orijinal_gorsel": "https://picsum.photos/1000/500?random"
+    },
+    {
+        "baslik": "Boy, 13, dies during World Cup celebrations in Spain",
+        "link": "https://www.bbc.co.uk/news/articles/c0qvdy0jv05o?at_medium=RSS&at_campaign=rss",
+        "ozet": "Two other young people were injured after a fountain partially collapsed in Salamanca's Ciudad Rodrigo.",
+        "kategori": "teknoloji",
+        "dosya": "auto-boy-13-dies-during-world-cup-celebrations-in-spain.html",
+        "kaynak": "BBC World",
+        "tarih": "20.07.2026",
+        "gorsel": "images/auto/boy-13-dies-during-world-cup-celebrations-in-spain.jpg",
+        "orijinal_gorsel": "https://picsum.photos/1000/500?random"
+    },
+    {
+        "baslik": "Police block thousands of 'cockroach' protesters marching on India's parliament",
+        "link": "https://www.bbc.co.uk/news/articles/cvg9w9dxd7lo?at_medium=RSS&at_campaign=rss",
+        "ozet": "Some protesters demanding education reforms said they werew injured in clashes with police who banned the march.",
+        "kategori": "gundem",
+        "dosya": "auto-police-block-thousands-of-cockroach-protesters-marching-on-i.html",
+        "kaynak": "BBC World",
+        "tarih": "20.07.2026",
+        "gorsel": "images/auto/police-block-thousands-of-cockroach-protesters-marching.jpg",
         "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     },
     {
@@ -77,36 +99,14 @@
         "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     },
     {
-        "baslik": "Norway opens new memorial for victims of 2011 massacre",
-        "link": "https://www.bbc.co.uk/news/articles/c07r9m22gyyo?at_medium=RSS&at_campaign=rss",
-        "ozet": "The artwork in the capital Oslo was unveiled on Sunday ahead of the 15th anniversary of the attack.",
+        "baslik": "Scores feared dead after passenger ferry capsizes off Guyana",
+        "link": "https://www.bbc.co.uk/news/articles/cm2gm99nrm7o?at_medium=RSS&at_campaign=rss",
+        "ozet": "Sixty-seven people have been rescued but the ferry is thought to have had more than 130 people on board.",
         "kategori": "gundem",
-        "dosya": "auto-norway-opens-new-memorial-for-victims-of-2011-massacre.html",
+        "dosya": "auto-scores-feared-dead-after-passenger-ferry-capsizes-off-guyana.html",
         "kaynak": "BBC World",
         "tarih": "20.07.2026",
-        "gorsel": "images/auto/norway-opens-new-memorial-for-victims-of-2011-massacre.jpg",
-        "orijinal_gorsel": "https://picsum.photos/1000/500?random"
-    },
-    {
-        "baslik": "Tate brothers arrested in US as further UK charges take total to 59",
-        "link": "https://www.bbc.co.uk/news/articles/cwymly9yd33o?at_medium=RSS&at_campaign=rss",
-        "ozet": "The Crown Prosecution Service says it has requested their extradition from the US, while their lawyer says they are innocent.",
-        "kategori": "gundem",
-        "dosya": "auto-tate-brothers-arrested-in-us-as-further-uk-charges-take-tota.html",
-        "kaynak": "BBC World",
-        "tarih": "20.07.2026",
-        "gorsel": "images/auto/tate-brothers-arrested-in-us-as-further-uk-charges-take.jpg",
-        "orijinal_gorsel": "https://picsum.photos/1000/500?random"
-    },
-    {
-        "baslik": "Russia launches major ballistic missile attack on Ukrainian cities",
-        "link": "https://www.bbc.co.uk/news/articles/c2el7xpnzrpo?at_medium=RSS&at_campaign=rss",
-        "ozet": "Eight people die and dozens are injured as several cities are hit by missile and drone attacks, while Kyiv continues its own assault on Russian infrastructure.",
-        "kategori": "teknoloji",
-        "dosya": "auto-russia-launches-major-ballistic-missile-attack-on-ukrainian-.html",
-        "kaynak": "BBC World",
-        "tarih": "20.07.2026",
-        "gorsel": "images/auto/russia-launches-major-ballistic-missile-attack-on-ukrai.jpg",
+        "gorsel": "images/auto/scores-feared-dead-after-passenger-ferry-capsizes-off-g.jpg",
         "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     }
 ]
