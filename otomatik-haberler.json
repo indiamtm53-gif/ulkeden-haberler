@@ -1,5 +1,16 @@
 [
     {
+        "baslik": "YKS sonuçları açıklandı",
+        "link": "https://www.trthaber.com/haber/egitim/yks-sonuclari-aciklandi-951740.html",
+        "ozet": "ÖSYM, 2026 Yükseköğretim Kurumları Sınavı (YKS) sonuçlarını açıkladı. Yaklaşık 2,5 milyon adayın katıldığı sınavın tercih işlemleri 29 Temmuz-10 Ağustos tarihleri arasında yapılacak.",
+        "kategori": "gundem",
+        "dosya": "auto-yks-sonuclari-aciklandi.html",
+        "kaynak": "TRT Haber",
+        "tarih": "21.07.2026",
+        "gorsel": "images/auto/yks-sonuclari-aciklandi.jpg",
+        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2376000/sinav-2377406.jpg"
+    },
+    {
         "baslik": "CENTCOM: İran'a yönelik yeni saldırı dalgası başlattık",
         "link": "https://www.trthaber.com/haber/dunya/centcom-irana-yonelik-yeni-saldiri-dalgasi-baslattik-951731.html",
         "ozet": "ABD Merkez Kuvvetler Komutanlığı (CENTCOM), bugün İran'a yönelik \"yeni bir saldırı dalgası\" başlattığını duyurdu.",
@@ -22,6 +33,17 @@
         "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/oguzhan-ugur-2476314.jpg"
     },
     {
+        "baslik": "Gülistan Doku soruşturmasında 15 gözaltı",
+        "link": "https://www.trthaber.com/haber/gundem/gulistan-doku-sorusturmasinda-15-gozalti-951748.html",
+        "ozet": "Tunceli'de 5 Ocak 2020'den itibaren kendisinden haber alınamayan üniversite öğrencisi Gülistan Doku ile ilgili yürütülen soruşturmada 15 şüpheli gözaltına alındı. Şüpheliler arasında eski Tunceli Valisi Tuncay Sonel’in eşi Handan Sonel de bulunuyor.",
+        "kategori": "gundem",
+        "dosya": "auto-gulistan-doku-sorusturmasinda-15-gozalti.html",
+        "kaynak": "TRT Haber",
+        "tarih": "21.07.2026",
+        "gorsel": "images/auto/gulistan-doku-sorusturmasinda-15-gozalti.jpg",
+        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2452000/gulistan-doku-depophotos-2453343.jpg"
+    },
+    {
         "baslik": "Siber Güvenlik Toplantısı yapıldı",
         "link": "https://www.trthaber.com/haber/gundem/siber-guvenlik-toplantisi-yapildi-951724.html",
         "ozet": "İçişleri Bakanı Mustafa Çiftçi, Siber Güvenlik Toplantısı'na başkanlık etti.",
@@ -31,28 +53,6 @@
         "tarih": "21.07.2026",
         "gorsel": "images/auto/siber-guvenlik-toplantisi-yapildi.jpg",
         "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/siber-guvenlik-toplantisiaa-2476984.jpg"
-    },
-    {
-        "baslik": "İngiltere'nin yeni Başbakanı Andy Burnham oldu",
-        "link": "https://www.trthaber.com/haber/dunya/ingilterenin-yeni-basbakani-andy-burnham-oldu-951693.html",
-        "ozet": "İngiltere İşçi Partisi liderliğine seçilen Andy Burnham, ülkenin yeni başbakanı oldu.",
-        "kategori": "gundem",
-        "dosya": "auto-ingilterenin-yeni-basbakani-andy-burnham-oldu.html",
-        "kaynak": "TRT Haber",
-        "tarih": "21.07.2026",
-        "gorsel": "images/auto/ingilterenin-yeni-basbakani-andy-burnham-oldu.jpg",
-        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/andy-burnham-reu-2476875.jpg"
-    },
-    {
-        "baslik": "Ankara'da bazı mahallelerde su kesintisi uygulanacak",
-        "link": "https://www.trthaber.com/haber/turkiye/ankarada-bazi-mahallelerde-su-kesintisi-uygulanacak-951717.html",
-        "ozet": "Ankara'da bugün 08.00-00.00 saatleri arasında bazı mahallelerde planlı su kesintisi uygulanacak.",
-        "kategori": "gundem",
-        "dosya": "auto-ankarada-bazi-mahallelerde-su-kesintisi-uygulanacak.html",
-        "kaynak": "TRT Haber",
-        "tarih": "21.07.2026",
-        "gorsel": "images/auto/ankarada-bazi-mahallelerde-su-kesintisi-uygulanacak.jpg",
-        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2370000/su-kesintisi-depo-2371720.jpg"
     },
     {
         "baslik": "Trump slaps 50% tariffs on Canada and Carney vows to 'intensify' trade talks",
@@ -68,7 +68,7 @@
     {
         "baslik": "US launches fresh strikes on Iran, as Trump warns of retaliation for deaths of soldiers",
         "link": "https://www.bbc.co.uk/news/articles/cx25wg2x26do?at_medium=RSS&at_campaign=rss",
-        "ozet": "The US says the attacks were aimed at degrading Iran's capabilities to attack ships in the Strait of Hormuz.",
+        "ozet": "Iran says it has hit two ships in the Strait of Hormuz as well as targets in Bahrain and Jordan.",
         "kategori": "gundem",
         "dosya": "auto-us-launches-fresh-strikes-on-iran-as-trump-warns-of-retaliat.html",
         "kaynak": "BBC World",
@@ -99,14 +99,14 @@
         "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     },
     {
-        "baslik": "Notorious drug cartel leader Ismael Zambada sentenced to life in US prison",
-        "link": "https://www.bbc.co.uk/news/articles/ce3q1d1ed5do?at_medium=RSS&at_campaign=rss",
-        "ozet": "Known as \"El Mayo\", the co-founder the Sinaloa Cartel was also ordered to pay $15bn after he admitted to sending vast amounts of drugs to the US.",
+        "baslik": "'Anti-ICE' Army veteran set fire outside Manhattan federal building, say officials",
+        "link": "https://www.bbc.co.uk/news/articles/c1m1rr90dzxo?at_medium=RSS&at_campaign=rss",
+        "ozet": "Andrew Arrabaca, 43, was armed with two axes, a machete, three knives and fireworks, says the FBI.",
         "kategori": "gundem",
-        "dosya": "auto-notorious-drug-cartel-leader-ismael-zambada-sentenced-to-lif.html",
+        "dosya": "auto-anti-ice-army-veteran-set-fire-outside-manhattan-federal-bui.html",
         "kaynak": "BBC World",
         "tarih": "21.07.2026",
-        "gorsel": "images/auto/notorious-drug-cartel-leader-ismael-zambada-sentenced-t.jpg",
+        "gorsel": "images/auto/anti-ice-army-veteran-set-fire-outside-manhattan-federa.jpg",
         "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     }
 ]
