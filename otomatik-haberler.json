@@ -1,24 +1,35 @@
 [
     {
-        "baslik": "Ankara'da eğitim helikopteri düştü",
-        "link": "https://www.trthaber.com/haber/turkiye/ankarada-egitim-helikopteri-dustu-951853.html",
-        "ozet": "Ankara’nın Temelli ilçesinde bir eğitim helikopteri düştü. Bölgeye çok sayıda ekip sevk edildi. Kazada 2 kişi yaralandı.",
+        "baslik": "Ankara'da eğitim helikopteri kazasında 1 can kaybı",
+        "link": "https://www.trthaber.com/haber/turkiye/ankarada-egitim-helikopteri-kazasinda-1-can-kaybi-951853.html",
+        "ozet": "Ankara’nın Temelli ilçesinde bir eğitim helikopteri düştü. Kazada yaralanan 2 kişiden Pilot Emekli Albay Yasaözden Bakkal hayatını kaybetti. Kazayla ilgili soruşturma başlatıldı, 2 Cumhuriyet savcısı görevlendirildi.",
         "kategori": "gundem",
-        "dosya": "auto-ankarada-egitim-helikopteri-dustu.html",
+        "dosya": "auto-ankarada-egitim-helikopteri-kazasinda-1-can-kaybi.html",
         "kaynak": "TRT Haber",
         "tarih": "22.07.2026",
-        "gorsel": "images/auto/ankarada-egitim-helikopteri-dustu.jpg",
-        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/egitim-helikopteri-dha-2477411.jpg"
+        "gorsel": "images/auto/ankarada-egitim-helikopteri-kazasinda-1-can-kaybi.jpg",
+        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/helikopter-dustu-dha-2477456.jpg"
     },
     {
-        "baslik": "2027 yılı hac kurası bugün çekiliyor",
-        "link": "https://www.trthaber.com/haber/gundem/2027-yili-hac-kurasi-bugun-cekiliyor-951840.html",
-        "ozet": "Gelecek yıl kutsal topraklara gidecek hacı adaylarının heyecanla beklediği gün geldi. Hac kuralarının çekilişi bugün Diyanet İşleri Başkanlığı'nda yapılacak. Peki, hac takviminde süreç nasıl işleyecek, kura sonuçları nasıl öğrenilecek?",
+        "baslik": "Ahbaplar suç örgütü soruşturmasında yeni gelişme",
+        "link": "https://www.trthaber.com/haber/gundem/ahbaplar-suc-orgutu-sorusturmasinda-yeni-gelisme-951867.html",
+        "ozet": "İstanbul Cumhuriyet Başsavcılığınca yürütülen \"Ahbaplar\" suç örgötüne yönelik soruşturma kapsamında, bazı yeni isimlerin ifadesine başvurulacak.",
         "kategori": "gundem",
-        "dosya": "auto-2027-yili-hac-kurasi-bugun-cekiliyor.html",
+        "dosya": "auto-ahbaplar-suc-orgutu-sorusturmasinda-yeni-gelisme.html",
         "kaynak": "TRT Haber",
         "tarih": "22.07.2026",
-        "gorsel": "images/auto/2027-yili-hac-kurasi-bugun-cekiliyor.jpg",
+        "gorsel": "images/auto/ahbaplar-suc-orgutu-sorusturmasinda-yeni-gelisme.jpg",
+        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2474000/ahbap-haluk-levent-2475642.jpg"
+    },
+    {
+        "baslik": "2027 yılı hac kurası bugün çekildi",
+        "link": "https://www.trthaber.com/haber/gundem/2027-yili-hac-kurasi-bugun-cekildi-951840.html",
+        "ozet": "Gelecek yıl kutsal topraklara gidecek hacı adaylarının heyecanla beklediği gün geldi. Hac kuralarının çekilişi bugün Diyanet İşleri Başkanlığında yapıldı. Peki, hac takviminde süreç nasıl işleyecek, kura sonuçları nasıl öğrenilecek?",
+        "kategori": "gundem",
+        "dosya": "auto-2027-yili-hac-kurasi-bugun-cekildi.html",
+        "kaynak": "TRT Haber",
+        "tarih": "22.07.2026",
+        "gorsel": "images/auto/2027-yili-hac-kurasi-bugun-cekildi.jpg",
         "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2464000/hacaa-2465044.jpg"
     },
     {
@@ -44,15 +55,26 @@
         "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1836000/reklam-aa-1837596.jpg"
     },
     {
-        "baslik": "TEI yerleşkesinde çıkan yangın kontrol altına alındı",
-        "link": "https://www.trthaber.com/haber/turkiye/tei-yerleskesinde-cikan-yangin-kontrol-altina-alindi-951824.html",
-        "ozet": "Savunma Sanayii Başkanı Haluk Görgün, Eskişehir'de kurulu TUSAŞ Motor Sanayii AŞ (TEI) yerleşkesinde çıkan yangının kontrol altına alındığını duyurdu.",
-        "kategori": "ekonomi",
-        "dosya": "auto-tei-yerleskesinde-cikan-yangin-kontrol-altina-alindi.html",
-        "kaynak": "TRT Haber",
+        "baslik": "US to announce deal allowing Saudi Arabia a nuclear programme, reports say",
+        "link": "https://www.bbc.co.uk/news/articles/cj03r59z73po?at_medium=RSS&at_campaign=rss",
+        "ozet": "The agreement would fulfil a long-held Saudi ambition but could attract concern in Israel and from some US lawmakers.",
+        "kategori": "gundem",
+        "dosya": "auto-us-to-announce-deal-allowing-saudi-arabia-a-nuclear-programm.html",
+        "kaynak": "BBC World",
         "tarih": "22.07.2026",
-        "gorsel": "images/auto/tei-yerleskesinde-cikan-yangin-kontrol-altina-alindi.jpg",
-        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/eskisehirde-tei-yanginaa-2477377.jpg"
+        "gorsel": "images/auto/us-to-announce-deal-allowing-saudi-arabia-a-nuclear-pro.jpg",
+        "orijinal_gorsel": "https://picsum.photos/1000/500?random"
+    },
+    {
+        "baslik": "Ukrainian drones hit more sites of Russian online retailer Wildberries",
+        "link": "https://www.bbc.co.uk/news/articles/c36de9n4pxpo?at_medium=RSS&at_campaign=rss",
+        "ozet": "Logistics hubs belonging to Wildberries in the Krasnodar and Stavropol regions were struck overnight.",
+        "kategori": "teknoloji",
+        "dosya": "auto-ukrainian-drones-hit-more-sites-of-russian-online-retailer-w.html",
+        "kaynak": "BBC World",
+        "tarih": "22.07.2026",
+        "gorsel": "images/auto/ukrainian-drones-hit-more-sites-of-russian-online-retai.jpg",
+        "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     },
     {
         "baslik": "Zelensky sacks Ukraine's top army commander after days of protests",
@@ -66,36 +88,14 @@
         "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     },
     {
-        "baslik": "More warehouses of Russian online retailer Wildberries hit by Ukraine, officials say",
-        "link": "https://www.bbc.co.uk/news/articles/c36de9n4pxpo?at_medium=RSS&at_campaign=rss",
-        "ozet": "Logistics hubs belonging to Wildberries in the Krasnodar and Stavropol regions were struck overnight on Tuesday.",
-        "kategori": "teknoloji",
-        "dosya": "auto-more-warehouses-of-russian-online-retailer-wildberries-hit-b.html",
-        "kaynak": "BBC World",
-        "tarih": "22.07.2026",
-        "gorsel": "images/auto/more-warehouses-of-russian-online-retailer-wildberries-.jpg",
-        "orijinal_gorsel": "https://picsum.photos/1000/500?random"
-    },
-    {
-        "baslik": "US renews strikes on Iran as Trump threatens to attack underground nuclear site",
-        "link": "https://www.bbc.co.uk/news/articles/cdrv0p37k8jo?at_medium=RSS&at_campaign=rss",
-        "ozet": "The US president's threat to target a key Iranian nuclear site came ahead of the 11th consecutive night of attacks.",
+        "baslik": "Iran war has cost US $37.5bn so far, Hegseth says, as Pentagon seeks billions more",
+        "link": "https://www.bbc.co.uk/news/articles/c70gek2kqyno?at_medium=RSS&at_campaign=rss",
+        "ozet": "The hearing was disrupted by protests and a shouting match as Hegseth testified at a pivotal time in the war.",
         "kategori": "gundem",
-        "dosya": "auto-us-renews-strikes-on-iran-as-trump-threatens-to-attack-under.html",
+        "dosya": "auto-iran-war-has-cost-us-375bn-so-far-hegseth-says-as-pentagon-s.html",
         "kaynak": "BBC World",
         "tarih": "22.07.2026",
-        "gorsel": "images/auto/us-renews-strikes-on-iran-as-trump-threatens-to-attack-.jpg",
-        "orijinal_gorsel": "https://picsum.photos/1000/500?random"
-    },
-    {
-        "baslik": "France passes law banning under-15s from social media",
-        "link": "https://www.bbc.co.uk/news/articles/cq56l9p4y93o?at_medium=RSS&at_campaign=rss",
-        "ozet": "The law will require social media platforms in France to verify all users age from January.",
-        "kategori": "gundem",
-        "dosya": "auto-france-passes-law-banning-under-15s-from-social-media.html",
-        "kaynak": "BBC World",
-        "tarih": "22.07.2026",
-        "gorsel": "images/auto/france-passes-law-banning-under-15s-from-social-media.jpg",
+        "gorsel": "images/auto/iran-war-has-cost-us-375bn-so-far-hegseth-says-as-penta.jpg",
         "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     },
     {
