@@ -22,6 +22,17 @@
         "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2448000/eurofighter-typhoon-aa-2448627.jpg"
     },
     {
+        "baslik": "Türkiye'den İsrailli bakanın Mescidi Aksa baskınına tepki",
+        "link": "https://www.trthaber.com/haber/gundem/turkiyeden-israilli-bakanin-mescid-i-aksa-baskinina-tepki-952038.html",
+        "ozet": "Dışişleri Bakanlığı, İsrailli bir bakanın, beraberindeki aşırılık yanlısı grupla, İsrail güvenlik güçlerinin koruması altında Mescid-i Aksa'ya düzenlediği baskını \"en güçlü biçimde\" kınadı.",
+        "kategori": "teknoloji",
+        "dosya": "auto-turkiyeden-israilli-bakanin-mescidi-aksa-baskinina-tepki.html",
+        "kaynak": "TRT Haber",
+        "tarih": "23.07.2026",
+        "gorsel": "images/auto/turkiyeden-israilli-bakanin-mescidi-aksa-baskinina-tepk.jpg",
+        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1760000/disisleri-bakanligi-depo-1761807.jpg"
+    },
+    {
         "baslik": "Ahbap Derneği soruşturmasında 6 isim daha ifadeye çağırıldı",
         "link": "https://www.trthaber.com/haber/gundem/ahbap-dernegi-sorusturmasinda-6-isim-daha-ifadeye-cagirildi-952021.html",
         "ozet": "İstanbul Cumhuriyet Başsavcılığı Ahbap Derneği soruşturması kapsamında 6 ismin daha ifadesine başvuracak. İfadeye çağrılan isimler arasında, Fatih Altaylı, Şahan Gökbakar, Ruşen Çakır, Hazal kaya, Özlem Gürses ve Fatih Koparan yer alıyor.",
@@ -44,15 +55,15 @@
         "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2092000/atmaca-fuzesi-2093116.jpg"
     },
     {
-        "baslik": "Fethiye'deki orman yangını kontrol altında",
-        "link": "https://www.trthaber.com/haber/turkiye/fethiyedeki-orman-yangini-kontrol-altinda-952011.html",
-        "ozet": "Muğla'nın Fethiye ilçesinde Gökçeovacık Mahallesi'nde başlayarak İnlice Mahallesi'ne ulaşan orman yangını, ekiplerin havadan ve karadan yoğun müdahalesiyle kontrol altına alındı.",
-        "kategori": "ekonomi",
-        "dosya": "auto-fethiyedeki-orman-yangini-kontrol-altinda.html",
-        "kaynak": "TRT Haber",
+        "baslik": "Oil prices hit $100 for the first time since May",
+        "link": "https://www.bbc.co.uk/news/articles/cx2djnzrqk2o?at_medium=RSS&at_campaign=rss",
+        "ozet": "The price of Brent crude rose more than 6% on Thursday as the war in the Middle East continues to escalate.",
+        "kategori": "gundem",
+        "dosya": "auto-oil-prices-hit-100-for-the-first-time-since-may.html",
+        "kaynak": "BBC World",
         "tarih": "23.07.2026",
-        "gorsel": "images/auto/fethiyedeki-orman-yangini-kontrol-altinda.jpg",
-        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/orman-yangini-aa-2477907.jpg"
+        "gorsel": "images/auto/oil-prices-hit-100-for-the-first-time-since-may.jpg",
+        "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     },
     {
         "baslik": "Saudis must recognise Israel for nuclear deal, says Trump",
@@ -66,14 +77,14 @@
         "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     },
     {
-        "baslik": "Houthis claim attack on oil tankers as US launches more strikes on Iran",
-        "link": "https://www.bbc.co.uk/news/articles/cpw9xzx9r4ko?at_medium=RSS&at_campaign=rss",
-        "ozet": "The Houthi attacks would be the first in the Red Sea since the Iran-backed group announced a \"maritime embargo\" against Saudi Arabia.",
+        "baslik": "Ukraine's ousted defence minister insists on being reinstated",
+        "link": "https://www.bbc.co.uk/news/articles/ce97nm53pgxo?at_medium=RSS&at_campaign=rss",
+        "ozet": "Mykhailo Fedorov refuses President Zelensky's offer to accept an alternative post, as the battle of wills continues.",
         "kategori": "teknoloji",
-        "dosya": "auto-houthis-claim-attack-on-oil-tankers-as-us-launches-more-stri.html",
+        "dosya": "auto-ukraines-ousted-defence-minister-insists-on-being-reinstated.html",
         "kaynak": "BBC World",
         "tarih": "23.07.2026",
-        "gorsel": "images/auto/houthis-claim-attack-on-oil-tankers-as-us-launches-more.jpg",
+        "gorsel": "images/auto/ukraines-ousted-defence-minister-insists-on-being-reins.jpg",
         "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     },
     {
@@ -88,25 +99,14 @@
         "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     },
     {
-        "baslik": "'I am still alive': Indian activist on hunger strike for 26 days loses 11kg",
-        "link": "https://www.bbc.co.uk/news/articles/ce34n7kqr5ko?at_medium=RSS&at_campaign=rss",
-        "ozet": "Sonam Wangchuk has been the main draw at the Cockroach Janta Party (CJP) protest in Delhi.",
+        "baslik": "Yemen's Houthis attack Saudi tanker as US launches more Iran strikes",
+        "link": "https://www.bbc.co.uk/news/articles/cpw9xzx9r4ko?at_medium=RSS&at_campaign=rss",
+        "ozet": "The Iran-backed group, which previously announced a \"maritime embargo\" against Saudi Arabia, also claims to have hit another vessel.",
         "kategori": "gundem",
-        "dosya": "auto-i-am-still-alive-indian-activist-on-hunger-strike-for-26-day.html",
+        "dosya": "auto-yemens-houthis-attack-saudi-tanker-as-us-launches-more-iran-.html",
         "kaynak": "BBC World",
         "tarih": "23.07.2026",
-        "gorsel": "images/auto/i-am-still-alive-indian-activist-on-hunger-strike-for-2.jpg",
-        "orijinal_gorsel": "https://picsum.photos/1000/500?random"
-    },
-    {
-        "baslik": "Canada's 'powerful' dairy sector is in Trump's trade crosshairs",
-        "link": "https://www.bbc.co.uk/news/articles/ce8kvm84lxmo?at_medium=RSS&at_campaign=rss",
-        "ozet": "Canada's dairy supply management system is in the spotlight after the US president singled it out as one of three main irritants used to justify new tariffs.",
-        "kategori": "teknoloji",
-        "dosya": "auto-canadas-powerful-dairy-sector-is-in-trumps-trade-crosshairs.html",
-        "kaynak": "BBC World",
-        "tarih": "23.07.2026",
-        "gorsel": "images/auto/canadas-powerful-dairy-sector-is-in-trumps-trade-crossh.jpg",
+        "gorsel": "images/auto/yemens-houthis-attack-saudi-tanker-as-us-launches-more-.jpg",
         "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     }
 ]
