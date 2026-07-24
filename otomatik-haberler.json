@@ -1,8 +1,19 @@
 [
     {
+        "baslik": "Bakan Gürlek: Haluk Levent Yunan adalarına kaçacaktı",
+        "link": "https://www.trthaber.com/haber/gundem/bakan-gurlek-haluk-levent-yunan-adalarina-kacacakti-952141.html",
+        "ozet": "Adalet Bakanı Akın Gürlek, \"Haluk Levent 12 Temmuz'da yurt dışına çıkış yapmak isterken yurt dışı çıkış yasağını öğrendi. Telefonunu kapatınca savcılarımız harekete geçti. Pazar günü Haluk Levent'i aldılar. Haluk Levent, İzmir'den tekneyle Yunan adalarına kaçacaktı\" açıklamasını yaptı.",
+        "kategori": "gundem",
+        "dosya": "auto-bakan-gurlek-haluk-levent-yunan-adalarina-kacacakti.html",
+        "kaynak": "TRT Haber",
+        "tarih": "24.07.2026",
+        "gorsel": "images/auto/bakan-gurlek-haluk-levent-yunan-adalarina-kacacakti.jpg",
+        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2448000/akin-gurlek-aa-2448738.jpg"
+    },
+    {
         "baslik": "Erdoğan: Ayasofya'yı yeniden ibadete açmak bize nasip oldu",
         "link": "https://www.trthaber.com/haber/gundem/erdogan-ayasofyayi-yeniden-ibadete-acmak-bize-nasip-oldu-952113.html",
-        "ozet": "Cumhurbşakanı Recep Tayyip Erdoğan, \"6'ncı seneyi devriyesiyle müşerref olduğumuz Ayasofya Camii Kebir'i yeniden ibadete açmak bize nasip oldu. Bundan dolayı tabii çok çok mutluyuz.\" dedi.",
+        "ozet": "Cumhurbaşkanı Recep Tayyip Erdoğan, \"6'ncı seneyi devriyesiyle müşerref olduğumuz Ayasofya Camii Kebir'i yeniden ibadete açmak bize nasip oldu. Bundan dolayı tabii çok çok mutluyuz.\" dedi.",
         "kategori": "gundem",
         "dosya": "auto-erdogan-ayasofyayi-yeniden-ibadete-acmak-bize-nasip-oldu.html",
         "kaynak": "TRT Haber",
@@ -44,36 +55,25 @@
         "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2454000/gulistan-2455362.jpg"
     },
     {
-        "baslik": "Çiftçi ve esnafa 629 milyar lira finansman desteği verildi",
-        "link": "https://www.trthaber.com/haber/ekonomi/ciftci-ve-esnafa-629-milyar-lira-finansman-destegi-verildi-952111.html",
-        "ozet": "Hazinenin faiz/kar payı destekli kredi ve finansman uygulaması kapsamında çiftçilere 449 milyar lira, esnaf ve sanatkara 180 milyar lira destek verildi.",
+        "baslik": "Ten killed in Russian attack on drone exhibition near Kyiv",
+        "link": "https://www.bbc.co.uk/news/articles/cj637zd1k1ko?at_medium=RSS&at_campaign=rss",
+        "ozet": "The event, attended by prominent members of the Ukrainian defence industry, was hit by ballistic missiles in the middle of the day.",
         "kategori": "gundem",
-        "dosya": "auto-ciftci-ve-esnafa-629-milyar-lira-finansman-destegi-verildi.html",
-        "kaynak": "TRT Haber",
-        "tarih": "24.07.2026",
-        "gorsel": "images/auto/ciftci-ve-esnafa-629-milyar-lira-finansman-destegi-veri.jpg",
-        "orijinal_gorsel": "https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1512000/para-aa-1513096.jpg"
-    },
-    {
-        "baslik": "Tens of thousands evacuated from French tourist spot and near Madrid as wildfires spread",
-        "link": "https://www.bbc.co.uk/news/articles/cdx82rl5g0do?at_medium=RSS&at_campaign=rss",
-        "ozet": "The fire has raged in the region for several days with officials now ordering the evacuation of the entire Cap Ferret peninsula.",
-        "kategori": "gundem",
-        "dosya": "auto-tens-of-thousands-evacuated-from-french-tourist-spot-and-nea.html",
+        "dosya": "auto-ten-killed-in-russian-attack-on-drone-exhibition-near-kyiv.html",
         "kaynak": "BBC World",
         "tarih": "24.07.2026",
-        "gorsel": "images/auto/tens-of-thousands-evacuated-from-french-tourist-spot-an.jpg",
+        "gorsel": "images/auto/ten-killed-in-russian-attack-on-drone-exhibition-near-k.jpg",
         "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     },
     {
-        "baslik": "US hits dozens of countries with new wave of tariffs",
-        "link": "https://www.bbc.co.uk/news/articles/cvgj61j6l08o?at_medium=RSS&at_campaign=rss",
-        "ozet": "Imposed citing forced labour concerns, the levies replace a temporary global duty brought in after the US Supreme Court struck down tariffs in February.",
-        "kategori": "gundem",
-        "dosya": "auto-us-hits-dozens-of-countries-with-new-wave-of-tariffs.html",
+        "baslik": "Trump vows to investigate EU over fining of US tech companies",
+        "link": "https://www.bbc.co.uk/news/articles/cvgjenp4680o?at_medium=RSS&at_campaign=rss",
+        "ozet": "The US president says fines against Google, as well as Apple, Meta and Amazon, should be \"entirely reversed.\"",
+        "kategori": "teknoloji",
+        "dosya": "auto-trump-vows-to-investigate-eu-over-fining-of-us-tech-companie.html",
         "kaynak": "BBC World",
         "tarih": "24.07.2026",
-        "gorsel": "images/auto/us-hits-dozens-of-countries-with-new-wave-of-tariffs.jpg",
+        "gorsel": "images/auto/trump-vows-to-investigate-eu-over-fining-of-us-tech-com.jpg",
         "orijinal_gorsel": "https://picsum.photos/1000/500?random"
     },
     {
